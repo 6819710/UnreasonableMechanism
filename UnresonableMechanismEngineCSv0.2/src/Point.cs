@@ -171,15 +171,15 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calculates difference.
         /// </summary>
-        /// <param name="point">Point to check against.</param>
+        /// <param name="subtrahend">Subtrahend point.</param>
         /// <returns>Difference in points.</returns>
-        public Point Difference(Point point)
+        public Point Difference(Point subtrahend)
         {
             Point result = this;
 
-            result.X -= point.X;
-            result.Y -= point.Y;
-            result.Z -= point.Z;
+            result.X -= result.DifferenceInX(subtrahend);
+            result.Y -= result.DifferenceInY(subtrahend);
+            result.Z -= result.DifferenceInZ(subtrahend);
 
             return new Point();
         }
@@ -187,11 +187,11 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calculates difference in x.
         /// </summary>
-        /// <param name="point">Point to check against.</param>
+        /// <param name="subtrahend">Subtrahend point.</param>
         /// <returns>Difference in x.</returns>
-        public double DifferenceInX(Point point)
+        public double DifferenceInX(Point subtrahend)
         {
-            return _x - point.X;
+            return _x - subtrahend.X;
         }
 
         /// <summary>
@@ -207,11 +207,11 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calculates difference in y.
         /// </summary>
-        /// <param name="point">Point to check against.</param>
+        /// <param name="subtrahend">Subtrahend point.</param>
         /// <returns>Difference in y.</returns>
-        public double DifferenceInY(Point point)
+        public double DifferenceInY(Point subtrahend)
         {
-            return _y - point.Y;
+            return _y - subtrahend.Y;
         }
 
         /// <summary>
@@ -227,11 +227,11 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calculates difference in z.
         /// </summary>
-        /// <param name="point">Point to check against.</param>
+        /// <param name="subtrahend">Subtrahend point.</param>
         /// <returns>Difference in z.</returns>
-        public double DifferenceInZ(Point point)
+        public double DifferenceInZ(Point subtrahend)
         {
-            return _z - point.Z;
+            return _z - subtrahend.Z;
         }
 
         /// <summary>
@@ -258,17 +258,178 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates sum.
+        /// Offsets the point by the given point.
         /// </summary>
-        /// <param name="point">Point to add.</param>
-        /// <returns>Sum of points.</returns>
-        public Point Sum(Point point)
+        /// <param name="point">Distance to offset.</param>
+        public void Offset(Point point)
+        {
+            this = Sum(point);
+        }
+
+        /// <summary>
+        /// Calculates product.
+        /// </summary>
+        /// <param name="multiplier">Multiplier point.</param>
+        /// <returns>Product of points.</returns>
+        public Point Product(Point multiplier)
         {
             Point result = this;
 
-            result.X += point.X;
-            result.Y += point.Y;
-            result.Z += point.Z;
+            result.X = result.ProductInX(multiplier);
+            result.Y = result.ProductInY(multiplier);
+            result.Z = result.ProductInZ(multiplier);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates product in x.
+        /// </summary>
+        /// <param name="multiplier">Multiplier point.</param>
+        /// <returns>Product of x.</returns>
+        public double ProductInX(Point multiplier)
+        {
+            return _x * multiplier.X;
+        }
+
+        /// <summary>
+        /// Calculates product of x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Product of x.</returns>
+        public double ProductInX(double x)
+        {
+            return _x * x;
+        }
+
+        /// <summary>
+        /// Calculates product of y.
+        /// </summary>
+        /// <param name="multiplier">Multiplier point.</param>
+        /// <returns>Product of y</returns>
+        public double ProductInY(Point multiplier)
+        {
+            return _y * multiplier.Y;
+        }
+
+        /// <summary>
+        /// Calculates product of y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Product of y.</returns>
+        public double ProductInY(double y)
+        {
+            return _y * y;
+        }
+
+        /// <summary>
+        /// Calculates product of z.
+        /// </summary>
+        /// <param name="multiplier">Multiplier point.</param>
+        /// <returns>Procuct of z.</returns>
+        public double ProductInZ(Point multiplier)
+        {
+            return _z * multiplier.Z;
+        }
+
+        /// <summary>
+        /// Calculates Product of z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Product of z.</returns>
+        public double ProductInZ(double z)
+        {
+            return _z * z;
+        }
+
+        /// <summary>
+        /// Calculates quotient.
+        /// </summary>
+        /// <param name="divisor">Divisor point.</param>
+        /// <returns>Quotient of points.</returns>
+        public Point Quotient(Point divisor)
+        {
+            Point result = this;
+
+            result.X = result.QuotientInX(divisor);
+            result.Y = result.QuotientInY(divisor);
+            result.Z = result.QuotientInZ(divisor);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates quotient of x.
+        /// </summary>
+        /// <param name="divisor">Divisor point.</param>
+        /// <returns>Quotient of x.</returns>
+        public double QuotientInX(Point divisor)
+        {
+            return _x / divisor.X;
+        }
+
+        /// <summary>
+        /// Calculates quotient of x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Quotient of x.</returns>
+        public double QuotientInX(double x)
+        {
+            return _x / x;
+        }
+
+        /// <summary>
+        /// Calculates quotient of y.
+        /// </summary>
+        /// <param name="divisor">Divisor point.</param>
+        /// <returns>Quotient of y.</returns>
+        public double QuotientInY(Point divisor)
+        {
+            return _y / divisor.Y;
+        }
+
+        /// <summary>
+        /// Calculates quotient of y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Quotient of y.</returns>
+        public double QuotientInY(double y)
+        {
+            return _y / y;
+        }
+
+        /// <summary>
+        /// Calculates quotient of z.
+        /// </summary>
+        /// <param name="divisor">Divisor point.</param>
+        /// <returns>Quotient of z.</returns>
+        public double QuotientInZ(Point divisor)
+        {
+            return _z / divisor.Z;
+        }
+
+        /// <summary>
+        /// Calculates quotient of z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Quotient of z.</returns>
+        public double QuotientInZ(double z)
+        {
+            return _z / z;
+        }
+
+        /// <summary>
+        /// Calculates sum.
+        /// </summary>
+        /// <param name="addend">Addend point.</param>
+        /// <returns>Sum of points.</returns>
+        public Point Sum(Point addend)
+        {
+            Point result = this;
+
+            result.X += result.SumInX(addend);
+            result.Y += result.SumInY(addend);
+            result.Z += result.SumInZ(addend);
 
             return new Point();
         }
@@ -276,11 +437,11 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calculates sum of x.
         /// </summary>
-        /// <param name="point">Point to add.</param>
+        /// <param name="addend">Addend point.</param>
         /// <returns>Sum of x.</returns>
-        public double SumInX(Point point)
+        public double SumInX(Point addend)
         {
-            return _x + point.X;
+            return _x + addend.X;
         }
 
         /// <summary>
@@ -296,11 +457,11 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calculates sum of y.
         /// </summary>
-        /// <param name="point">Point to add.</param>
+        /// <param name="addend">Addend point.</param>
         /// <returns>Sum of y</returns>
-        public double SumInY(Point point)
+        public double SumInY(Point addend)
         {
-            return _y + point.Y;
+            return _y + addend.Y;
         }
 
         /// <summary>
@@ -316,11 +477,11 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calculates Sum of z.
         /// </summary>
-        /// <param name="point">Point to add.</param>
+        /// <param name="addend">Addend point.</param>
         /// <returns>Sum of z.</returns>
-        public double SumInZ(Point point)
+        public double SumInZ(Point addend)
         {
-            return _z + point.Z;
+            return _z + addend.Z;
         }
 
         /// <summary>
