@@ -257,6 +257,28 @@ namespace UnreasonableMechanismEngineCS
             SwinGame.DrawLine(clr, x, y - 5, x, y + 5);
         }
 
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+            {
+                return false;
+            }
+
+            Point pnt = (Point)obj;
+
+            if ((object)pnt == null)
+            {
+                return false;
+            }
+
+            return _x == pnt.X && _y == pnt.Y && _z == pnt.Z;
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)_x ^ (int)_y ^ (int)_z;
+        }
+
         /// <summary>
         /// Offsets the point by the given point.
         /// </summary>
@@ -492,6 +514,48 @@ namespace UnreasonableMechanismEngineCS
         public double SumInZ(double z)
         {
             return _z + z;
+        }
+
+        public override string ToString()
+        {
+            if (_z == 0)
+            {
+                return "(" + _x + ", " + _y + ")";
+            }
+            else
+            {
+                return "(" + _x + ", " + _y + ", " + _z + ")";
+            }
+        }
+
+        public static bool operator ==(Point left, Point right)
+        {
+            return left.Equals(right);
+        }
+
+        public static bool operator !=(Point left, Point right)
+        {
+            return !(left.Equals(right));
+        }
+
+        public static Point operator +(Point left, Point right)
+        {
+            return left.Sum(right);
+        }
+
+        public static Point operator -(Point left, Point right)
+        {
+            return left.Difference(right);
+        }
+
+        public static Point operator* (Point left, Point right)
+        {
+            return left.Product(right);
+        }
+
+        public static Point operator/ (Point left, Point right)
+        {
+            return left.Quotient(right);
         }
     }
 }
