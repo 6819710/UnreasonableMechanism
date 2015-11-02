@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.2", "UnresonableMechanismEngineCSv0.2\UnreasonableMechanismEngineCSv0.2.csproj", "{9F68A310-52ED-4054-B422-5E666D29265B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.2Tests", "UnreasonableMechanismEngineCSv0.2Tests\UnreasonableMechanismEngineCSv0.2Tests.csproj", "{DEDDA9C1-2ED0-443A-93B8-A079740DB276}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,14 @@ Global
 		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|Any CPU.ActiveCfg = Release|x86
 		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|x86.ActiveCfg = Release|x86
 		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|x86.Build.0 = Release|x86
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Debug|x86.Build.0 = Debug|Any CPU
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Release|x86.ActiveCfg = Release|Any CPU
+		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
