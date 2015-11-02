@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.4", "UnreasonableMechanismCSv0.4\UnreasonableMechanismCSv0.4.csproj", "{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B} = {F3ED2946-289C-4DED-9E22-9E749A8B953B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.1", "UnreasonableMechanismEngineCSv0.1\UnreasonableMechanismEngineCSv0.1.csproj", "{F3ED2946-289C-4DED-9E22-9E749A8B953B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Debug|x86.ActiveCfg = Debug|x86
+		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Debug|x86.Build.0 = Debug|x86
+		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Release|Any CPU.ActiveCfg = Release|x86
+		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Release|x86.ActiveCfg = Release|x86
+		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Release|x86.Build.0 = Release|x86
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Debug|x86.Build.0 = Debug|Any CPU
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Release|x86.ActiveCfg = Release|Any CPU
+		{F3ED2946-289C-4DED-9E22-9E749A8B953B}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
