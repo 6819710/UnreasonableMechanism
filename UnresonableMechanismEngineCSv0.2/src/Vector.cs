@@ -194,7 +194,7 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Readonly Property: Unit vector.
         /// </summary>
-        public double Unit
+        public Vector Unit
         {
             get
             {
@@ -219,95 +219,187 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates difference.
+        /// Calculates difference from vector (minuend - subtrahend = difference).
         /// </summary>
         /// <param name="subtrahend">Subtrahend vector.</param>
-        /// <returns>Difference in vectors.</returns>
-        public Vector Difference(Vector subtrahend)
+        /// <returns>Difference.</returns>
+        public Vector DifferenceBy(Vector subtrahend)
         {
             Vector result = this;
 
-            result.I = result.DifferenceInI(subtrahend);
-            result.J = result.DifferenceInJ(subtrahend);
-            result.K = result.DifferenceInK(subtrahend);
+            result.I = result.DifferenceByI(subtrahend);
+            result.J = result.DifferenceByJ(subtrahend);
+            result.K = result.DifferenceByK(subtrahend);
 
             return result;
         }
 
         /// <summary>
-        /// Calculates difference.
+        /// Calculates the difference from minuend (minuend - subtrahend = difference).
+        /// </summary>
+        /// <param name="minuend">Minuend vector.</param>
+        /// <returns>Difference.</returns>
+        public Vector DifferenceFrom(Vector minuend)
+        {
+            Vector result = this;
+
+            result.I = result.DifferenceFromI(minuend);
+            result.J = result.DifferenceFromJ(minuend);
+            result.K = result.DifferenceFromK(minuend);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates difference from vector (minuend - subtrahend = difference).
         /// </summary>
         /// <param name="subtrahend">Subtrahend value.</param>
-        /// <returns>Difference vector.</returns>
-        public Vector Difference(double subtrahend)
+        /// <returns>Difference.</returns>
+        public Vector DifferenceBy(double subtrahend)
         {
             Vector result = this;
 
-            result.I = result.DifferenceInI(subtrahend);
-            result.J = result.DifferenceInJ(subtrahend);
-            result.K = result.DifferenceInK(subtrahend);
+            result.I = result.DifferenceByI(subtrahend);
+            result.J = result.DifferenceByJ(subtrahend);
+            result.K = result.DifferenceByK(subtrahend);
 
             return result;
         }
 
         /// <summary>
-        /// Calculates difference in i.
+        /// Calculates the difference from minuend (minuend - subtrahend = difference).
+        /// </summary>
+        /// <param name="minuend">Minuend value.</param>
+        /// <returns>Difference</returns>
+        public Vector DifferenceFrom(double minuend)
+        {
+            Vector result = this;
+
+            result.I = result.DifferenceFromI(minuend);
+            result.J = result.DifferenceFromJ(minuend);
+            result.K = result.DifferenceFromK(minuend);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates difference from i.
         /// </summary>
         /// <param name="subtrahend">Subtrahend vector.</param>
-        /// <returns>Difference in i</returns>
-        public double DifferenceInI(Vector subtrahend)
+        /// <returns>Difference from i.</returns>
+        public double DifferenceByI(Vector subtrahend)
         {
             return _i - subtrahend.I;
         }
 
         /// <summary>
-        /// Calculates difference in i.
+        /// Calculates difference from minuend.
         /// </summary>
-        /// <param name="i">Value of i.</param>
-        /// <returns>Difference in i.</returns>
-        public double DifferenceInI(double i)
+        /// <param name="minuend">Minuend Vector.</param>
+        /// <returns>Difference from muniend.</returns>
+        public double DifferenceFromI(Vector minuend)
         {
-            return _i - i;
+            return minuend.I - _i;
         }
 
         /// <summary>
-        /// Calculates difference in j.
+        /// Calculates difference from i.
+        /// </summary>
+        /// <param name="subtrahend">Subtrahend value.</param>
+        /// <returns>Difference from i.</returns>
+        public double DifferenceByI(double subtrahend)
+        {
+            return _i - subtrahend;
+        }
+
+        /// <summary>
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="minuend">Minuend Value.</param>
+        /// <returns>Difference from muniend.</returns>
+        public double DifferenceFromI(double minuend)
+        {
+            return minuend - _i;
+        }
+
+        /// <summary>
+        /// Calculates difference from j.
         /// </summary>
         /// <param name="subtrahend">Subtrahend vector.</param>
-        /// <returns>Difference in j.</returns>
-        public double DifferenceInJ(Vector subtrahend)
+        /// <returns>Difference from j.</returns>
+        public double DifferenceByJ(Vector subtrahend)
         {
             return _j - subtrahend.J;
         }
 
         /// <summary>
-        /// Calculates difference in j.
+        /// Calculates difference from minuend.
         /// </summary>
-        /// <param name="j">Value of j.</param>
-        /// <returns>Difference in j.</returns>
-        public double DifferenceInJ(double j)
+        /// <param name="minuend">Minuend Vector.</param>
+        /// <returns>Difference from muniend.</returns>
+        public double DifferenceFromJ(Vector minuend)
         {
-            return _j - j;
+            return minuend.J - _j;
         }
 
         /// <summary>
-        /// Calculates difference in k.
+        /// Calculates difference from j.
+        /// </summary>
+        /// <param name="subtrahend">Subtrahend value.</param>
+        /// <returns>Difference from j.</returns>
+        public double DifferenceByJ(double subtrahend)
+        {
+            return _j - subtrahend;
+        }
+
+        /// <summary>
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="minuend">Minuend Value.</param>
+        /// <returns>Difference from muniend.</returns>
+        public double DifferenceFromJ(double minuend)
+        {
+            return minuend - _j;
+        }
+
+        /// <summary>
+        /// Calculates difference from k.
         /// </summary>
         /// <param name="subtrahend">Subtrahend vector.</param>
-        /// <returns>Difference in k.</returns>
-        public double DifferenceInK(Vector subtrahend)
+        /// <returns>Difference from k.</returns>
+        public double DifferenceByK(Vector subtrahend)
         {
             return _k - subtrahend.K;
         }
 
         /// <summary>
-        /// Calculates difference in k.
+        /// Calculates difference from minuend.
         /// </summary>
-        /// <param name="k">Value of k.</param>
-        /// <returns>Difference in k.</returns>
-        public double DifferenceInK(double k)
+        /// <param name="minuend">Minuend Vector.</param>
+        /// <returns>Difference from muniend.</returns>
+        public double DifferenceFromK(Vector minuend)
         {
-            return _k - k;
+            return minuend.K - _k;
+        }
+
+        /// <summary>
+        /// Calculates difference from k.
+        /// </summary>
+        /// <param name="subtrahend">Subtrahend value.</param>
+        /// <returns>Difference from k.</returns>
+        public double DifferenceByK(double subtrahend)
+        {
+            return _k - subtrahend;
+        }
+
+        /// <summary>
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="minuend">Minuend Value.</param>
+        /// <returns>Difference from muniend.</returns>
+        public double DifferenceFromK(double minuend)
+        {
+            return minuend - _k;
         }
 
         /// <summary>
@@ -359,13 +451,243 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Calculates the product.
+        /// </summary>
+        /// <param name="factor">Factor value.</param>
+        /// <returns>Product.</returns>
+        public Vector Product(double factor)
+        {
+            Vector result = this;
+
+            result.I = result.ProductInI(factor);
+            result.J = result.ProductInJ(factor);
+            result.K = result.ProductInK(factor);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates the product by i.
+        /// </summary>
+        /// <param name="factor">Factor value.</param>
+        /// <returns>Product by i.</returns>
+        public double ProductInI(double factor)
+        {
+            return _i * factor;
+        }
+
+        /// <summary>
+        /// Calculates the product by j.
+        /// </summary>
+        /// <param name="factor">Factor value.</param>
+        /// <returns>Product by j.</returns>
+        public double ProductInJ(double factor)
+        {
+            return _j * factor;
+        }
+
+        /// <summary>
+        /// Calculates the product by k.
+        /// </summary>
+        /// <param name="factor">Factor value.</param>
+        /// <returns>Product by k.</returns>
+        public double ProductInK(double factor)
+        {
+            return _k * factor;
+        }
+
+        /// <summary>
         /// Projects vector onto the vector provided.
         /// </summary>
         /// <param name="vector">Vector to project onto.</param>
         /// <returns>Projected vector.</returns>
         public Vector Project(Vector vector)
         {
-            return this.DotProduct(vector) / vector.Magnitude * vector.Unit;
+            return vector.Unit * (DotProduct(vector) / vector.Magnitude);
+        }
+
+        /// <summary>
+        /// Calculates quotent from divisor.
+        /// </summary>
+        /// <param name="divisior">Divisor value.</param>
+        /// <returns>Quorent.</returns>
+        public Vector QuotentBy(double divisor)
+        {
+            Vector result = this;
+
+            result.I = result.QuotentByI(divisor);
+            result.J = result.QuotentByJ(divisor);
+            result.K = result.QuotentByK(divisor);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates quotent from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quorent.</returns>
+        public Vector QuotentFrom(double dividend)
+        {
+            Vector result = this;
+
+            result.I = result.QuotentFromI(dividend);
+            result.J = result.QuotentFromJ(dividend);
+            result.K = result.QuotentFromK(dividend);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates quotent from i.
+        /// </summary>
+        /// <param name="divisior">Divisor value.</param>
+        /// <returns>Quorent.</returns>
+        public double QuotentByI(double divisor)
+        {
+            return _i / divisor;
+        }
+
+        /// <summary>
+        /// Calculates quotent from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quorent.</returns>
+        public double QuotentFromI(double dividend)
+        {
+            return dividend / _i;
+        }
+
+        /// <summary>
+        /// Calculates quotent from j.
+        /// </summary>
+        /// <param name="divisior">Divisor value.</param>
+        /// <returns>Quorent.</returns>
+        public double QuotentByJ(double divisor)
+        {
+            return _j / divisor;
+        }
+
+        /// <summary>
+        /// Calculates quotent from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quorent.</returns>
+        public double QuotentFromJ(double dividend)
+        {
+            return dividend / _i;
+        }
+
+        /// <summary>
+        /// Calculates quotent from k.
+        /// </summary>
+        /// <param name="divisior">Divisor value.</param>
+        /// <returns>Quorent.</returns>
+        public double QuotentByK(double divisor)
+        {
+            return _k / divisor;
+        }
+
+        /// <summary>
+        /// Calculates quotent from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quorent.</returns>
+        public double QuotentFromK(double dividend)
+        {
+            return dividend / _k;
+        }
+
+        /// <summary>
+        /// Calculates sum.
+        /// </summary>
+        /// <param name="addend">Addend vector.</param>
+        /// <returns>Sum of vectors.</returns>
+        public Vector Sum(Vector addend)
+        {
+            Vector result = this;
+
+            result.I = result.SumInI(addend);
+            result.J = result.SumInJ(addend);
+            result.K = result.SumInK(addend);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates sum.
+        /// </summary>
+        /// <param name="addend">Addend value.</param>
+        /// <returns>Sum.</returns>
+        public Vector Sum(double addend)
+        {
+            Vector result = this;
+
+            result.I = result.SumInI(addend);
+            result.J = result.SumInJ(addend);
+            result.K = result.SumInK(addend);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates sum of i.
+        /// </summary>
+        /// <param name="addend">Addend vector.</param>
+        /// <returns>Sum of i.</returns>
+        public double SumInI(Vector addend)
+        {
+            return _i + addend.I;
+        }
+
+        /// <summary>
+        /// Calculates sum of i.
+        /// </summary>
+        /// <param name="i">Value of i.</param>
+        /// <returns>Sum of i.</returns>
+        public double SumInI(double i)
+        {
+            return _i + i;
+        }
+
+        /// <summary>
+        /// Calculates sum of j.
+        /// </summary>
+        /// <param name="addend">Addend vector.</param>
+        /// <returns>Sum of j.</returns>
+        public double SumInJ(Vector addend)
+        {
+            return _j + addend.J;
+        }
+
+        /// <summary>
+        /// Calculates sum of j.
+        /// </summary>
+        /// <param name="j">Value of j.</param>
+        /// <returns>Sum of j.</returns>
+        public double SumInJ(double j)
+        {
+            return _j + j;
+        }
+
+        /// <summary>
+        /// Calculates sum of k.
+        /// </summary>
+        /// <param name="addend">Addend vector.</param>
+        /// <returns>Sum of k.</returns>
+        public double SumInK(Vector addend)
+        {
+            return _k + addend.K;
+        }
+
+        /// <summary>
+        /// Calculates sum of k.
+        /// </summary>
+        /// <param name="k">Value of k.</param>
+        /// <returns>Sum of k.</returns>
+        public double SumInK(double k)
+        {
+            return _k + k;
         }
 
         public override string ToString()
@@ -392,42 +714,57 @@ namespace UnreasonableMechanismEngineCS
 
         public static Vector operator+ (Vector left, Vector right)
         {
-            return new Vector();
+            return left.Sum(right);
         }
 
         public static Vector operator+ (Vector left, double right)
         {
-            return new Vector();
+            return left.Sum(right);
+        }
+
+        public static Vector operator+ (double left, Vector right)
+        {
+            return right.Sum(left);
         }
 
         public static Vector operator- (Vector left, Vector right)
         {
-            return left.Difference(right);
+            return left.DifferenceBy(right);
         }
 
         public static Vector operator- (Vector left, double right)
         {
-            return left.Difference(right);
+            return left.DifferenceBy(right);
+        }
+
+        public static Vector operator- (double left, Vector right)
+        {
+            return right.DifferenceFrom(left);
         }
 
         public static Vector operator* (Vector left, Vector right)
         {
-            return new Vector();
+            return left.CrossProduct(right);
         }
 
         public static Vector operator* (Vector left, double right)
         {
-            return new Vector();
+            return left.Product(right);
         }
 
-        public static Vector operator/ (Vector left, Vector right)
+        public static Vector operator* (double left, Vector right)
         {
-            return new Vector();
+            return right.Product(left);
         }
 
         public static Vector operator/ (Vector left, double right)
         {
-            return new Vector();
+            return left.QuotentBy(right);
+        }
+
+        public static Vector operator/ (double left, Vector right)
+        {
+            return right.QuotentFrom(left);
         }
     }
 }
