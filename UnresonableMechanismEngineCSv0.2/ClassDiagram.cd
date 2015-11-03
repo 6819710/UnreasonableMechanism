@@ -15,9 +15,9 @@
     </TypeIdentifier>
   </Struct>
   <Struct Name="UnreasonableMechanismEngineCS.Vector">
-    <Position X="3" Y="0.5" Width="2" />
+    <Position X="3" Y="0.5" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAIAAAAAAgAEoABACABwQAAgAIAAAQBAAeEBAAA=</HashCode>
+      <HashCode>AAACTgIAAAABAgAE4AVACAAAAAAgAIAQAQBAAekBIiQ=</HashCode>
       <FileName>src\Vector.cs</FileName>
     </TypeIdentifier>
   </Struct>

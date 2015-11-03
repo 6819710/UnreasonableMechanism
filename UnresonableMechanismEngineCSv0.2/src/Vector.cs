@@ -690,6 +690,15 @@ namespace UnreasonableMechanismEngineCS
             return _k + k;
         }
 
+        /// <summary>
+        /// Converts vector to point.
+        /// </summary>
+        /// <returns>Point.</returns>
+        public Point ToPoint()
+        {
+            return new Point(_i, _j, _k);
+        }
+
         public override string ToString()
         {
             if (_k == 0)

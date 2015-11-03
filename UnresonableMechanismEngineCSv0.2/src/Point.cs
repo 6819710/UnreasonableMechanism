@@ -528,6 +528,15 @@ namespace UnreasonableMechanismEngineCS
             }
         }
 
+        /// <summary>
+        /// Converts vector to point.
+        /// </summary>
+        /// <returns>Vector.</returns>
+        public Vector ToVector()
+        {
+            return new Vector(_x, _y, _z);
+        }
+
         public static bool operator ==(Point left, Point right)
         {
             return left.Equals(right);
