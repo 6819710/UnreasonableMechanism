@@ -34,9 +34,22 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Constructs a polygon using an array of vertices (point) and location.
+        /// </summary>
+        /// <param name="vertices">Array of vertices (point).</param>
+        /// <param name="location">Location (point).</param>
+        public Polygon(Point[] vertices, Point location)
+        {
+            _vertices = new List<Point>(vertices);
+            _edges = new List<Vector>();
+            BuildEdges();
+            Offset(new Vector(Center, location));
+        }
+
+        /// <summary>
         /// Readonly Property: Center point of polygon (calculated).
         /// </summary>
-        public Point center
+        public Point Center
         {
             get
             {
@@ -84,6 +97,18 @@ namespace UnreasonableMechanismEngineCS
                 {
                     _edges.Add(new Vector(_vertices[i], _vertices[i + 1]));
                 }
+            }
+        }
+
+        /// <summary>
+        /// Offsets the polygon by the given movment vector.
+        /// </summary>
+        /// <param name="movement">Movement vector.</param>
+        public void Offset(Vector movement)
+        {
+            foreach(Point vertex in _vertices)
+            {
+                vertex.Offset(movement);
             }
         }
     }
