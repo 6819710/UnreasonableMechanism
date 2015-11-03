@@ -388,12 +388,12 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Offsets the point by the given point.
+        /// Offsets the point by the given movement vector.
         /// </summary>
-        /// <param name="point">Distance to offset.</param>
-        public void Offset(Point point)
+        /// <param name="point">Movement vector.</param>
+        public void Offset(Vector movement)
         {
-            this = Sum(point);
+            this = Sum(movement.ToPoint());
         }
 
         /// <summary>
