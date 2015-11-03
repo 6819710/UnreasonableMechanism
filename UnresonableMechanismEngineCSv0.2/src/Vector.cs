@@ -33,9 +33,9 @@ namespace UnreasonableMechanismEngineCS
         /// <param name="from">From point.</param>
         public Vector(Point to, Point from)
         {
-            _i = to.DifferenceInX(from);
-            _j = to.DifferenceInY(from);
-            _k = to.DifferenceInZ(from);
+            _i = to.DifferenceByX(from);
+            _j = to.DifferenceByY(from);
+            _k = to.DifferenceByZ(from);
         }
 
         /// <summary>
