@@ -30,6 +30,7 @@ namespace UnreasonableMechanismEngineCS
         {
             _vertices = new List<Point>(vertices);
             _edges = new List<Vector>();
+            BuildEdges();
         }
 
         /// <summary>
@@ -67,6 +68,22 @@ namespace UnreasonableMechanismEngineCS
             get
             {
                 return _vertices;
+            }
+        }
+
+        private void BuildEdges()
+        {
+            _edges.Clear();
+            for (int i = 0; i < _vertices.Count; ++i)
+            {
+                if (i + 1 >= _vertices.Count)
+                {
+                    _edges.Add(new Vector(_vertices[i], _vertices[0]));
+                }
+                else
+                {
+                    _edges.Add(new Vector(_vertices[i], _vertices[i + 1]));
+                }
             }
         }
     }
