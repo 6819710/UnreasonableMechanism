@@ -169,79 +169,187 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates difference.
+        /// Calculates difference from point.
         /// </summary>
         /// <param name="subtrahend">Subtrahend point.</param>
-        /// <returns>Difference in points.</returns>
-        public Point Difference(Point subtrahend)
+        /// <returns>Difference from point.</returns>
+        public Point DifferenceBy(Point subtrahend)
         {
             Point result = this;
 
-            result.X -= result.DifferenceInX(subtrahend);
-            result.Y -= result.DifferenceInY(subtrahend);
-            result.Z -= result.DifferenceInZ(subtrahend);
+            result.X -= result.DifferenceByX(subtrahend);
+            result.Y -= result.DifferenceByY(subtrahend);
+            result.Z -= result.DifferenceByZ(subtrahend);
 
             return new Point();
         }
 
         /// <summary>
-        /// Calculates difference in x.
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="minuend">Minuend point.</param>
+        /// <returns>Difference from minuend.</returns>
+        public Point DifferenceFrom(Point minuend)
+        {
+            Point result = this;
+
+            result.X -= result.DifferenceFromX(minuend);
+            result.Y -= result.DifferenceFromY(minuend);
+            result.Z -= result.DifferenceFromZ(minuend);
+
+            return new Point();
+        }
+
+        /// <summary>
+        /// Calculates difference from point.
+        /// </summary>
+        /// <param name="subtrahend">Subtrahend value.</param>
+        /// <returns>Difference from point.</returns>
+        public Point DifferenceBy(double subtrahend)
+        {
+            Point result = this;
+
+            result.X -= result.DifferenceByX(subtrahend);
+            result.Y -= result.DifferenceByY(subtrahend);
+            result.Z -= result.DifferenceByZ(subtrahend);
+
+            return new Point();
+        }
+
+        /// <summary>
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="minuend">Minuend value.</param>
+        /// <returns>Difference from minuend.</returns>
+        public Point DifferenceFrom(double minuend)
+        {
+            Point result = this;
+
+            result.X -= result.DifferenceFromX(minuend);
+            result.Y -= result.DifferenceFromY(minuend);
+            result.Z -= result.DifferenceFromZ(minuend);
+
+            return new Point();
+        }
+
+        /// <summary>
+        /// Calculates difference from point.
         /// </summary>
         /// <param name="subtrahend">Subtrahend point.</param>
-        /// <returns>Difference in x.</returns>
-        public double DifferenceInX(Point subtrahend)
+        /// <returns>Difference from point.</returns>
+        public double DifferenceByX(Point subtrahend)
         {
             return _x - subtrahend.X;
         }
 
         /// <summary>
-        /// Calculates difference in x.
+        /// Calculates difference from minuend.
         /// </summary>
-        /// <param name="x">Value of x.</param>
-        /// <returns>Difference in x.</returns>
-        public double DifferenceInX(double x)
+        /// <param name="minuend">Minuend point.</param>
+        /// <returns>Difference from minuend.</returns>
+        public double DifferenceFromX(Point minuend)
         {
-            return _x - x;
+            return minuend.X - _x;
         }
 
         /// <summary>
-        /// Calculates difference in y.
+        /// Calculates difference from point.
+        /// </summary>
+        /// <param name="subtrahend">Subtrahend value.</param>
+        /// <returns>Difference from point.</returns>
+        public double DifferenceByX(double subtrahend)
+        {
+            return _x - subtrahend;
+        }
+
+        /// <summary>
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="munuend">Minuend value.</param>
+        /// <returns>Difference from minuend.</returns>
+        public double DifferenceFromX(double munuend)
+        {
+            return munuend - _x;
+        }
+
+        /// <summary>
+        /// Calculates difference from point.
         /// </summary>
         /// <param name="subtrahend">Subtrahend point.</param>
-        /// <returns>Difference in y.</returns>
-        public double DifferenceInY(Point subtrahend)
+        /// <returns>Difference from point.</returns>
+        public double DifferenceByY(Point subtrahend)
         {
             return _y - subtrahend.Y;
         }
 
         /// <summary>
-        /// Calculates difference in y.
+        /// Calculates difference from minuend.
         /// </summary>
-        /// <param name="y">Value of y.</param>
-        /// <returns>Difference in y.</returns>
-        public double DifferenceInY(double y)
+        /// <param name="minuend">Minuend point.</param>
+        /// <returns>Difference from minuend.</returns>
+        public double DifferenceFromY(Point minuend)
         {
-            return _y - y;
+            return minuend.Y - _y;
         }
 
         /// <summary>
-        /// Calculates difference in z.
+        /// Calculates difference from point.
+        /// </summary>
+        /// <param name="subtrahend">Subtrahend value.</param>
+        /// <returns>Difference from point.</returns>
+        public double DifferenceByY(double subtrahend)
+        {
+            return _y - subtrahend;
+        }
+
+        /// <summary>
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="minuend">Minuend value.</param>
+        /// <returns>Difference from minuend.</returns>
+        public double DifferenceFromY(double minuend)
+        {
+            return minuend - _y;
+        }
+
+        /// <summary>
+        /// Calculates difference from point.
         /// </summary>
         /// <param name="subtrahend">Subtrahend point.</param>
-        /// <returns>Difference in z.</returns>
-        public double DifferenceInZ(Point subtrahend)
+        /// <returns>Difference from point.</returns>
+        public double DifferenceByZ(Point subtrahend)
         {
             return _z - subtrahend.Z;
         }
 
         /// <summary>
-        /// Calculates difference in z.
+        /// Calculates difference from minuend.
         /// </summary>
-        /// <param name="z">Value of z.</param>
-        /// <returns>Difference in z.</returns>
-        public double DifferenceInZ(double z)
+        /// <param name="minuend">Minuend point.</param>
+        /// <returns>Difference from minuend.</returns>
+        public double DifferenceFromZ(Point minuend)
         {
-            return _z - z;
+            return minuend.Z - _z;
+        }
+
+        /// <summary>
+        /// Calculates difference from point.
+        /// </summary>
+        /// <param name="subtrahend">Subtrahend value.</param>
+        /// <returns>Difference from point.</returns>
+        public double DifferenceByZ(double subtrahend)
+        {
+            return _z - subtrahend;
+        }
+
+        /// <summary>
+        /// Calculates difference from minuend.
+        /// </summary>
+        /// <param name="minuend">Minuend value.</param>
+        /// <returns>Difference from minuend.</returns>
+        public double DifferenceFromZ(double minuend)
+        {
+            return minuend - _z;
         }
 
         /// <summary>
@@ -292,8 +400,24 @@ namespace UnreasonableMechanismEngineCS
         /// Calculates product.
         /// </summary>
         /// <param name="multiplier">Multiplier point.</param>
-        /// <returns>Product of points.</returns>
+        /// <returns>Product.</returns>
         public Point Product(Point multiplier)
+        {
+            Point result = this;
+
+            result.X = result.ProductInX(multiplier);
+            result.Y = result.ProductInY(multiplier);
+            result.Z = result.ProductInZ(multiplier);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates product.
+        /// </summary>
+        /// <param name="multiplier">Multiplier value.</param>
+        /// <returns>Product.</returns>
+        public Point Product(double multiplier)
         {
             Point result = this;
 
@@ -365,87 +489,211 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates quotient.
+        /// Calculates quotient from point.
         /// </summary>
         /// <param name="divisor">Divisor point.</param>
-        /// <returns>Quotient of points.</returns>
-        public Point Quotient(Point divisor)
+        /// <returns>Quotient from point.</returns>
+        public Point QuotientBy(Point divisor)
         {
             Point result = this;
 
-            result.X = result.QuotientInX(divisor);
-            result.Y = result.QuotientInY(divisor);
-            result.Z = result.QuotientInZ(divisor);
+            result.X = result.QuotientByX(divisor);
+            result.Y = result.QuotientByY(divisor);
+            result.Z = result.QuotientByZ(divisor);
 
             return result;
         }
 
         /// <summary>
-        /// Calculates quotient of x.
+        /// Calculates quotient from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend point.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public Point QuotientFrom(Point dividend)
+        {
+            Point result = this;
+
+            result.X = result.QuotientFromX(dividend);
+            result.Y = result.QuotientFromY(dividend);
+            result.Z = result.QuotientFromZ(dividend);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates quotient from point.
+        /// </summary>
+        /// <param name="divisor">Divisor value.</param>
+        /// <returns>Quotient from point.</returns>
+        public Point QuotientBy(double divisor)
+        {
+            Point result = this;
+
+            result.X = result.QuotientByX(divisor);
+            result.Y = result.QuotientByY(divisor);
+            result.Z = result.QuotientByZ(divisor);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates quotient from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public Point QuotientFrom(double dividend)
+        {
+            Point result = this;
+
+            result.X = result.QuotientFromX(dividend);
+            result.Y = result.QuotientFromY(dividend);
+            result.Z = result.QuotientFromZ(dividend);
+
+            return result;
+        }
+
+        /// <summary>
+        /// Calculates quotient from point.
         /// </summary>
         /// <param name="divisor">Divisor point.</param>
-        /// <returns>Quotient of x.</returns>
-        public double QuotientInX(Point divisor)
+        /// <returns>Quotient from point.</returns>
+        public double QuotientByX(Point divisor)
         {
             return _x / divisor.X;
         }
 
         /// <summary>
-        /// Calculates quotient of x.
+        /// Calculates quotient from dividend.
         /// </summary>
-        /// <param name="x">Value of x.</param>
-        /// <returns>Quotient of x.</returns>
-        public double QuotientInX(double x)
+        /// <param name="dividend">Dividend point.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public double QuotientFromX(Point dividend)
         {
-            return _x / x;
+            return dividend.X / _x;
         }
 
         /// <summary>
-        /// Calculates quotient of y.
+        /// Calculates quotient from point.
+        /// </summary>
+        /// <param name="divisor">Divisor value.</param>
+        /// <returns>Quotient from point.</returns>
+        public double QuotientByX(double divisor)
+        {
+            return _x / divisor;
+        }
+
+        /// <summary>
+        /// Calculates quotient from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public double QuotientFromX(double dividend)
+        {
+            return dividend / _y;
+        }
+
+        /// <summary>
+        /// Calculates quotient from point.
         /// </summary>
         /// <param name="divisor">Divisor point.</param>
-        /// <returns>Quotient of y.</returns>
-        public double QuotientInY(Point divisor)
+        /// <returns>Quotient from point.</returns>
+        public double QuotientByY(Point divisor)
         {
             return _y / divisor.Y;
         }
 
         /// <summary>
-        /// Calculates quotient of y.
+        /// Calculates quotient from dividend.
         /// </summary>
-        /// <param name="y">Value of y.</param>
-        /// <returns>Quotient of y.</returns>
-        public double QuotientInY(double y)
+        /// <param name="dividend">Dividend point.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public double QuotientFromY(Point dividend)
         {
-            return _y / y;
+            return dividend.Y / _y;
         }
 
         /// <summary>
-        /// Calculates quotient of z.
+        /// Calculates quotient from point.
+        /// </summary>
+        /// <param name="divisor">Divisor value.</param>
+        /// <returns>Quotient from point.</returns>
+        public double QuotientByY(double divisor)
+        {
+            return _y / divisor;
+        }
+
+        /// <summary>
+        /// Calculates quotient from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public double QuotientFromY(double dividend)
+        {
+            return dividend / _y;
+        }
+
+        /// <summary>
+        /// Calculates quotient from point.
         /// </summary>
         /// <param name="divisor">Divisor point.</param>
-        /// <returns>Quotient of z.</returns>
-        public double QuotientInZ(Point divisor)
+        /// <returns>Quotient from point.</returns>
+        public double QuotientByZ(Point divisor)
         {
             return _z / divisor.Z;
         }
 
         /// <summary>
-        /// Calculates quotient of z.
+        /// Calculates quotient from dividend.
         /// </summary>
-        /// <param name="z">Value of z.</param>
-        /// <returns>Quotient of z.</returns>
-        public double QuotientInZ(double z)
+        /// <param name="dividend">Dividend point.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public double QuotientFromZ(Point dividend)
         {
-            return _z / z;
+            return dividend.Z / _z;
+        }
+
+        /// <summary>
+        /// Calculates quotient from point.
+        /// </summary>
+        /// <param name="divisor">Divisor value.</param>
+        /// <returns>Quotient from point.</returns>
+        public double QuotientByZ(double divisor)
+        {
+            return _z / divisor;
+        }
+
+        /// <summary>
+        /// Calculates quotient from dividend.
+        /// </summary>
+        /// <param name="dividend">Dividend value.</param>
+        /// <returns>Quotient from dividend.</returns>
+        public double QuotientFromZ(double dividend)
+        {
+            return dividend / _z;
         }
 
         /// <summary>
         /// Calculates sum.
         /// </summary>
         /// <param name="addend">Addend point.</param>
-        /// <returns>Sum of points.</returns>
+        /// <returns>Sum.</returns>
         public Point Sum(Point addend)
+        {
+            Point result = this;
+
+            result.X += result.SumInX(addend);
+            result.Y += result.SumInY(addend);
+            result.Z += result.SumInZ(addend);
+
+            return new Point();
+        }
+
+        /// <summary>
+        /// Calculates sum.
+        /// </summary>
+        /// <param name="addend">Addend value.</param>
+        /// <returns>Sum.</returns>
+        public Point Sum(double addend)
         {
             Point result = this;
 
@@ -552,9 +800,29 @@ namespace UnreasonableMechanismEngineCS
             return left.Sum(right);
         }
 
-        public static Point operator -(Point left, Point right)
+        public static Point operator+ (Point left, double right)
         {
-            return left.Difference(right);
+            return left.Sum(right);
+        }
+
+        public static Point operator+ (double left, Point right)
+        {
+            return right.Sum(left);
+        }
+
+        public static Point operator- (Point left, Point right)
+        {
+            return left.DifferenceBy(right);
+        }
+
+        public static Point operator- (Point left, double right)
+        {
+            return left.DifferenceBy(right);
+        }
+
+        public static Point operator- (double left, Point right)
+        {
+            return right.DifferenceFrom(left);
         }
 
         public static Point operator* (Point left, Point right)
@@ -562,9 +830,29 @@ namespace UnreasonableMechanismEngineCS
             return left.Product(right);
         }
 
+        public static Point operator* (Point left, double right)
+        {
+            return left.Product(right);
+        }
+
+        public static Point operator* (double left, Point right)
+        {
+            return right.Product(left);
+        }
+
         public static Point operator/ (Point left, Point right)
         {
-            return left.Quotient(right);
+            return left.QuotientBy(right);
+        }
+
+        public static Point operator/ (Point left, double right)
+        {
+            return left.QuotientBy(right);
+        }
+
+        public static Point operator/ (double left, Point right)
+        {
+            return right.QuotientFrom(left);
         }
     }
 }
