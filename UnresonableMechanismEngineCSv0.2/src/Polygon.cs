@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SwinGameSDK;
 
 namespace UnreasonableMechanismEngineCS
 {
@@ -97,6 +98,61 @@ namespace UnreasonableMechanismEngineCS
                 {
                     _edges.Add(new Vector(_vertices[i], _vertices[i + 1]));
                 }
+            }
+        }
+
+        /// <summary>
+        /// Draws polygon edges;
+        /// </summary>
+        /// <param name="clr">Colour to draw edges.</param>
+        public void DrawEdge(Color clr)
+        {
+            for(int i = 0; i < _vertices.Count; i++)
+            {
+                _edges[i].Draw(clr, _vertices[i]);
+            }
+        }
+
+        /// <summary>
+        /// Draws polygon face.
+        /// </summary>
+        /// <param name="clr">Colour to draw face.</param>
+        public void DrawFace(Color clr)
+        {
+            for(int i = 0; i < _vertices.Count; i++)
+            {
+                float x = (float)Center.X;
+                float y = (float)Center.Y;
+
+                float x1 = (float)_vertices[i].X;
+                float y1 = (float)_vertices[i].Y;
+
+                float x2, y2;
+
+                if (i + 1 >= _vertices.Count)
+                {
+                    x2 = (float)_vertices[0].X;
+                    y2 = (float)_vertices[0].Y;
+                }
+                else
+                {
+                    x2 = (float)_vertices[i + 1].X;
+                    y2 = (float)_vertices[i + 1].Y;
+                }
+
+                SwinGame.FillTriangle(clr, x, y, x1, y1, x2, y2);
+            }
+        }
+
+        /// <summary>
+        /// Draws polygon vertices.
+        /// </summary>
+        /// <param name="clr">Color to draw vertices.</param>
+        public void DrawVertex(Color clr)
+        {
+            foreach(Point vertex in _vertices)
+            {
+                vertex.Draw(clr);
             }
         }
 
