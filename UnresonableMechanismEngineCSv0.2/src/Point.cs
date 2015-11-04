@@ -177,11 +177,11 @@ namespace UnreasonableMechanismEngineCS
         {
             Point result = this;
 
-            result.X -= result.DifferenceByX(subtrahend);
-            result.Y -= result.DifferenceByY(subtrahend);
-            result.Z -= result.DifferenceByZ(subtrahend);
+            result.X = result.DifferenceByX(subtrahend);
+            result.Y = result.DifferenceByY(subtrahend);
+            result.Z = result.DifferenceByZ(subtrahend);
 
-            return new Point();
+            return result;
         }
 
         /// <summary>
@@ -193,11 +193,11 @@ namespace UnreasonableMechanismEngineCS
         {
             Point result = this;
 
-            result.X -= result.DifferenceFromX(minuend);
-            result.Y -= result.DifferenceFromY(minuend);
-            result.Z -= result.DifferenceFromZ(minuend);
+            result.X = result.DifferenceFromX(minuend);
+            result.Y = result.DifferenceFromY(minuend);
+            result.Z = result.DifferenceFromZ(minuend);
 
-            return new Point();
+            return result;
         }
 
         /// <summary>
@@ -209,11 +209,11 @@ namespace UnreasonableMechanismEngineCS
         {
             Point result = this;
 
-            result.X -= result.DifferenceByX(subtrahend);
-            result.Y -= result.DifferenceByY(subtrahend);
-            result.Z -= result.DifferenceByZ(subtrahend);
+            result.X = result.DifferenceByX(subtrahend);
+            result.Y = result.DifferenceByY(subtrahend);
+            result.Z = result.DifferenceByZ(subtrahend);
 
-            return new Point();
+            return result;
         }
 
         /// <summary>
@@ -225,11 +225,11 @@ namespace UnreasonableMechanismEngineCS
         {
             Point result = this;
 
-            result.X -= result.DifferenceFromX(minuend);
-            result.Y -= result.DifferenceFromY(minuend);
-            result.Z -= result.DifferenceFromZ(minuend);
+            result.X = result.DifferenceFromX(minuend);
+            result.Y = result.DifferenceFromY(minuend);
+            result.Z = result.DifferenceFromZ(minuend);
 
-            return new Point();
+            return result;
         }
 
         /// <summary>
