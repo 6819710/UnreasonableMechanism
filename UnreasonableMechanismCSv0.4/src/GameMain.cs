@@ -24,7 +24,7 @@ namespace UnreasonableMechanismCS
                 new Point(0, 0),
                 new Point(20, 0),
                 new Point(0, 80)
-            });
+            }, new Point(100, 100));
 
 
 

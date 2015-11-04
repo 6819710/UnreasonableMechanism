@@ -44,7 +44,7 @@ namespace UnreasonableMechanismEngineCS
             _vertices = new List<Point>(vertices);
             _edges = new List<Vector>();
             BuildEdges();
-            Offset(new Vector(Center, location));
+            Offset(new Vector(location, Center));
         }
 
         /// <summary>
