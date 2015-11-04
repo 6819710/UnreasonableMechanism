@@ -21,10 +21,10 @@ namespace UnreasonableMechanismCS
         {
             Polygon polygon = new Polygon(new Point[]
             {
-                new Point(20, 30),
-                new Point(20, 80),
-                new Point(50, 80)
-            });
+                new Point(0, 0),
+                new Point(20, 0),
+                new Point(0, 80)
+            }, new Point(100, 100));
 
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
@@ -47,6 +47,8 @@ namespace UnreasonableMechanismCS
                 
                 polygon.DrawFace(Color.Goldenrod);
                 polygon.DrawEdge(Color.DarkGoldenrod);
+
+                polygon.Center.Draw(Color.Red);
 
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
