@@ -96,85 +96,123 @@ namespace UnreasonableMechanismEngineCS.Tests
         [Test()]
         public void DifferenceByXTest1()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+
+            Assert.AreEqual(1, a.DifferenceByX(1), "error in a.x - 1");
+            Assert.AreEqual(0, a.DifferenceByX(2), "error in a.x - 2");
         }
 
         [Test()]
         public void DifferenceFromXTest1()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+
+            Assert.AreEqual(0, a.DifferenceFromX(2), "error in 2 - a.x");
+            Assert.AreEqual(-1, a.DifferenceFromX(1), "error in 1 - a.x");
         }
 
         [Test()]
         public void DifferenceByYTest()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+            Point b = new Point(3, 6, 9);
+
+            Assert.AreEqual(-3, a.DifferenceByY(b), "error in a.y - b.y");
+            Assert.AreEqual(3, b.DifferenceByY(a), "error in b.y - a.y");
         }
 
         [Test()]
         public void DifferenceFromYTest()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+            Point b = new Point(3, 6, 9);
+
+            Assert.AreEqual(-3, b.DifferenceFromY(a), "error in a.y - b.y");
+            Assert.AreEqual(3, a.DifferenceFromY(b), "error in b.y - a.y");
         }
 
         [Test()]
         public void DifferenceByYTest1()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+
+            Assert.AreEqual(2, a.DifferenceByY(1), "error in a.y - 1");
+            Assert.AreEqual(1, a.DifferenceByY(2), "error in a.y - 2");
         }
 
         [Test()]
         public void DifferenceFromYTest1()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+
+            Assert.AreEqual(-1, a.DifferenceFromY(2), "error in 2 - a.x");
+            Assert.AreEqual(-2, a.DifferenceFromY(1), "error in 1 - a.x");
         }
 
         [Test()]
         public void DifferenceByZTest()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+            Point b = new Point(3, 6, 9);
+
+            Assert.AreEqual(-5, a.DifferenceByZ(b), "error in a.z - b.z");
+            Assert.AreEqual(5, b.DifferenceByZ(a), "error in b.z - a.z");
         }
 
         [Test()]
         public void DifferenceFromZTest()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+            Point b = new Point(3, 6, 9);
+
+            Assert.AreEqual(-5, b.DifferenceFromZ(a), "error in a.z - b.z");
+            Assert.AreEqual(5, a.DifferenceFromZ(b), "error in b.z - a.z");
         }
 
         [Test()]
         public void DifferenceByZTest1()
         {
-            Assert.Fail();
+            Point a = new Point(2, 3, 4);
+
+            Assert.AreEqual(3, a.DifferenceByZ(1), "error in a.z - 1");
+            Assert.AreEqual(2, a.DifferenceByZ(2), "error in a.z - 2");
         }
 
         [Test()]
         public void DifferenceFromZTest1()
         {
-            Assert.Fail();
-        }
+            Point a = new Point(2, 3, 4);
 
-        [Test()]
-        public void DrawTest()
-        {
-            Assert.Fail();
+            Assert.AreEqual(-2, a.DifferenceFromZ(2), "error in 2 - a.x");
+            Assert.AreEqual(-3, a.DifferenceFromZ(1), "error in 1 - a.x");
         }
 
         [Test()]
         public void EqualsTest()
         {
-            Assert.Fail();
+            Point a = new Point(1, 2, 3);
+            Point b = new Point(1, 2, 3);
+            Point c = new Point(2, 3, 4);
+
+            Assert.IsTrue(a.Equals(b));
+            Assert.IsFalse(a.Equals(c));
         }
 
         [Test()]
         public void GetHashCodeTest()
         {
-            Assert.Fail();
+            Point a = new Point(1, 2, 3);
+
+            Assert.AreEqual(1 ^ 2 ^ 3, a.GetHashCode());
         }
 
         [Test()]
         public void OffsetTest()
         {
-            Assert.Fail();
+            Point a = new Point(1, 2, 3);
+            Vector movement = new Vector(2, 2, 2);
+
+            Assert.AreEqual(new Point(3, 4, 5), a.Offset(movement));
         }
 
         [Test()]

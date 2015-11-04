@@ -24,7 +24,9 @@ namespace UnreasonableMechanismCS
                 new Point(0, 0),
                 new Point(20, 0),
                 new Point(0, 80)
-            }, new Point(100, 100));
+            });
+
+
 
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
@@ -40,6 +42,8 @@ namespace UnreasonableMechanismCS
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
+
+                polygon.Offset(new UnreasonableMechanismEngineCS.Vector(1, 1));
 
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.Black);

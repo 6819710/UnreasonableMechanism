@@ -391,9 +391,9 @@ namespace UnreasonableMechanismEngineCS
         /// Offsets the point by the given movement vector.
         /// </summary>
         /// <param name="point">Movement vector.</param>
-        public void Offset(Vector movement)
+        public Point Offset(Vector movement)
         {
-            this = Sum(movement.ToPoint());
+            return Sum(movement.ToPoint());
         }
 
         /// <summary>
@@ -681,11 +681,11 @@ namespace UnreasonableMechanismEngineCS
         {
             Point result = this;
 
-            result.X += result.SumInX(addend);
-            result.Y += result.SumInY(addend);
-            result.Z += result.SumInZ(addend);
+            result.X = result.SumInX(addend);
+            result.Y = result.SumInY(addend);
+            result.Z = result.SumInZ(addend);
 
-            return new Point();
+            return result;
         }
 
         /// <summary>
@@ -697,11 +697,11 @@ namespace UnreasonableMechanismEngineCS
         {
             Point result = this;
 
-            result.X += result.SumInX(addend);
-            result.Y += result.SumInY(addend);
-            result.Z += result.SumInZ(addend);
+            result.X = result.SumInX(addend);
+            result.Y = result.SumInY(addend);
+            result.Z = result.SumInZ(addend);
 
-            return new Point();
+            return result;
         }
 
         /// <summary>

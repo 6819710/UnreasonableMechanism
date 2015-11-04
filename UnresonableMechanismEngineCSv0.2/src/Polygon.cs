@@ -92,11 +92,11 @@ namespace UnreasonableMechanismEngineCS
             {
                 if (i + 1 >= _vertices.Count)
                 {
-                    _edges.Add(new Vector(_vertices[i], _vertices[0]));
+                    _edges.Add(new Vector(_vertices[0], _vertices[i]));
                 }
                 else
                 {
-                    _edges.Add(new Vector(_vertices[i], _vertices[i + 1]));
+                    _edges.Add(new Vector(_vertices[i + 1], _vertices[i]));
                 }
             }
         }
@@ -162,9 +162,9 @@ namespace UnreasonableMechanismEngineCS
         /// <param name="movement">Movement vector.</param>
         public void Offset(Vector movement)
         {
-            foreach(Point vertex in _vertices)
+            for(int i = 0; i < _vertices.Count; i++)
             {
-                vertex.Offset(movement);
+                _vertices[i] = _vertices[i].Offset(movement);
             }
         }
     }
