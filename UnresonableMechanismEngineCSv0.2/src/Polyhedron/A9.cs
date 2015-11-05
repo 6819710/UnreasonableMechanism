@@ -66,7 +66,12 @@ namespace UnreasonableMechanismEngineCS
             new Polygon(new Point[] { _vertices[23], _vertices[17], _vertices[18] })
         };
 
-        public A9(double scale):base(_faces)
+        public A9(double scale) : base(_faces)
+        {
+            base.Scale(scale);
+        }
+
+        public A9(double scale, Point location) : base(_faces, location)
         {
             base.Scale(scale);
         }
