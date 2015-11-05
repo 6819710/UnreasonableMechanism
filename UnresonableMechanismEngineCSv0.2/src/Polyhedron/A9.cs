@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnreasonableMechanismEngineCS
 {
-    class A9:Polyhedron
+    public class A9:Polyhedron
     {
         private static List<Point> _vertices = new List<Point>(new Point[]
         {
@@ -68,7 +68,7 @@ namespace UnreasonableMechanismEngineCS
 
         public A9(double scale):base(_faces)
         {
-            base.Scale(scale)
+            base.Scale(scale);
         }
     }
 }
