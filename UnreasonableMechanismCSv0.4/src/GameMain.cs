@@ -19,17 +19,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public static void Main()
         {
-            Point A = new Point(0, 0, 0);
-            Point B = new Point(1, 0, 0);
-            Point C = new Point(0.5, 0.866, 0);
-            Point D = new Point(0.5, 0.433, 0.866);
-
-            Polygon A1 = new Polygon(new Point[] { A, B, C });
-            Polygon A2 = new Polygon(new Point[] { A, B, D });
-            Polygon A3 = new Polygon(new Point[] { B, C, D });
-            Polygon A4 = new Polygon(new Point[] { C, A, D });
-
-            Polyhedron P1 = new Polyhedron(new Polygon[] { A1, A2, A3, A4 });
+            Polyhedron P1 = new A9(80);
 
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
@@ -46,22 +36,22 @@ namespace UnreasonableMechanismCS
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
 
-                if (SwinGame.KeyDown(KeyCode.vk_a))
+                if (SwinGame.KeyDown(KeyCode.vk_w))
                 {
                     P1.RollX(-0.035, P1.Center);
                 }
 
-                if (SwinGame.KeyDown(KeyCode.vk_d))
+                if (SwinGame.KeyDown(KeyCode.vk_s))
                 {
                     P1.RollX(0.035, P1.Center);
                 }
 
-                if (SwinGame.KeyDown(KeyCode.vk_w))
+                if (SwinGame.KeyDown(KeyCode.vk_a))
                 {
                     P1.PitchY(0.035, P1.Center);
                 }
 
-                if (SwinGame.KeyDown(KeyCode.vk_s))
+                if (SwinGame.KeyDown(KeyCode.vk_d))
                 {
                     P1.PitchY(-0.035, P1.Center);
                 }
@@ -94,7 +84,6 @@ namespace UnreasonableMechanismCS
                 if (SwinGame.KeyDown(KeyCode.vk_DOWN))
                 {
                     P1.Offset(new UnreasonableMechanismEngineCS.Vector(0, 1));
-                    
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_LEFT))
