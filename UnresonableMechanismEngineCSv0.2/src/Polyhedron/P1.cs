@@ -12,16 +12,16 @@ namespace UnreasonableMechanismEngineCS
         {
             new Point(0, 0, 0),
             new Point(1, 0, 0),
-            new Point(0.5, 0.866, 0),
-            new Point(0.5, 0.433, 0.866)
+            new Point(0.5, Math.Cos(BasicMath.ToRad(30)), 0),
+            new Point(0.5, Math.Cos(BasicMath.ToRad(30))/3, Math.Cos(BasicMath.ToRad(30)))
         });
 
         private static Polygon[] _faces = new Polygon[]
         {
+            new Polygon(new Point[] { _vertices[0], _vertices[1], _vertices[2] }),
+            new Polygon(new Point[] { _vertices[0], _vertices[1], _vertices[3] }),
             new Polygon(new Point[] { _vertices[1], _vertices[2], _vertices[3] }),
-            new Polygon(new Point[] { _vertices[1], _vertices[2], _vertices[4] }),
-            new Polygon(new Point[] { _vertices[2], _vertices[3], _vertices[4] }),
-            new Polygon(new Point[] { _vertices[3], _vertices[1], _vertices[4] })
+            new Polygon(new Point[] { _vertices[2], _vertices[0], _vertices[3] })
         };
 
         public P1(double scale) : base(_faces)
