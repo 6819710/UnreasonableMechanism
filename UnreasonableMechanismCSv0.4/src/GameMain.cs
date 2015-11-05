@@ -46,7 +46,37 @@ namespace UnreasonableMechanismCS
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
 
-                if(SwinGame.KeyDown(KeyCode.vk_z))
+                if (SwinGame.KeyDown(KeyCode.vk_a))
+                {
+                    P1.RollX(-0.035, P1.Center);
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_d))
+                {
+                    P1.RollX(0.035, P1.Center);
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_w))
+                {
+                    P1.PitchY(0.035, P1.Center);
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_s))
+                {
+                    P1.PitchY(-0.035, P1.Center);
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_q))
+                {
+                    P1.YawZ(0.035, P1.Center);
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_e))
+                {
+                    P1.YawZ(-0.035, P1.Center);
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_z))
                 {
                     P1.Scale(1.5, P1.Center);
                 }

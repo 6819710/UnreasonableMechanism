@@ -131,9 +131,9 @@ namespace UnreasonableMechanismEngineCS
         /// <param name="point">Point to pitch about.</param>
         public void PitchY(double angle, Point point)
         {
-            foreach(Polygon face in _faces)
+            for (int i = 0; i < _faces.Count; i++)
             {
-                face.PitchY(angle, point);
+                _faces[i].YawZ(angle, point);
             }
         }
 
@@ -144,9 +144,9 @@ namespace UnreasonableMechanismEngineCS
         /// <param name="point">Point to roll about.</param>
         public void RollX(double angle, Point point)
         {
-            foreach (Polygon face in _faces)
+            for (int i = 0; i < _faces.Count; i++)
             {
-                face.RollX(angle, point);
+                _faces[i].YawZ(angle, point);
             }
         }
 
@@ -194,9 +194,9 @@ namespace UnreasonableMechanismEngineCS
         /// <param name="point">Point to yaw about.</param>
         public void YawZ(double angle, Point point)
         {
-            foreach (Polygon face in _faces)
+            for(int i = 0; i < _faces.Count; i++)
             {
-                face.YawZ(angle, point);
+                _faces[i].YawZ(angle, point);
             }
         }
     }
