@@ -73,6 +73,7 @@
     <Compile Include="src\BasicMath.cs" />
     <Compile Include="src\Polyhedron\A9.cs" />
     <Compile Include="src\Polyhedron\P1.cs" />
+    <Compile Include="src\Polyhedron\P5.cs" />
     <Compile Include="src\Vector.cs" />
   </ItemGroup>
   <ItemGroup>
