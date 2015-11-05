@@ -151,6 +151,15 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Scales the polyhedron about its center.
+        /// </summary>
+        /// <param name="scale">Scale.</param>
+        public void Scale(double scale)
+        {
+            Scale(scale, Center);
+        }
+
+        /// <summary>
         /// Scales the polyhedron about the given point.
         /// </summary>
         /// <param name="scale">Scale.</param>
