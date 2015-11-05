@@ -19,7 +19,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public static void Main()
         {
-            Polyhedron P1 = new A9(80);
+            Polyhedron P1 = new A9(40, new Point(80,80));
 
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
@@ -38,22 +38,22 @@ namespace UnreasonableMechanismCS
 
                 if (SwinGame.KeyDown(KeyCode.vk_w))
                 {
-                    P1.RollX(-0.035, P1.Center);
+                    P1.RollX(0.035, P1.Center);
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_s))
                 {
-                    P1.RollX(0.035, P1.Center);
+                    P1.RollX(-0.035, P1.Center);
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_a))
                 {
-                    P1.PitchY(0.035, P1.Center);
+                    P1.PitchY(-0.035, P1.Center);
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_d))
                 {
-                    P1.PitchY(-0.035, P1.Center);
+                    P1.PitchY(0.035, P1.Center);
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_q))
@@ -100,8 +100,7 @@ namespace UnreasonableMechanismCS
                 SwinGame.ClearScreen(Color.Black);
                 SwinGame.DrawFramerate(2, 2);
 
-                P1.DrawFace(Color.Goldenrod);
-                P1.DrawEdge(Color.DarkGoldenrod);
+                P1.Draw(Color.Goldenrod, Color.DarkGoldenrod);
 
                 P1.Center.Draw(Color.Red);
 
