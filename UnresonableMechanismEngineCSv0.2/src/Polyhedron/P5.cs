@@ -26,7 +26,7 @@ namespace UnreasonableMechanismEngineCS
             new Polygon(new Point[] { _vertices[0], _vertices[4], _vertices[5], _vertices[1] }),
             new Polygon(new Point[] { _vertices[1], _vertices[5], _vertices[6], _vertices[2] }),
             new Polygon(new Point[] { _vertices[2], _vertices[6], _vertices[7], _vertices[3] }),
-            new Polygon(new Point[] { _vertices[3], _vertices[7], _vertices[4], _vertices[1] }),
+            new Polygon(new Point[] { _vertices[3], _vertices[7], _vertices[4], _vertices[0] }),
             new Polygon(new Point[] { _vertices[5], _vertices[4], _vertices[7], _vertices[6] }),
         };
 
