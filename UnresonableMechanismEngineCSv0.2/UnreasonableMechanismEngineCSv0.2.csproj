@@ -72,7 +72,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\BasicMath.cs" />
     <Compile Include="src\Vector.cs" />
-    <Compile Include="src\Transformations.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\*.dll" />
