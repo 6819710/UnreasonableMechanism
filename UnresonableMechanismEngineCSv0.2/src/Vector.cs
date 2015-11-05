@@ -425,7 +425,7 @@ namespace UnreasonableMechanismEngineCS
             float i = (float)_i;
             float j = (float)_j;
 
-            SwinGame.DrawLine(clr, x, y, x + i, y + j);
+            SwinGame.DrawThickLine(clr, x, y, x + i, y + j, 2);
         }
 
         public override bool Equals(object obj)
