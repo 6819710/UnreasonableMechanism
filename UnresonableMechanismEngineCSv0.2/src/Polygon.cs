@@ -167,5 +167,23 @@ namespace UnreasonableMechanismEngineCS
                 _vertices[i] = _vertices[i].Offset(movement);
             }
         }
+
+        /// <summary>
+        /// Scales the polygon about the given point.
+        /// </summary>
+        /// <param name="scale">Scale.</param>
+        /// <param name="center">Point to scale about.</param>
+        public void Scale(double scale, Point point)
+        {
+            for(int i = 0; i < _vertices.Count; i++)
+            {
+                Point working = _vertices[i] - point;
+
+                working = working * scale;
+
+                _vertices[i] = working + point;
+            }
+            BuildEdges();
+        }
     }
 }
