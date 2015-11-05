@@ -24,10 +24,10 @@ namespace UnreasonableMechanismCS
             Point C = new Point(0.5, 0.866, 0);
             Point D = new Point(0.5, 0.433, 0.866);
 
-            Polygon A1 = new Polygon(new Point[] { A * 50, B * 50, C * 50 });
-            Polygon A2 = new Polygon(new Point[] { A * 50, B * 50, D * 50 });
-            Polygon A3 = new Polygon(new Point[] { B * 50, C * 50, D * 50 });
-            Polygon A4 = new Polygon(new Point[] { C * 50, A * 50, D * 50 });
+            Polygon A1 = new Polygon(new Point[] { A, B, C });
+            Polygon A2 = new Polygon(new Point[] { A, B, D });
+            Polygon A3 = new Polygon(new Point[] { B, C, D });
+            Polygon A4 = new Polygon(new Point[] { C, A, D });
 
             Polyhedron P1 = new Polyhedron(new Polygon[] { A1, A2, A3, A4 });
 
@@ -46,7 +46,36 @@ namespace UnreasonableMechanismCS
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
 
-                P1.Offset(new UnreasonableMechanismEngineCS.Vector(1, 1));
+                if(SwinGame.KeyDown(KeyCode.vk_z))
+                {
+                    P1.Scale(1.5, P1.Center);
+                }
+
+                if(SwinGame.KeyDown(KeyCode.vk_x))
+                {
+                    P1.Scale(0.75, P1.Center);
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_UP))
+                {
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(0, -1));
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_DOWN))
+                {
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(0, 1));
+                    
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_LEFT))
+                {
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(-1, 0));
+                }
+
+                if (SwinGame.KeyDown(KeyCode.vk_RIGHT))
+                {
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(1, 0));
+                }
 
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.Black);

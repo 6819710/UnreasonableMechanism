@@ -125,6 +125,19 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Scales the polyhedron about the given point.
+        /// </summary>
+        /// <param name="scale">Scale.</param>
+        /// <param name="center">Point to scale about.</param>
+        public void Scale(double scale, Point point)
+        {
+            foreach(Polygon face in _faces)
+            {
+                face.Scale(scale, point);
+            }
+        }
+
+        /// <summary>
         /// Sorts the faces in order of Z.
         /// </summary>
         private void Sort()
