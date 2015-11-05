@@ -19,7 +19,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public static void Main()
         {
-            Polyhedron P1 = new A9(40, new Point(80,80));
+            Polyhedron P1 = new P1(40, new Point(80,80));
 
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
@@ -78,22 +78,22 @@ namespace UnreasonableMechanismCS
 
                 if (SwinGame.KeyDown(KeyCode.vk_UP))
                 {
-                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(0, -1));
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(0, -2));
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_DOWN))
                 {
-                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(0, 1));
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(0, 2));
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_LEFT))
                 {
-                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(-1, 0));
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(-2, 0));
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_RIGHT))
                 {
-                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(1, 0));
+                    P1.Offset(new UnreasonableMechanismEngineCS.Vector(2, 0));
                 }
 
                 //Clear the screen and draw the framerate
