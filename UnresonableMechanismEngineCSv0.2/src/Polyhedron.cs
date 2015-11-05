@@ -125,6 +125,32 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Pitches the polyhedron about the y coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to pitch.</param>
+        /// <param name="point">Point to pitch about.</param>
+        public void PitchY(double angle, Point point)
+        {
+            foreach(Polygon face in _faces)
+            {
+                face.PitchY(angle, point);
+            }
+        }
+
+        /// <summary>
+        /// Rolls the polyhedron about the x coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to roll.</param>
+        /// <param name="point">Point to roll about.</param>
+        public void RollX(double angle, Point point)
+        {
+            foreach (Polygon face in _faces)
+            {
+                face.RollX(angle, point);
+            }
+        }
+
+        /// <summary>
         /// Scales the polyhedron about the given point.
         /// </summary>
         /// <param name="scale">Scale.</param>
@@ -158,6 +184,19 @@ namespace UnreasonableMechanismEngineCS
                         flag = true;
                     }
                 }
+            }
+        }
+
+        /// <summary>
+        /// Yaws the polyhedron about the z coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to yaw.</param>
+        /// <param name="point">Point to yaw about.</param>
+        public void YawZ(double angle, Point point)
+        {
+            foreach (Polygon face in _faces)
+            {
+                face.YawZ(angle, point);
             }
         }
     }

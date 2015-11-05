@@ -169,6 +169,34 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Pitches the polygon about the y coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to pitch.</param>
+        /// <param name="point">Point to pitch about.</param>
+        public void PitchY(double angle, Point point)
+        {
+            for(int i = 0; i < _vertices.Count; i++)
+            {
+                _vertices[i].PitchY(angle, point);
+            }
+            BuildEdges();
+        }
+
+        /// <summary>
+        /// Rolls the polygon about the x coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to roll.</param>
+        /// <param name="point">Point to roll about.</param>
+        public void RollX(double angle, Point point)
+        {
+            for (int i = 0; i < _vertices.Count; i++)
+            {
+                _vertices[i].RollX(angle, point);
+            }
+            BuildEdges();
+        }
+
+        /// <summary>
         /// Scales the polygon about the given point.
         /// </summary>
         /// <param name="scale">Scale.</param>
@@ -182,6 +210,20 @@ namespace UnreasonableMechanismEngineCS
                 working = working * scale;
 
                 _vertices[i] = working + point;
+            }
+            BuildEdges();
+        }
+
+        /// <summary>
+        /// Yaws the polygon about the z coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to yaw.</param>
+        /// <param name="point">Point to yaw about.</param>
+        public void YawZ(double angle, Point point)
+        {
+            for (int i = 0; i < _vertices.Count; i++)
+            {
+                _vertices[i].YawZ(angle, point);
             }
             BuildEdges();
         }
