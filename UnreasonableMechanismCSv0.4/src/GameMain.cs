@@ -19,7 +19,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public static void Main()
         {
-            Polyhedron P1 = new P1(40, new Point(80,80));
+            Polyhedron P1 = new P5(40, new Point(80,80));
 
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
