@@ -38,7 +38,7 @@ namespace UnreasonableMechanismEngineCS
         public Polyhedron(Polygon[] faces, Point location)
         {
             _faces = new List<Polygon>(faces);
-            Offset(new Vector(Center, location));
+            Offset(new Vector(location, Center));
         }
 
         /// <summary>
