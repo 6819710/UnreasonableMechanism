@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SwinGameSDK;
 
 namespace UnreasonableMechanismEngineCS
 {
@@ -69,6 +70,81 @@ namespace UnreasonableMechanismEngineCS
             get
             {
                 return _faces;
+            }
+        }
+
+        /// <summary>
+        /// Draws the polyhedron edges.
+        /// </summary>
+        /// <param name="clr">Colour to draw the edges.</param>
+        public void DrawEdge(Color clr)
+        {
+            Sort();
+            foreach (Polygon face in _faces)
+            {
+                face.DrawEdge(clr);
+            }
+        }
+
+        /// <summary>
+        /// Draws the polyhedron faces.
+        /// </summary>
+        /// <param name="clr">Color to draw the faces.</param>
+        public void DrawFace(Color clr)
+        {
+            Sort();
+            foreach (Polygon face in _faces)
+            {
+                face.DrawFace(clr);
+            }
+        }
+
+        /// <summary>
+        /// Draws the polyhedron vertices.
+        /// </summary>
+        /// <param name="clr">Color to draw the vertices.</param>
+        public void DrawVertex(Color clr)
+        {
+            Sort();
+            foreach (Polygon face in _faces)
+            {
+                face.DrawVertex(clr);
+            }
+        }
+
+        /// <summary>
+        /// Offsets the polyhedron by the given movment vector.
+        /// </summary>
+        /// <param name="movement">Movement vector.</param>
+        public void Offset(Vector movement)
+        {
+            foreach(Polygon face in _faces)
+            {
+                face.Offset(movement);
+            }
+        }
+
+        /// <summary>
+        /// Sorts the faces in order of Z.
+        /// </summary>
+        private void Sort()
+        {
+            Polygon temp;
+            bool flag = true;
+
+            for (int i = 0; i < _faces.Count - 1 && flag == true; i++)
+            {
+                flag = false;
+                for (int j = 0; j < _faces.Count - 1; j++)
+                {
+                    if (_faces[j + 1].Center.Z > _faces[j].Center.Z)
+                    {
+                        temp = _faces[j];
+                        _faces[j] = _faces[j + 1];
+                        _faces[j + 1] = temp;
+                        flag = true;
+                    }
+                }
             }
         }
     }
