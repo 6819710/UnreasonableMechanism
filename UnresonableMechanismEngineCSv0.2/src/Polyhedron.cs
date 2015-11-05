@@ -133,7 +133,7 @@ namespace UnreasonableMechanismEngineCS
         {
             for (int i = 0; i < _faces.Count; i++)
             {
-                _faces[i].YawZ(angle, point);
+                _faces[i].PitchY(angle, point);
             }
         }
 
@@ -146,7 +146,7 @@ namespace UnreasonableMechanismEngineCS
         {
             for (int i = 0; i < _faces.Count; i++)
             {
-                _faces[i].YawZ(angle, point);
+                _faces[i].RollX(angle, point);
             }
         }
 

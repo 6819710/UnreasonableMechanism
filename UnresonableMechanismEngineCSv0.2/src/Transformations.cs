@@ -12,9 +12,9 @@ namespace UnreasonableMechanismEngineCS
         /// </summary>
         /// <param name="angle">Angle to pitch.</param>
         /// <param name="point">Point to pitch about.</param>
-        public static Point PitchY(double angle, Point point)
+        public static Point PitchY(Point delta,double angle, Point point)
         {
-            Point delta = this - point;
+            delta -= point;
 
             double x = delta.X;
             double z = delta.Z;
@@ -22,7 +22,8 @@ namespace UnreasonableMechanismEngineCS
             delta.X = Math.Cos(angle) * x - Math.Sin(angle) * z;
             delta.Z = Math.Sin(angle) * x + Math.Cos(angle) * z;
 
-            return delta + point;
+            delta += point;
+            return delta;
         }
 
         /// <summary>
@@ -30,9 +31,9 @@ namespace UnreasonableMechanismEngineCS
         /// </summary>
         /// <param name="angle">Angle to roll.</param>
         /// <param name="point">Point to roll about.</param>
-        public static Point RollX(double angle, Point point)
+        public static Point RollX(Point delta, double angle, Point point)
         {
-            Point delta = this - point;
+            delta -= point;
 
             double y = delta.Y;
             double z = delta.Z;
@@ -40,7 +41,8 @@ namespace UnreasonableMechanismEngineCS
             delta.Y = Math.Cos(angle) * y + Math.Sin(angle) * z;
             delta.Z = -Math.Sin(angle) * y + Math.Cos(angle) * z;
 
-            return delta + point;
+            delta += point;
+            return delta;
         }
 
         /// <summary>
@@ -48,9 +50,9 @@ namespace UnreasonableMechanismEngineCS
         /// </summary>
         /// <param name="angle">Angle to yaw.</param>
         /// <param name="point">Point to yaw about.</param>
-        public static Point YawZ(double angle, Point point)
+        public static Point YawZ(Point delta, double angle, Point point)
         {
-            Point delta = this - point;
+            delta -= point;
 
             double x = delta.X;
             double y = delta.Y;
@@ -58,7 +60,8 @@ namespace UnreasonableMechanismEngineCS
             delta.X = Math.Cos(angle) * x + Math.Sin(angle) * y;
             delta.Y = -Math.Sin(angle) * x + Math.Cos(angle) * y;
 
-            return delta + point;
+            delta += point;
+            return delta;
         }
     }
 }

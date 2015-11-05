@@ -177,7 +177,7 @@ namespace UnreasonableMechanismEngineCS
         {
             for(int i = 0; i < _vertices.Count; i++)
             {
-                _vertices[i].PitchY(angle, point);
+                _vertices[i] = _vertices[i].PitchY(angle, point);
             }
             BuildEdges();
         }
@@ -191,7 +191,7 @@ namespace UnreasonableMechanismEngineCS
         {
             for (int i = 0; i < _vertices.Count; i++)
             {
-                _vertices[i].RollX(angle, point);
+                _vertices[i] = _vertices[i].RollX(angle, point);
             }
             BuildEdges();
         }
@@ -223,7 +223,7 @@ namespace UnreasonableMechanismEngineCS
         {
             for (int i = 0; i < _vertices.Count; i++)
             {
-                _vertices[i].YawZ(angle, point);
+                _vertices[i] = _vertices[i].YawZ(angle, point);
             }
             BuildEdges();
         }

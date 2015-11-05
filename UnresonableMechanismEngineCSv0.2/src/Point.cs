@@ -397,6 +397,24 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Pitches the point about the y coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to pitch.</param>
+        /// <param name="point">Point to pitch about.</param>
+        public Point PitchY(double angle, Point point)
+        {
+            Point delta = this - point;
+
+            double x = delta.X;
+            double z = delta.Z;
+
+            delta.X = Math.Cos(angle) * x - Math.Sin(angle) * z;
+            delta.Z = Math.Sin(angle) * x + Math.Cos(angle) * z;
+
+            return delta + point;
+        }
+
+        /// <summary>
         /// Calculates product.
         /// </summary>
         /// <param name="multiplier">Multiplier point.</param>
@@ -673,6 +691,24 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Rolls the point about the x coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to roll.</param>
+        /// <param name="point">Point to roll about.</param>
+        public Point RollX(double angle, Point point)
+        {
+            Point delta = this - point;
+
+            double y = delta.Y;
+            double z = delta.Z;
+
+            delta.Y = Math.Cos(angle) * y + Math.Sin(angle) * z;
+            delta.Z = -Math.Sin(angle) * y + Math.Cos(angle) * z;
+
+            return delta + point;
+        }
+
+        /// <summary>
         /// Calculates sum.
         /// </summary>
         /// <param name="addend">Addend point.</param>
@@ -783,6 +819,24 @@ namespace UnreasonableMechanismEngineCS
         public Vector ToVector()
         {
             return new Vector(_x, _y, _z);
+        }
+
+        /// <summary>
+        /// Yaws the point about the z coordinate of the given point.
+        /// </summary>
+        /// <param name="angle">Angle to yaw.</param>
+        /// <param name="point">Point to yaw about.</param>
+        public Point YawZ(double angle, Point point)
+        {
+            Point delta = this - point;
+
+            double x = delta.X;
+            double y = delta.Y;
+
+            delta.X = Math.Cos(angle) * x + Math.Sin(angle) * y;
+            delta.Y = -Math.Sin(angle) * x + Math.Cos(angle) * y;
+
+            return delta + point;
         }
 
         public static bool operator ==(Point left, Point right)
