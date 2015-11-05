@@ -68,12 +68,12 @@ namespace UnreasonableMechanismCS
 
                 if (SwinGame.KeyDown(KeyCode.vk_z))
                 {
-                    P1.Scale(1.5, P1.Center);
+                    P1.Scale(1.01, P1.Center);
                 }
 
                 if(SwinGame.KeyDown(KeyCode.vk_x))
                 {
-                    P1.Scale(0.75, P1.Center);
+                    P1.Scale(0.99, P1.Center);
                 }
 
                 if (SwinGame.KeyDown(KeyCode.vk_UP))
