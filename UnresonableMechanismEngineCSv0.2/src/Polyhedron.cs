@@ -58,7 +58,7 @@ namespace UnreasonableMechanismEngineCS
                         count++;
                     }
                 }
-                return result;
+                return result / count;
             }
         }
 
