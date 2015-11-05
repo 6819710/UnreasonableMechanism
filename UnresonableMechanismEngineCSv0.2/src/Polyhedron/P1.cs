@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnreasonableMechanismEngineCS
 {
-    class P1:Polyhedron
+    public class P1:Polyhedron
     {
         private static List<Point> _vertices = new List<Point>(new Point[]
         {
