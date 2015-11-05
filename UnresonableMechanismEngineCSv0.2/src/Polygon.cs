@@ -102,7 +102,40 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Draws polygon edges;
+        /// Draws the polygon, face, edges and vertives.
+        /// </summary>
+        /// <param name="clrFace">Colour to draw face.</param>
+        /// <param name="clrEdge">Colour to draw edges.</param>
+        /// <param name="clrVertex">Color to draw vertices.</param>
+        public void Draw(Color clrFace, Color clrEdge, Color clrVertex)
+        {
+            DrawFace(clrFace);
+            DrawEdge(clrEdge);
+            DrawVertex(clrVertex);
+        }
+
+        /// <summary>
+        /// Draws the polygon, face and edges.
+        /// </summary>
+        /// <param name="clrFace">Colour to draw face.</param>
+        /// <param name="clrEdge">Colour to draw edges.</param>
+        public void Draw(Color clrFace, Color clrEdge)
+        {
+            DrawFace(clrFace);
+            DrawEdge(clrEdge);
+        }
+
+        /// <summary>
+        /// Draws the polygon, face.
+        /// </summary>
+        /// <param name="clrFace">Colour to draw face.</param>
+        public void Draw(Color clrFace)
+        {
+            DrawFace(clrFace);
+        }
+
+        /// <summary>
+        /// Draws polygon edges.
         /// </summary>
         /// <param name="clr">Colour to draw edges.</param>
         public void DrawEdge(Color clr)
