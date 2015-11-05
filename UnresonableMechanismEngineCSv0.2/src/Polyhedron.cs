@@ -74,6 +74,48 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Draws the polyhedron, faces, edges and vertices.
+        /// </summary>
+        /// <param name="clrFace">Color to draw the faces.</param>
+        /// <param name="clrEdge">Colour to draw the edges.</param>
+        /// <param name="clrVertex">Color to draw the vertices.</param>
+        public void Draw(Color clrFace, Color clrEdge, Color clrVertex)
+        {
+            Sort();
+            foreach (Polygon face in _faces)
+            {
+                face.Draw(clrFace, clrEdge, clrVertex);
+            }
+        }
+
+        /// <summary>
+        /// Draws the polyhedron, faces and edges.
+        /// </summary>
+        /// <param name="clrFace">Color to draw the faces.</param>
+        /// <param name="clrEdge">Colour to draw the edges.</param>
+        public void Draw(Color clrFace, Color clrEdge)
+        {
+            Sort();
+            foreach (Polygon face in _faces)
+            {
+                face.Draw(clrFace, clrEdge);
+            }
+        }
+
+        /// <summary>
+        /// Draws the polyhedron, faces.
+        /// </summary>
+        /// <param name="clrFace">Color to draw the faces.</param>
+        public void Draw(Color clrFace)
+        {
+            Sort();
+            foreach (Polygon face in _faces)
+            {
+                face.Draw(clrFace);
+            }
+        }
+
+        /// <summary>
         /// Draws the polyhedron edges.
         /// </summary>
         /// <param name="clr">Colour to draw the edges.</param>
