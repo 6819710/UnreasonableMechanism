@@ -610,6 +610,222 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Calulates minimum distance from x when vertex is greater than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceGreaterThanX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanX(x) && vertex.DistanceFromX(x) < distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from y when vertex is greater than y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceGreaterThanY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanY(y) && vertex.DistanceFromY(y) < distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from z when vertex is greater than z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceGreaterThanZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanZ(z) && vertex.DistanceFromZ(z) < distance)
+                {
+                    distance = vertex.DistanceFromX(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from x when vertex is greater than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceGreaterThanEqualX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanEqualX(x) && vertex.DistanceFromX(x) < distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from y when vertex is greater than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceGreaterThanEqualY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanEqualY(y) && vertex.DistanceFromY(y) < distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from z when vertex is greater than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceGreaterThanEqualZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanEqualZ(z) && vertex.DistanceFromZ(z) < distance)
+                {
+                    distance = vertex.DistanceFromZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from x when vertex is less than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceLessThanX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanX(x) && vertex.DistanceFromX(x) < distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from y when vertex is less than y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceLessThanY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanY(y) && vertex.DistanceFromY(y) < distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from z when vertex is less than z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceLessThanZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanZ(z) && vertex.DistanceFromZ(z) < distance)
+                {
+                    distance = vertex.DistanceFromX(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from x when vertex is less than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceLessThanEqualX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanEqualX(x) && vertex.DistanceFromX(x) < distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from y when vertex is less than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceGLessThanEqualY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanEqualY(y) && vertex.DistanceFromY(y) < distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from z when vertex is less than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceLessThanEqualZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanEqualZ(z) && vertex.DistanceFromZ(z) < distance)
+                {
+                    distance = vertex.DistanceFromZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
         /// Offsets the polygon by the given movment vector.
         /// </summary>
         /// <param name="movement">Movement vector.</param>
