@@ -394,7 +394,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calulates the maximum distance from x when vertex is less than x.
+        /// Calulates the maximum distance from x when vertex is greater than x.
         /// </summary>
         /// <param name="x">Value of x.</param>
         /// <returns>Maximum distance from x.</returns>
@@ -412,7 +412,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calulates the maximum distance from y when vertex is less than y.
+        /// Calulates the maximum distance from y when vertex is greater than y.
         /// </summary>
         /// <param name="y">Value of y.</param>
         /// <returns>Maximum distance from y.</returns>
@@ -430,7 +430,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calulates the maximum distance from z when vertex is less than z.
+        /// Calulates the maximum distance from z when vertex is greater than z.
         /// </summary>
         /// <param name="z">Value of z.</param>
         /// <returns>Maximum distance from z.</returns>
@@ -448,7 +448,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates the maximum distance from x when vertex is less than or equal to x.
+        /// Calculates the maximum distance from x when vertex is greater than or equal to x.
         /// </summary>
         /// <param name="x">Value of x.</param>
         /// <returns>Maximum distance from x.</returns>
@@ -466,7 +466,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates maximum distance from y when vertex is less than or equal to y.
+        /// Calculates maximum distance from y when vertex is greater than or equal to y.
         /// </summary>
         /// <param name="y">Value of y.</param>
         /// <returns>Maximum distance from y.</returns>
@@ -484,7 +484,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates maximum distance from z when vertex is less than or equal to z.
+        /// Calculates maximum distance from z when vertex is greater than or equal to z.
         /// </summary>
         /// <param name="z">value of z.</param>
         /// <returns>Maximum distance from z.</returns>
