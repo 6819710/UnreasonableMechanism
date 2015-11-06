@@ -507,6 +507,15 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Calculates the counterclockwise perpendicular vector in the x-y plane.
+        /// </summary>
+        /// <returns>Perpendicular vector.</returns>
+        public Vector PerpendicularVector2D()
+        {
+            return new Vector(-_j, _i);
+        }
+
+        /// <summary>
         /// Calculates quotent from divisor.
         /// </summary>
         /// <param name="divisior">Divisor value.</param>
