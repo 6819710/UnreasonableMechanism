@@ -359,6 +359,438 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Calulates the maximum distance from x when vertex is greater than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MaxDistanceGreaterThanX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanX(x) && face.MaxDistanceGreaterThanX(x) > distance)
+                {
+                    distance = face.MaxDistanceGreaterThanX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from y when vertex is greater than y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
+        public double MaxDistanceGreaterThanY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanY(y) && face.MaxDistanceGreaterThanY(y) > distance)
+                {
+                    distance = face.MaxDistanceGreaterThanY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from z when vertex is greater than z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
+        public double MaxDistanceGreaterThanZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanZ(z) && face.MaxDistanceGreaterThanZ(z) > distance)
+                {
+                    distance = face.MaxDistanceGreaterThanZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates the maximum distance from x when vertex is greater than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MadDistanceGreaterThanEqualX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanEqualX(x) && face.MadDistanceGreaterThanEqualX(x) > distance)
+                {
+                    distance = face.MadDistanceGreaterThanEqualX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from y when vertex is greater than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
+        public double MaxDistanceGreaterThanEqualY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanEqualY(y) && face.MaxDistanceGreaterThanEqualY(y) > distance)
+                {
+                    distance = face.MaxDistanceGreaterThanEqualY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from z when vertex is greater than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
+        public double MaxDistanceGreaterThanEqualZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanEqualZ(z) && face.MaxDistanceGreaterThanEqualZ(z) > distance)
+                {
+                    distance = face.MaxDistanceGreaterThanEqualZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from x when vertex is less than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MaxDistanceLessThanX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanX(x) && face.MaxDistanceLessThanX(x) > distance)
+                {
+                    distance = face.MaxDistanceLessThanX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from y when vertex is less than y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
+        public double MaxDistanceLessThanY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanY(y) && face.MaxDistanceLessThanY(y) > distance)
+                {
+                    distance = face.MaxDistanceLessThanY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from z when vertex is less than z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
+        public double MaxDistanceLessThanZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanZ(z) && face.MaxDistanceLessThanZ(z) > distance)
+                {
+                    distance = face.MaxDistanceLessThanZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates the maximum distance from x when vertex is less than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MadDistanceLessThanEqualX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanEqualX(x) && face.MadDistanceLessThanEqualX(x) > distance)
+                {
+                    distance = face.MadDistanceLessThanEqualX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from y when vertex is less than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
+        public double MaxDistanceGLessThanEqualY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanEqualY(y) && face.MaxDistanceGLessThanEqualY(y) > distance)
+                {
+                    distance = face.MaxDistanceGLessThanEqualY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from z when vertex is less than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
+        public double MaxDistanceLessThanEqualZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanEqualZ(z) && face.MaxDistanceLessThanEqualZ(z) > distance)
+                {
+                    distance = face.MaxDistanceLessThanEqualZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from x when vertex is greater than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceGreaterThanX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanX(x) && face.MinDistanceGreaterThanX(x) < distance)
+                {
+                    distance = face.MinDistanceGreaterThanX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from y when vertex is greater than y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceGreaterThanY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanY(y) && face.MinDistanceGreaterThanY(y) < distance)
+                {
+                    distance = face.MinDistanceGreaterThanY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from z when vertex is greater than z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceGreaterThanZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanZ(z) && face.MinDistanceGreaterThanZ(z) < distance)
+                {
+                    distance = face.MinDistanceGreaterThanZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from x when vertex is greater than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceGreaterThanEqualX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanEqualX(x) && face.MinDistanceGreaterThanEqualX(x) < distance)
+                {
+                    distance = face.MinDistanceGreaterThanEqualX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from y when vertex is greater than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceGreaterThanEqualY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanEqualY(y) && face.MinDistanceGreaterThanEqualY(y) < distance)
+                {
+                    distance = face.MinDistanceGreaterThanEqualY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from z when vertex is greater than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceGreaterThanEqualZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.GreaterThanEqualZ(z) && face.MinDistanceGreaterThanEqualZ(z) < distance)
+                {
+                    distance = face.MinDistanceGreaterThanEqualZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from x when vertex is less than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceLessThanX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanX(x) && face.MinDistanceLessThanX(x) < distance)
+                {
+                    distance = face.MinDistanceLessThanX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from y when vertex is less than y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceLessThanY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanY(y) && face.MinDistanceLessThanY(y) < distance)
+                {
+                    distance = face.MinDistanceLessThanY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates minimum distance from z when vertex is less than z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceLessThanZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanZ(z) && face.MinDistanceLessThanZ(z) < distance)
+                {
+                    distance = face.MinDistanceLessThanZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from x when vertex is less than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Minimum distance from x.</returns>
+        public double MinDistanceLessThanEqualX(double x)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanEqualX(x) && face.MinDistanceLessThanEqualX(x) < distance)
+                {
+                    distance = face.MinDistanceLessThanEqualX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from y when vertex is less than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Minimum distance from y.</returns>
+        public double MinDistanceGLessThanEqualY(double y)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanEqualY(y) && face.MinDistanceGLessThanEqualY(y) < distance)
+                {
+                    distance = face.MinDistanceGLessThanEqualY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates minimum distance from z when vertex is less than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Minimum distance from z.</returns>
+        public double MinDistanceLessThanEqualZ(double z)
+        {
+            double distance = double.PositiveInfinity;
+            foreach(Polygon face in _faces)
+            {
+                if(face.LessThanEqualZ(z) && face.MinDistanceLessThanEqualZ(z) < distance)
+                {
+                    distance = face.MinDistanceLessThanEqualZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
         /// Offsets the polyhedron by the given movment vector.
         /// </summary>
         /// <param name="movement">Movement vector.</param>
