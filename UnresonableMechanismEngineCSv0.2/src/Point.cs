@@ -365,6 +365,36 @@ namespace UnreasonableMechanismEngineCS
             SwinGame.DrawLine(clr, x, y - 5, x, y + 5);
         }
 
+        /// <summary>
+        /// Calculates distance from x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Distance from x.</returns>
+        public double DistanceFromX(double x)
+        {
+            return Math.Abs(DifferenceByX(x));
+        }
+
+        /// <summary>
+        /// Calulates distance from y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Distance from y.</returns>
+        public double DistanceFromY(double y)
+        {
+            return Math.Abs(DifferenceByY(y));
+        }
+
+        /// <summary>
+        /// Calculates distance from z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Distance from z.</returns>
+        public double DistanceFromZ(double z)
+        {
+            return Math.Abs(DifferenceByZ(z));
+        }
+
         public override bool Equals(object obj)
         {
             if (obj == null)
