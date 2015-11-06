@@ -11,6 +11,9 @@ namespace UnreasonableMechanismCS
 {
     public static class InputController
     {
+        /// <summary>
+        /// Processes user input.
+        /// </summary>
         public static void ProcessInput()
         {
             HandleMovement();
