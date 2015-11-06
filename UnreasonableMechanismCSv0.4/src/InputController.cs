@@ -53,7 +53,7 @@ namespace UnreasonableMechanismCS
                     polyhedron.Offset(new UM.Vector(-2, 0));
                     if(polyhedron.LessThanX(0))
                     {
-                        polyhedron.Offset(new UM.Vector(0, polyhedron.MaxDistanceLessThanX(0)));
+                        polyhedron.Offset(new UM.Vector(polyhedron.MaxDistanceLessThanX(0), 0));
                     }
                 }
             }
@@ -65,7 +65,7 @@ namespace UnreasonableMechanismCS
                     polyhedron.Offset(new UM.Vector(2, 0));
                     if(polyhedron.GreaterThanX(800))
                     {
-                        polyhedron.Offset(new UM.Vector(0, polyhedron.MaxDistanceGreaterThanX(800)));
+                        polyhedron.Offset(new UM.Vector(-polyhedron.MaxDistanceGreaterThanX(800), 0));
                     }
                 }
             }
