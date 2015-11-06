@@ -414,8 +414,8 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calulates the maximum distance from y when vertex is less than y.
         /// </summary>
-        /// <param name="y"></param>
-        /// <returns></returns>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
         public double MaxDistanceGreaterThanY(double y)
         {
             double distance = double.NegativeInfinity;
@@ -432,8 +432,8 @@ namespace UnreasonableMechanismEngineCS
         /// <summary>
         /// Calulates the maximum distance from z when vertex is less than z.
         /// </summary>
-        /// <param name="z"></param>
-        /// <returns></returns>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
         public double MaxDistanceGreaterThanZ(double z)
         {
             double distance = double.NegativeInfinity;
@@ -442,6 +442,60 @@ namespace UnreasonableMechanismEngineCS
                 if(vertex.GreaterThanZ(z) && vertex.DistanceFromZ(z) > distance)
                 {
                     distance = vertex.DistanceFromX(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates the maximum distance from x when vertex is less than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MadDistanceGreaterThanEqualX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanEqualX(x) && vertex.DistanceFromX(x) > distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from y when vertex is less than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
+        public double MaxDistanceGreaterThanEqualY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanEqualY(y) && vertex.DistanceFromY(y) > distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from z when vertex is less than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
+        public double MaxDistanceGreaterThanEqualZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanEqualZ(z) && vertex.DistanceFromZ(z) > distance)
+                {
+                    distance = vertex.DistanceFromZ(z);
                 }
             }
             return distance;
