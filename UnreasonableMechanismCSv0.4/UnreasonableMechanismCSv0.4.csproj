@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\GameObjects.cs" />
+    <Compile Include="src\InputController.cs" />
     <Compile Include="src\GameMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
