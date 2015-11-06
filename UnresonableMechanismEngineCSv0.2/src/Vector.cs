@@ -118,7 +118,7 @@ namespace UnreasonableMechanismEngineCS
         {
             get
             {
-                return Math.Sqrt(Math.Pow(_i, 2) + Math.Pow(_k, 2) + Math.Pow(_k, 2));
+                return Math.Sqrt(Math.Pow(_i, 2) + Math.Pow(_j, 2) + Math.Pow(_k, 2));
             }
 
             set
