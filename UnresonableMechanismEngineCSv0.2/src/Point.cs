@@ -397,10 +397,29 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Pitches the point about the trajectory from the given point.
+        /// </summary>
+        /// <param name="angle">Angle to pitch (radians).</param>
+        /// <param name="point">Point to pivet about.</param>
+        /// <param name="trajectory">Trajectory vector.</param>
+        /// <param name="roll">Roll vector.</param>
+        /// <returns></returns>
+        public Point Pitch(double angle, Point point, Vector trajectory, Vector roll)
+        {
+            Point delta = this - point;
+
+            double x = delta.X;
+            double y = delta.Y;
+            double z = delta.Z;
+
+            return delta + point;
+        }
+
+        /// <summary>
         /// Pitches the point about the y coordinate of the given point.
         /// </summary>
-        /// <param name="angle">Angle to pitch.</param>
-        /// <param name="point">Point to pitch about.</param>
+        /// <param name="angle">Angle to pitch (radians).</param>
+        /// <param name="point">Point to pivit about.</param>
         public Point PitchY(double angle, Point point)
         {
             Point delta = this - point;
