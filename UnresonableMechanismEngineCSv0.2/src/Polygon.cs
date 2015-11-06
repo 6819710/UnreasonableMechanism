@@ -190,6 +190,210 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Determines if polygon is greater than the provided value.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Boolean.</returns>
+        public bool GreaterThanX(double x)
+        {
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanX(x))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is greater than or equal to the provided value.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Boolean.</returns>
+        public bool GreaterThanEqualX(double x)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.GreaterThanEqualX(x))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is greater than the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool GreaterThanY(double y)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.GreaterThanY(y))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is greater than or equal to the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool GreaterThanEqualY(double y)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.GreaterThanEqualY(y))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is greater than the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool GreaterThanZ(double z)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.GreaterThanZ(z))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is greater than or equal to the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool GreaterThanEqualZ(double z)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.GreaterThanEqualZ(z))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is less than the provided value.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Boolean.</returns>
+        public bool LessThanX(double x)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.LessThanX(x))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is less than or equal to the provided value.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Boolean.</returns>
+        public bool LessThanEqualX(double x)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.LessThanEqualX(x))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is less than the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool LessThanY(double y)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.LessThanY(y))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is less than or equal to the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool LessThanEqualY(double y)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.LessThanEqualY(y))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is less than the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool LessThanZ(double z)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.LessThanZ(z))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Determines if polygon is less than or equal to the provided value.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Boolean.</returns>
+        public bool LessThanEqualZ(double z)
+        {
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.LessThanEqualZ(z))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
         /// Offsets the polygon by the given movment vector.
         /// </summary>
         /// <param name="movement">Movement vector.</param>
