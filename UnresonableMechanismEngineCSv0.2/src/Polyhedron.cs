@@ -543,7 +543,7 @@ namespace UnreasonableMechanismEngineCS
         /// </summary>
         /// <param name="y">Value of y.</param>
         /// <returns>Maximum distance from y.</returns>
-        public double MaxDistanceGLessThanEqualY(double y)
+        public double MaxDistanceLessThanEqualY(double y)
         {
             double distance = double.NegativeInfinity;
             foreach(Polygon face in _faces)
@@ -759,7 +759,7 @@ namespace UnreasonableMechanismEngineCS
         /// </summary>
         /// <param name="y">Value of y.</param>
         /// <returns>Minimum distance from y.</returns>
-        public double MinDistanceGLessThanEqualY(double y)
+        public double MinDistanceLessThanEqualY(double y)
         {
             double distance = double.PositiveInfinity;
             foreach(Polygon face in _faces)
