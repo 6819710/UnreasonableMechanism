@@ -507,7 +507,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Calculates the counterclockwise perpendicular vector in the x-y plane.
+        /// Calculates the counterclockwise perpendicular vector in the x-y plane. Note: Does not work for 3D vectors.
         /// </summary>
         /// <returns>Perpendicular vector.</returns>
         public Vector PerpendicularVector2D()
