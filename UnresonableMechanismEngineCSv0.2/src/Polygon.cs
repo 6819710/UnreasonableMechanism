@@ -502,6 +502,114 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Calulates the maximum distance from x when vertex is less than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MaxDistanceLessThanX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanX(x) && vertex.DistanceFromX(x) > distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from y when vertex is less than y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
+        public double MaxDistanceLessThanY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanY(y) && vertex.DistanceFromY(y) > distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from z when vertex is less than z.
+        /// </summary>
+        /// <param name="z">Value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
+        public double MaxDistanceLessThanZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanZ(z) && vertex.DistanceFromZ(z) > distance)
+                {
+                    distance = vertex.DistanceFromX(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates the maximum distance from x when vertex is less than or equal to x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MadDistanceLessThanEqualX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanEqualX(x) && vertex.DistanceFromX(x) > distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from y when vertex is less than or equal to y.
+        /// </summary>
+        /// <param name="y">Value of y.</param>
+        /// <returns>Maximum distance from y.</returns>
+        public double MaxDistanceGLessThanEqualY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if (vertex.LessThanEqualY(y) && vertex.DistanceFromY(y) > distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calculates maximum distance from z when vertex is less than or equal to z.
+        /// </summary>
+        /// <param name="z">value of z.</param>
+        /// <returns>Maximum distance from z.</returns>
+        public double MaxDistanceLessThanEqualZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.LessThanEqualZ(z) && vertex.DistanceFromZ(z) > distance)
+                {
+                    distance = vertex.DistanceFromZ(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
         /// Offsets the polygon by the given movment vector.
         /// </summary>
         /// <param name="movement">Movement vector.</param>
