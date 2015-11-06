@@ -548,9 +548,9 @@ namespace UnreasonableMechanismEngineCS
             double distance = double.NegativeInfinity;
             foreach(Polygon face in _faces)
             {
-                if(face.LessThanEqualY(y) && face.MaxDistanceGLessThanEqualY(y) > distance)
+                if(face.LessThanEqualY(y) && face.MaxDistanceLessThanEqualY(y) > distance)
                 {
-                    distance = face.MaxDistanceGLessThanEqualY(y);
+                    distance = face.MaxDistanceLessThanEqualY(y);
                 }
             }
             return distance;
@@ -764,9 +764,9 @@ namespace UnreasonableMechanismEngineCS
             double distance = double.PositiveInfinity;
             foreach(Polygon face in _faces)
             {
-                if(face.LessThanEqualY(y) && face.MinDistanceGLessThanEqualY(y) < distance)
+                if(face.LessThanEqualY(y) && face.MinDistanceLessThanEqualY(y) < distance)
                 {
-                    distance = face.MinDistanceGLessThanEqualY(y);
+                    distance = face.MinDistanceLessThanEqualY(y);
                 }
             }
             return distance;
