@@ -394,6 +394,60 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Calulates the maximum distance from x when vertex is less than x.
+        /// </summary>
+        /// <param name="x">Value of x.</param>
+        /// <returns>Maximum distance from x.</returns>
+        public double MaxDistanceGreaterThanX(double x)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanX(x) && vertex.DistanceFromX(x) > distance)
+                {
+                    distance = vertex.DistanceFromX(x);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from y when vertex is less than y.
+        /// </summary>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public double MaxDistanceGreaterThanY(double y)
+        {
+            double distance = double.NegativeInfinity;
+            foreach (Point vertex in _vertices)
+            {
+                if (vertex.GreaterThanY(y) && vertex.DistanceFromY(y) > distance)
+                {
+                    distance = vertex.DistanceFromY(y);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
+        /// Calulates the maximum distance from z when vertex is less than z.
+        /// </summary>
+        /// <param name="z"></param>
+        /// <returns></returns>
+        public double MaxDistanceGreaterThanZ(double z)
+        {
+            double distance = double.NegativeInfinity;
+            foreach(Point vertex in _vertices)
+            {
+                if(vertex.GreaterThanZ(z) && vertex.DistanceFromZ(z) > distance)
+                {
+                    distance = vertex.DistanceFromX(z);
+                }
+            }
+            return distance;
+        }
+
+        /// <summary>
         /// Offsets the polygon by the given movment vector.
         /// </summary>
         /// <param name="movement">Movement vector.</param>
