@@ -114,6 +114,7 @@ namespace UnreasonableMechanismCS
         public void Offset(UM.Vector movement)
         {
             _hitbox.Offset(movement);
+            _position.Offset(movement);
         }
     }
 }
