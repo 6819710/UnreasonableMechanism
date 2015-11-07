@@ -11,15 +11,51 @@ namespace UnreasonableMechanismCS
     public static class GameObjects
     {
         public static Entity Player;
+        public static List<ItemEntity> Items = new List<ItemEntity>();
 
-        public static List<Polyhedron> Polyhedra = new List<Polyhedron>();
-
-        public static void Draw(Color clrFace, Color clrEdge)
+        /// <summary>
+        /// Draws all game items.
+        /// </summary>
+        public static void Draw()
         {
-            foreach(Polyhedron polyhedron in Polyhedra)
+            Player.DrawEntity();
+
+            DrawItemEntities();
+        }
+
+        private static void DrawItemEntities()
+        {
+            foreach(ItemEntity item in Items)
             {
-                polyhedron.Draw(clrFace, clrEdge);
+                item.DrawEntity();
             }
+        }
+
+        /// <summary>
+        /// Adds an item to the items list.
+        /// </summary>
+        /// <param name="obj">Object.</param>
+        public static void AddItem(ItemEntity obj)
+        {
+            Items.Add(obj);
+        }
+
+        /// <summary>
+        /// Removes the provided item from the items list.
+        /// </summary>
+        /// <param name="obj">Object.</param>
+        public static void RemoveItem(ItemEntity obj)
+        {
+            Items.Remove(obj);
+        }
+
+        /// <summary>
+        /// Removes the item from the items list at the given index.
+        /// </summary>
+        /// <param name="index">Index of item.</param>
+        public static void RemoveItem(int index)
+        {
+            Items.RemoveAt(index);
         }
     }
 }
