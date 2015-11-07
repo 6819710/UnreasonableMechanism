@@ -19,8 +19,6 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public static void Main()
         {
-            GameObjects.Polyhedra.Add(new A9(40, new Point(80,80)));
-
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
 
@@ -39,13 +37,13 @@ namespace UnreasonableMechanismCS
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
 
-                InputController.ProcessInput();
+                GameObjects.ProcessEvents();
 
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.Black);
                 SwinGame.DrawFramerate(2, 2);
 
-                GameObjects.Draw(Color.Goldenrod, Color.DarkGoldenrod);
+                GameObjects.Draw();
 
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
