@@ -14,6 +14,15 @@ namespace UnreasonableMechanismCS
         public static List<ItemEntity> Items = new List<ItemEntity>();
 
         /// <summary>
+        /// Adds an item to the items list.
+        /// </summary>
+        /// <param name="obj">Object.</param>
+        public static void AddItem(ItemEntity obj)
+        {
+            Items.Add(obj);
+        }
+
+        /// <summary>
         /// Draws all game items.
         /// </summary>
         public static void Draw()
@@ -32,12 +41,19 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Adds an item to the items list.
+        /// Processes events for all game objects.
         /// </summary>
-        /// <param name="obj">Object.</param>
-        public static void AddItem(ItemEntity obj)
+        public static void ProcessEvents()
         {
-            Items.Add(obj);
+            ProcessItems();
+        }
+
+        private static void ProcessItems()
+        {
+            foreach(ItemEntity item in Items)
+            {
+                item.ProcessEvents();
+            }
         }
 
         /// <summary>
