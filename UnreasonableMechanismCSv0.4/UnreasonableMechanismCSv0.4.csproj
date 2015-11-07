@@ -65,6 +65,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Model\Enum\BulletColour.cs" />
+    <Compile Include="src\Model\BulletEntity.cs" />
+    <Compile Include="src\Model\Enum\BulletType.cs" />
     <Compile Include="src\Model\Enum\ItemType.cs" />
     <Compile Include="src\Model\ItemEntity.cs" />
     <Compile Include="src\GameResources.cs" />

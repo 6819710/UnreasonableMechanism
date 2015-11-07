@@ -38,15 +38,36 @@
   <Class Name="UnreasonableMechanismCS.ItemEntity">
     <Position X="5.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACQAAAAAAAAAAAAAABAAAAAAhAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>src\Model\ItemEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnreasonableMechanismCS.BulletEntity">
+    <Position X="8.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Model\BulletEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="UnreasonableMechanismCS.ItemType">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAgIAAAAAAAAAAAAAAAAABgAACAAABAAA=</HashCode>
       <FileName>src\Model\Enum\ItemType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UnreasonableMechanismCS.BulletType">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEwAAAQAAEAAAAAAEAASAAAQAAgAAAAiAIAAAAAAAA=</HashCode>
+      <FileName>src\Model\Enum\BulletType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UnreasonableMechanismCS.BulletColour">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAoAAAAAAAAAABAAAAAAAAAAAADAAAAA=</HashCode>
+      <FileName>src\Model\Enum\BulletColour.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />
