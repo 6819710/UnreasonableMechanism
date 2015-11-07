@@ -24,7 +24,7 @@
   <Class Name="UnreasonableMechanismCS.Entity">
     <Position X="0.5" Y="6" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAASAAAAQAEAAAAAggBAAAgAARAAAAAAAAAgAAAgAA=</HashCode>
+      <HashCode>AAAASAAAAQAEAAAgAggBAAAgAARAAAAAAAAAgAAAgAA=</HashCode>
       <FileName>src\Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,8 +52,15 @@
   <Class Name="UnreasonableMechanismCS.PlayerEntity">
     <Position X="0.5" Y="3" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAABAAAAAABAAQAAAABAAAAQAAA=</HashCode>
       <FileName>src\Model\PlayerEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnreasonableMechanismCS.Movement">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Model\Movement\Movement.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="UnreasonableMechanismCS.ItemType">
