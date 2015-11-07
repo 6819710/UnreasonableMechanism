@@ -1,105 +1,112 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="UnreasonableMechanismCS.GameMain">
-    <Position X="0.5" Y="0.5" Width="1.75" />
+  <Class Name="UnreasonableMechanismCS.GameMain" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACIAAIAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>src\GameMain.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.GameObjects">
-    <Position X="2.5" Y="0.5" Width="3" />
+  <Class Name="UnreasonableMechanismCS.GameObjects" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAACgAAAAABAAAAhAAAAAAEAAAAAQEAAAA=</HashCode>
       <FileName>src\GameObjects.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.InputController">
-    <Position X="5.75" Y="0.5" Width="2.25" />
+  <Class Name="UnreasonableMechanismCS.InputController" Collapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAgAAAAEAAAACAAAAA=</HashCode>
       <FileName>src\InputController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.Entity">
-    <Position X="0.5" Y="6" Width="3.5" />
+  <Class Name="UnreasonableMechanismCS.Entity" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAASAAAAQAEAAAgAggBAAAgAARAAAAAAAAAgAAAgAA=</HashCode>
       <FileName>src\Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.GameResources">
-    <Position X="0.5" Y="10.75" Width="5" />
+  <Class Name="UnreasonableMechanismCS.GameResources" Collapsed="true">
+    <Position X="9" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ACEIAEIAAAACAAAAAgAAAAhAkACAEAIQBFAIABQAACg=</HashCode>
       <FileName>src\GameResources.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.ItemEntity">
-    <Position X="5.25" Y="6" Width="1.5" />
+  <Class Name="UnreasonableMechanismCS.ItemEntity" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACQAAAAAAAAAAAAAABAQAAAAhAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAACQACAAAAAAAAAAAABAQAAAAhAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>src\Model\ItemEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.BulletEntity">
-    <Position X="8.75" Y="7.25" Width="1.5" />
+  <Class Name="UnreasonableMechanismCS.BulletEntity" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAACEAABAAABAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Model\BulletEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.PlayerEntity">
-    <Position X="0.5" Y="3" Width="2.75" />
+  <Class Name="UnreasonableMechanismCS.PlayerEntity" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAABAAAAAABAAQAAAABAAAAQAAA=</HashCode>
       <FileName>src\Model\PlayerEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.Movement">
-    <Position X="10.25" Y="4.5" Width="1.5" />
+  <Class Name="UnreasonableMechanismCS.Movement" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAA=</HashCode>
       <FileName>src\Model\Movement\Movement.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.Gravity">
-    <Position X="14" Y="4.75" Width="1.5" />
+  <Class Name="UnreasonableMechanismCS.Gravity" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAAAAACAAAgAAAAAAAEAQAAAAA=</HashCode>
       <FileName>src\Model\Movement\Gravity.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.Linear">
-    <Position X="14" Y="3.25" Width="1.5" />
+  <Class Name="UnreasonableMechanismCS.Linear" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Model\Movement\Linear.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="UnreasonableMechanismCS.ItemType">
-    <Position X="8.25" Y="0.5" Width="1.5" />
+  <Class Name="UnreasonableMechanismCS.TestLevel">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\TestLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="UnreasonableMechanismCS.ItemType" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAIAAAAAAgIAAAAAAAAAAAAAAAAABgAACAAABAAA=</HashCode>
       <FileName>src\Model\Enum\ItemType.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="UnreasonableMechanismCS.BulletType">
-    <Position X="10" Y="0.5" Width="1.5" />
+  <Enum Name="UnreasonableMechanismCS.BulletType" Collapsed="true">
+    <Position X="10.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAEwAAAQAAEAAAAAAEAASAAAQAAgAAAAiAIAAAAAAAA=</HashCode>
       <FileName>src\Model\Enum\BulletType.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="UnreasonableMechanismCS.BulletColour">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+  <Enum Name="UnreasonableMechanismCS.BulletColour" Collapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAGAAAAAAAAAoAAAAAAAAAABAAAAAAAAAAAADAAAAA=</HashCode>
       <FileName>src\Model\Enum\BulletColour.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="UnreasonableMechanismCS.PlayerType">
-    <Position X="13.5" Y="0.5" Width="1.5" />
+  <Enum Name="UnreasonableMechanismCS.PlayerType" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAEAAgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Model\Enum\PlayerType.cs</FileName>

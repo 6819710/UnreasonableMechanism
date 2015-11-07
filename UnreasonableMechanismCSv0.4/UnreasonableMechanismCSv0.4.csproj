@@ -81,6 +81,7 @@
     <Compile Include="src\InputController.cs" />
     <Compile Include="src\GameMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\TestLevel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\*.dll" />
