@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UM = UnreasonableMechanismEngineCS;
 using UnreasonableMechanismEngineCS;
+using SwinGameSDK;
 
 namespace UnreasonableMechanismCS
 {
@@ -72,6 +73,33 @@ namespace UnreasonableMechanismCS
             {
                 _hitpoints = value;
             }
+        }
+
+        /// <summary>
+        /// Draws the game bitmap.
+        /// </summary>
+        public virtual void DrawEntity()
+        {
+            //TODO: Generate Method
+        }
+
+        /// <summary>
+        /// Processes entity events.
+        /// </summary>
+        public abstract void ProcessEvents();
+
+        /// <summary>
+        /// Processes entity movement.
+        /// </summary>
+        public abstract void ProcessMovement();
+
+        /// <summary>
+        /// Offsets the entity by the given movement vector.
+        /// </summary>
+        /// <param name="movement">Movement vector.</param>
+        public void Offset(UM.Vector movement)
+        {
+            _hitbox.Offset(movement);
         }
     }
 }
