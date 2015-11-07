@@ -17,18 +17,22 @@ namespace UnreasonableMechanismCS
         private PlayerType _playerType;
         private Polygon _grazebox;
 
-        public PlayerEntity(PlayerType playerType) : base(new Point(270, 430), InitBounding(new Point2D(270, 430), playerType), 1, playerType.ToString())
+        /// <summary>
+        /// Constructs a new player in the defult position.
+        /// </summary>
+        /// <param name="playerType">Type of player selected.</param>
+        public PlayerEntity(PlayerType playerType) : base(new Point(270, 430), InitBounding(new Point(270, 430), playerType), 1, playerType.ToString())
         {
             _playerType = playerType;
             _grazebox = InitGrazeBox(Position, playerType);
         }
 
-        private Polygon InitBounding(Point position, PlayerType playerType)
+        private static Polygon InitBounding(Point position, PlayerType playerType)
         {
             throw new NotImplementedException();
         }
 
-        private Polygon InitGrazeBox(Point position, PlayerType playerType)
+        private static Polygon InitGrazeBox(Point position, PlayerType playerType)
         {
             throw new NotImplementedException();
         }
