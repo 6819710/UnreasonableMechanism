@@ -10,6 +10,8 @@ namespace UnreasonableMechanismCS
 {
     public static class GameObjects
     {
+        public static Entity Player;
+
         public static List<Polyhedron> Polyhedra = new List<Polyhedron>();
 
         public static void Draw(Color clrFace, Color clrEdge)
