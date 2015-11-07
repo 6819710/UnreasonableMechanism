@@ -10,5 +10,11 @@ namespace UnreasonableMechanismCS
     /// </summary>
     public enum PlayerType
     {
+        //TODO: Rename player types with chariter names and varients.
+
+        WideA,
+        WideB,
+        NarrowA,
+        NarrowB
     }
 }
