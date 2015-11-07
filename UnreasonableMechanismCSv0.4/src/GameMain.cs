@@ -14,6 +14,8 @@ namespace UnreasonableMechanismCS
 
         private static bool _splashFlag = false;
 
+        private static uint _tick = 0;
+
         /// <summary>
         /// Main access point for the program.
         /// </summary>
@@ -24,6 +26,7 @@ namespace UnreasonableMechanismCS
 
             //Load game assets.
             GameResources.LoadResources();
+            GameObjects.Initalise();
 
             //Show SwinGame splash screen.
             if(_splashFlag)
@@ -39,6 +42,8 @@ namespace UnreasonableMechanismCS
 
                 GameObjects.ProcessEvents();
 
+                TestLevel.Step(_tick);
+
                 //Clear the screen and draw the framerate
                 SwinGame.ClearScreen(Color.Black);
                 SwinGame.DrawFramerate(2, 2);
@@ -47,6 +52,8 @@ namespace UnreasonableMechanismCS
 
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
+
+                _tick++;
             }
 
             //Free game assets.

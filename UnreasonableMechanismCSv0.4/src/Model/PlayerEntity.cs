@@ -29,12 +29,12 @@ namespace UnreasonableMechanismCS
 
         private static Polygon InitBounding(Point position, PlayerType playerType)
         {
-            throw new NotImplementedException();
+            return new Polygon();
         }
 
         private static Polygon InitGrazeBox(Point position, PlayerType playerType)
         {
-            throw new NotImplementedException();
+            return new Polygon();
         }
 
         public override void ProcessEvents()

@@ -27,7 +27,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public static void Draw()
         {
-            Player.DrawEntity();
+            //Player.DrawEntity();
 
             DrawItemEntities();
         }
@@ -40,12 +40,20 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        public static void Initalise()
+        {
+            Player = new PlayerEntity(PlayerType.NarrowA);
+        }
+
         /// <summary>
         /// Processes events for all game objects.
         /// </summary>
         public static void ProcessEvents()
         {
-            ProcessItems();
+            if(Items.Count > 0)
+            {
+                ProcessItems();
+            }
         }
 
         private static void ProcessItems()
