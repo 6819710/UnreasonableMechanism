@@ -16,6 +16,7 @@ namespace UnreasonableMechanismCS
         private string _bitmap;
         private Polygon _hitbox;
         private int _hitpoints;
+        private Point _position;
         private int _tick;
 
         /// <summary>
@@ -80,7 +81,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public virtual void DrawEntity()
         {
-            //TODO: Generate Method
+            SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_position.X - GameResources.GameImage(Bitmap).Width / 2, (float)_position.Y - GameResources.GameImage(Bitmap).Height / 2);
         }
 
         /// <summary>
