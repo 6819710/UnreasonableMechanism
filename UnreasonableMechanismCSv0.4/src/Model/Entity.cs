@@ -22,11 +22,13 @@ namespace UnreasonableMechanismCS
         /// <summary>
         /// Constructs the entity with the provided hitbox, hitpoints and bitmap.
         /// </summary>
+        /// <param name="position">Position (point).</param>
         /// <param name="hitbox">Hitbox (polygon).</param>
         /// <param name="hitpoints">Hitpoints (int).</param>
         /// <param name="bitmap">Bitmap name (string).</param>
-        public Entity(Polygon hitbox, int hitpoints, string bitmap)
+        public Entity(Point position, Polygon hitbox, int hitpoints, string bitmap)
         {
+            _position = position;
             _hitbox = hitbox;
             _hitpoints = hitpoints;
             _bitmap = bitmap;
