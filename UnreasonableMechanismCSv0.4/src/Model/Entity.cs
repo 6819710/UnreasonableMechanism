@@ -79,6 +79,17 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
+        /// Readonly Property: Position.
+        /// </summary>
+        public Point Position
+        {
+            get
+            {
+                return _position;
+            }
+        }
+
+        /// <summary>
         /// Draws the game bitmap.
         /// </summary>
         public virtual void DrawEntity()
