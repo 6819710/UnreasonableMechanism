@@ -24,15 +24,22 @@
   <Class Name="UnreasonableMechanismCS.Entity">
     <Position X="0.5" Y="3.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAASAAAAQAEAAAAAggBAAAgAARAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAAASAAAAQAEAAAAAggBAAAgAARAAAAAAAAAgAAAgAA=</HashCode>
       <FileName>src\Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.GameResources">
-    <Position X="7" Y="2.75" Width="1.5" />
+    <Position X="0.5" Y="8.25" Width="5" />
+    <TypeIdentifier>
+      <HashCode>ACEIAEIAAAACAAAAAgAAAAhAkACAEAIQBFAIABQAACg=</HashCode>
+      <FileName>src\GameResources.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnreasonableMechanismCS.ItemEntity">
+    <Position X="8" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>src\GameResources.cs</FileName>
+      <FileName>src\Model\ItemEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
