@@ -22,31 +22,38 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Entity">
-    <Position X="0.5" Y="3.5" Width="3.5" />
+    <Position X="0.5" Y="6" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAASAAAAQAEAAAAAggBAAAgAARAAAAAAAAAgAAAgAA=</HashCode>
       <FileName>src\Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.GameResources">
-    <Position X="0.5" Y="8.25" Width="5" />
+    <Position X="0.5" Y="10.75" Width="5" />
     <TypeIdentifier>
       <HashCode>ACEIAEIAAAACAAAAAgAAAAhAkACAEAIQBFAIABQAACg=</HashCode>
       <FileName>src\GameResources.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.ItemEntity">
-    <Position X="5.25" Y="3.5" Width="1.5" />
+    <Position X="5.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACQAAAAAAAAAAAAAABAAAAAAhAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>src\Model\ItemEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.BulletEntity">
-    <Position X="8.75" Y="4.75" Width="1.5" />
+    <Position X="8.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAACEAABAAABAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Model\BulletEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnreasonableMechanismCS.PlayerEntity">
+    <Position X="0.5" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAA=</HashCode>
+      <FileName>PlayerEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="UnreasonableMechanismCS.ItemType">
@@ -73,7 +80,7 @@
   <Enum Name="UnreasonableMechanismCS.PlayerType">
     <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AIAEAAgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Model\Enum\PlayerType.cs</FileName>
     </TypeIdentifier>
   </Enum>
