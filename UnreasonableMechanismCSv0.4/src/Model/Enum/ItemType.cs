@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace UnreasonableMechanismCS
+﻿namespace UnreasonableMechanismCS
 {
     /// <summary>
     /// ItemType defines the avalible types of collectable items in the game.
