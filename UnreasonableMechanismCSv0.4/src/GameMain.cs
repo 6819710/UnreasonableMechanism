@@ -24,6 +24,9 @@ namespace UnreasonableMechanismCS
             //Open game window.
             SwinGame.OpenGraphicsWindow(_title + " v" + _version, 800, 600);
 
+            //Load game assets.
+            GameResources.LoadResources();
+
             //Show SwinGame splash screen.
             if(_splashFlag)
             {
@@ -47,6 +50,9 @@ namespace UnreasonableMechanismCS
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
             }
+
+            //Free game assets.
+            GameResources.FreeResources();
         }
     }
 }
