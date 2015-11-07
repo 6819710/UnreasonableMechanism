@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Model\Movement\Gravity.cs" />
     <Compile Include="src\Model\Movement\Movement.cs" />
     <Compile Include="src\Model\PlayerEntity.cs" />
     <Compile Include="src\Model\Enum\PlayerType.cs" />
