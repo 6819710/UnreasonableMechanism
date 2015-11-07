@@ -15,6 +15,7 @@ namespace UnreasonableMechanismCS
     {
         private ItemType _itemType;
         private Movement _movement;
+        private bool _flag;
 
         /// <summary>
         /// Constructs a new item entitiy.
@@ -24,6 +25,7 @@ namespace UnreasonableMechanismCS
         public ItemEntity(Point position, ItemType itemType) : base (position, InitBounding(position, itemType), 1, "Item" + itemType.ToString() )
         {
             _itemType = itemType;
+            _flag = itemType == ItemType.Star;
             _movement = new Gravity(new UM.Vector(0, -3), new UM.Vector(0, 0.1), 1.8);
         }
 
@@ -56,14 +58,31 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        /// <summary>
+        /// Processes entity events.
+        /// </summary>
         public override void ProcessEvents()
         {
             ProcessMovement();
             DrawEntity();
         }
 
+        /// <summary>
+        /// Processes entity movement.
+        /// </summary>
         public override void ProcessMovement()
         {
+            if(_flag)
+            {
+                UM.Vector v = new UM.Vector(GameObjects.Player.Position, Position);
+
+                if(v.Magnitude > 5)
+                {
+                    v.Magnitude = 5;
+                }
+
+                _movement = new Linear(v);
+            }
             _movement.step();
             Offset(_movement.Velocity);
         }
