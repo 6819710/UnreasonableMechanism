@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Model\Entity.cs" />
     <Compile Include="src\GameObjects.cs" />
     <Compile Include="src\InputController.cs" />
     <Compile Include="src\GameMain.cs" />
@@ -118,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UnresonableMechanismEngineCSv0.2\UnreasonableMechanismEngineCSv0.2.csproj">
