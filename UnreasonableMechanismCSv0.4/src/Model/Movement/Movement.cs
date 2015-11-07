@@ -25,13 +25,18 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Readonly Property: Delta.
+        /// Property: Velosity.
         /// </summary>
         public UM.Vector Velocity
         {
             get
             {
                 return _velocity;
+            }
+
+            set
+            {
+                _velocity = value;
             }
         }
 
