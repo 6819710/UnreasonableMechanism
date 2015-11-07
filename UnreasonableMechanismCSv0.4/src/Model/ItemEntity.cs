@@ -14,6 +14,7 @@ namespace UnreasonableMechanismCS
     public class ItemEntity : Entity
     {
         private ItemType _itemType;
+        private Movement _movement;
 
         /// <summary>
         /// Constructs a new item entitiy.
@@ -23,6 +24,7 @@ namespace UnreasonableMechanismCS
         public ItemEntity(Point position, ItemType itemType) : base (position, InitBounding(position, itemType), 1, "Item" + itemType.ToString() )
         {
             _itemType = itemType;
+            _movement = new Gravity(new UM.Vector(0, -3), new UM.Vector(0, 0.1), 1.8);
         }
 
         /// <summary>
@@ -36,19 +38,34 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        /// <summary>
+        /// Draws the item entity.
+        /// </summary>
         public override void DrawEntity()
         {
-            base.DrawEntity();
+            float x = (float)Position.X - (GameResources.GameImage(Bitmap).Width / 2);
+            float y = (float)Position.Y - (GameResources.GameImage(Bitmap).Height / 2);
+
+            if (Position.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
+            {
+                SwinGame.DrawBitmap(GameResources.GameImage("Above" + Bitmap), x, 20);
+            }
+            else
+            {
+                SwinGame.DrawBitmap(GameResources.GameImage(Bitmap), x, y);
+            }
         }
 
         public override void ProcessEvents()
         {
-            throw new NotImplementedException();
+            ProcessMovement();
+            DrawEntity();
         }
 
         public override void ProcessMovement()
         {
-            throw new NotImplementedException();
+            _movement.step();
+            Offset(_movement.Velocity);
         }
 
         private static Polygon InitBounding(Point position, ItemType itemType)
