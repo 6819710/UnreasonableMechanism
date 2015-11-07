@@ -13,25 +13,25 @@ namespace UnreasonableMechanismCS
     /// </summary>
     public abstract class Movement
     {
-        private UM.Vector _delta;
+        private UM.Vector _velocity;
 
         /// <summary>
         /// Constructs movement with provided delta.
         /// </summary>
-        /// <param name="delta">Vector with movement information.</param>
-        public Movement(UM.Vector delta)
+        /// <param name="velocity">Vector with movement information.</param>
+        public Movement(UM.Vector velocity)
         {
-            _delta = delta;
+            _velocity = velocity;
         }
 
         /// <summary>
         /// Readonly Property: Delta.
         /// </summary>
-        public UM.Vector Delta
+        public UM.Vector Velocity
         {
             get
             {
-                return _delta;
+                return _velocity;
             }
         }
 
