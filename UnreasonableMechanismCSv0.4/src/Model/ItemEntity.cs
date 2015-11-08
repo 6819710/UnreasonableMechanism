@@ -9,7 +9,7 @@ using SwinGameSDK;
 namespace UnreasonableMechanismCS
 {
     /// <summary>
-    /// ItemEntities define all collectable items and powerups.
+    /// ItemEntity defines collectable items within the game.
     /// </summary>
     public class ItemEntity : Entity
     {
@@ -22,7 +22,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         /// <param name="position">Position of the item (point).</param>
         /// <param name="itemType">Type of item (itemtype).</param>
-        public ItemEntity(Point position, ItemType itemType) : base (position, InitBounding(position, itemType), 1, "Item" + itemType.ToString() )
+        public ItemEntity(Point position, ItemType itemType) : base ("Item" + itemType.ToString(), InitBounding(position, itemType), 1)
         {
             _itemType = itemType;
             _flag = itemType == ItemType.Star;
@@ -45,10 +45,10 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void DrawEntity()
         {
-            float x = (float)Position.X - (GameResources.GameImage(Bitmap).Width / 2);
-            float y = (float)Position.Y - (GameResources.GameImage(Bitmap).Height / 2);
+            float x = (float)Hitbox.Center.X - (GameResources.GameImage(Bitmap).Width / 2);
+            float y = (float)Hitbox.Center.Y - (GameResources.GameImage(Bitmap).Height / 2);
 
-            if (Position.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
+            if (Hitbox.Center.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
             {
                 SwinGame.DrawBitmap(GameResources.GameImage("Above" + Bitmap), x, 20);
             }
@@ -56,6 +56,8 @@ namespace UnreasonableMechanismCS
             {
                 SwinGame.DrawBitmap(GameResources.GameImage(Bitmap), x, y);
             }
+
+            Hitbox.DrawEdge(Color.Goldenrod);
         }
 
         /// <summary>
@@ -83,6 +85,7 @@ namespace UnreasonableMechanismCS
 
                 _movement = new Linear(v);
             }
+
             _movement.step();
             Offset(_movement.Velocity);
         }
@@ -97,10 +100,10 @@ namespace UnreasonableMechanismCS
 
             Point[] vertices = new Point[]
             {
-                new Point(x + width, y - Height),
-                new Point(x - width, y - Height),
-                new Point(x - width, y + Height),
-                new Point(x + width, y + Height),
+                new Point(x + width / 2, y - Height / 2),
+                new Point(x - width / 2, y - Height / 2),
+                new Point(x - width / 2, y + Height / 2),
+                new Point(x + width / 2, y + Height / 2),
             };
 
             return new Polygon(vertices);

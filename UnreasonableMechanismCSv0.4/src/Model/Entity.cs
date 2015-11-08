@@ -9,29 +9,26 @@ using SwinGameSDK;
 namespace UnreasonableMechanismCS
 {
     /// <summary>
-    /// Entities are the base abstract class for all collidable game objects.
+    /// Entity defines base class for entities within the play area.
     /// </summary>
     public abstract class Entity
     {
         private string _bitmap;
         private Polygon _hitbox;
         private int _hitpoints;
-        private Point _position;
         private int _tick;
 
         /// <summary>
-        /// Constructs the entity with the provided hitbox, hitpoints and bitmap.
+        /// Constructs new entity.
         /// </summary>
-        /// <param name="position">Position (point).</param>
-        /// <param name="hitbox">Hitbox (polygon).</param>
-        /// <param name="hitpoints">Hitpoints (int).</param>
-        /// <param name="bitmap">Bitmap name (string).</param>
-        public Entity(Point position, Polygon hitbox, int hitpoints, string bitmap)
+        /// <param name="bitmap">Name of bitmap to use.</param>
+        /// <param name="hitbox">Definition of hitbox (polygon).</param>
+        /// <param name="hitpoints">Number of hitpoints.</param>
+        public Entity(string bitmap, Polygon hitbox, int hitpoints)
         {
-            _position = position;
+            _bitmap = bitmap;
             _hitbox = hitbox;
             _hitpoints = hitpoints;
-            _bitmap = bitmap;
             _tick = 0;
         }
 
@@ -79,22 +76,11 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Readonly Property: Position.
-        /// </summary>
-        public Point Position
-        {
-            get
-            {
-                return _position;
-            }
-        }
-
-        /// <summary>
         /// Draws the game bitmap.
         /// </summary>
         public virtual void DrawEntity()
         {
-            SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_position.X - GameResources.GameImage(Bitmap).Width / 2, (float)_position.Y - GameResources.GameImage(Bitmap).Height / 2);
+            SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_hitbox.Center.X - GameResources.GameImage(Bitmap).Width / 2, (float)_hitbox.Center.Y - GameResources.GameImage(Bitmap).Height / 2);
         }
 
         /// <summary>
@@ -114,7 +100,6 @@ namespace UnreasonableMechanismCS
         public void Offset(UM.Vector movement)
         {
             _hitbox.Offset(movement);
-            _position.Offset(movement);
         }
     }
 }

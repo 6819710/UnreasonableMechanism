@@ -3,28 +3,28 @@
   <Class Name="UnreasonableMechanismCS.GameMain" Collapsed="true">
     <Position X="9" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACIAAIAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAACAAACIAAIAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>src\GameMain.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.GameObjects" Collapsed="true">
     <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAACgAAAAABAAAAhAAAAAAEAAAAAQEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAACgAAAAABAAAAhAAAQAAEAAAAAQEAAAA=</HashCode>
       <FileName>src\GameObjects.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.InputController" Collapsed="true">
     <Position X="10.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAgAAAAEAAAACAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\InputController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Entity" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAASAAAAQAEAAAgAggBAAAgAARAAAAAAAAAgAAAgAA=</HashCode>
+      <HashCode>AAAASAAAAQAEAAAAAggBAAAgAARAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>src\Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -80,8 +80,15 @@
   <Class Name="UnreasonableMechanismCS.TestLevel">
     <Position X="5.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAIAAAAAAAQAA=</HashCode>
       <FileName>src\TestLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnreasonableMechanismCS.Settings">
+    <Position X="10.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIAIAAgAAAAAAAAAAQAICAAAgAACIAAAAAAA=</HashCode>
+      <FileName>src\Settings.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="UnreasonableMechanismCS.ItemType" Collapsed="true">
