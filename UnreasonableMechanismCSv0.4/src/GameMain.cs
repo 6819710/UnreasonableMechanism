@@ -52,6 +52,14 @@ namespace UnreasonableMechanismCS
 
                 GameObjects.Draw();
 
+                SwinGame.DrawBitmap(GameResources.GameImage("GameArea"), 0, 0);
+                //SwinGame.DrawText("Score: " + GameScores.Score, Color.Black, 540, 40);
+                //SwinGame.DrawText("Lives: " + GameScores.Player, Color.Black, 540, 60);
+                //SwinGame.DrawText("Bombs: " + GameScores.Bomb, Color.Black, 540, 80);
+                //SwinGame.DrawText("Power: " + GameScores.Power, Color.Black, 540, 120);
+                //SwinGame.DrawText("Graze: " + GameScores.Graze, Color.Black, 540, 140);
+                //SwinGame.DrawText("Bonus: " + GameScores.Bonus, Color.Black, 540, 160);
+
                 //Draw onto the screen
                 SwinGame.RefreshScreen(60);
 
