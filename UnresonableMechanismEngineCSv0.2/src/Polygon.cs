@@ -138,6 +138,20 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
+        /// Readonly Property: Middle point
+        /// </summary>
+        public Point Middle
+        {
+            get
+            {
+                Point min = new Point(MinX, MinY, MinZ);
+                Point max = new Point(MaxX, MaxY, MaxZ);
+
+                return (min + max) / 2;
+            }
+        }
+
+        /// <summary>
         /// Readonly Property: Minimum x value.
         /// </summary>
         public double MinX
