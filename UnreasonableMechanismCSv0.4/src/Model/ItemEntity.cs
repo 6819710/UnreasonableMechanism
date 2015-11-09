@@ -44,50 +44,6 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Draws entity.
-        /// </summary>
-        public override void Draw()
-        {
-            if (Settings.SHOWHITBOX)
-            {
-                switch (_itemType)
-                {
-                    case ItemType.BigPower:
-                        DrawHitbox(Colour.Red);
-                        break;
-
-                    case ItemType.Bomb:
-                        DrawHitbox(Colour.Green);
-                        break;
-
-                    case ItemType.FullPower:
-                        DrawHitbox(Colour.Yellow);
-                        break;
-
-                    case ItemType.Life:
-                        DrawHitbox(Colour.MediumPurple);
-                        break;
-
-                    case ItemType.Point:
-                        DrawHitbox(Colour.Blue);
-                        break;
-
-                    case ItemType.Power:
-                        DrawHitbox(Colour.Red);
-                        break;
-
-                    case ItemType.Star:
-                        DrawHitbox(Colour.White);
-                        break;
-                }
-            }
-            else
-            {
-                DrawEntity();
-            }
-        }
-
-        /// <summary>
         /// Draws entity bitmap.
         /// </summary>
         public override void DrawEntity()
