@@ -145,6 +145,16 @@ namespace UnreasonableMechanismCS
             return new Polygon(vertices, new Point(270, 430));
         }
 
+        /// <summary>
+        /// Offsets the player by the given movement.
+        /// </summary>
+        /// <param name="movement">Movement.</param>
+        public override void Offset(Vector movement)
+        {
+            base.Offset(movement);
+            _grazebox.Offset(movement);
+        }
+
         public override void ProcessEvents()
         {
             ProcessMovement();
@@ -153,6 +163,6 @@ namespace UnreasonableMechanismCS
         public override void ProcessMovement()
         {
             InputController.ProcessPlayerMovement();
-        }
+        }        
     }
 }
