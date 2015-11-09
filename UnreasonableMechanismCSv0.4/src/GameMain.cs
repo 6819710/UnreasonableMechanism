@@ -37,7 +37,7 @@ namespace UnreasonableMechanismCS
             }
 
             //Run game loop.
-            while (false == SwinGame.WindowCloseRequested())
+            while (!SwinGame.WindowCloseRequested() && !Settings.EXIT)
             {
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
