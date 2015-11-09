@@ -119,6 +119,13 @@
       <FileName>src\GameObjects.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="UnreasonableMechanismCS.Button">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>src\Model\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Enum Name="UnreasonableMechanismCS.ItemType" Collapsed="true">
     <Position X="9" Y="3.5" Width="1.5" />
     <TypeIdentifier>
