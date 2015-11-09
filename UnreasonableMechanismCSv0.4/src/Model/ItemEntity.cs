@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UM = UnreasonableMechanismEngineCS;
-using UnreasonableMechanismEngineCS;
 using SwinGameSDK;
+using UnreasonableMechanismEngineCS;
+
+using Vector = UnreasonableMechanismEngineCS.Vector;
+using Colour = SwinGameSDK.Color;
+
 
 namespace UnreasonableMechanismCS
 {
@@ -26,7 +29,7 @@ namespace UnreasonableMechanismCS
         {
             _itemType = itemType;
             _flag = itemType == ItemType.Star;
-            _movement = new Gravity(new UM.Vector(0, -3), new UM.Vector(0, 0.1), 1.8);
+            _movement = new Gravity(new Vector(0, -3), new Vector(0, 0.1), 1.8);
         }
 
         /// <summary>
@@ -45,19 +48,57 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void DrawEntity()
         {
-            float x = (float)Hitbox.Center.X - (GameResources.GameImage(Bitmap).Width / 2);
-            float y = (float)Hitbox.Center.Y - (GameResources.GameImage(Bitmap).Height / 2);
-
-            if (Hitbox.Center.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
+            if(Settings.SHOWHITBOX)
             {
-                SwinGame.DrawBitmap(GameResources.GameImage("Above" + Bitmap), x, 20);
+                Colour colour = Colour.White;
+                switch(_itemType)
+                {
+                    case ItemType.BigPower:
+                        colour = Colour.Red;
+                        break;
+
+                    case ItemType.Bomb:
+                        colour = Colour.Green;
+                        break;
+
+                    case ItemType.FullPower:
+                        colour = Colour.Yellow;
+                        break;
+
+                    case ItemType.Life:
+                        colour = Colour.MediumPurple;
+                        break;
+
+                    case ItemType.Point:
+                        colour = Colour.Blue;
+                        break;
+
+                    case ItemType.Power:
+                        colour = Colour.Red;
+                        break;
+
+                    case ItemType.Star:
+                        colour = Colour.White;
+                        break;
+                }
+
+                Hitbox.DrawEdge(colour);
+                Hitbox.Center.Draw(colour);
             }
             else
             {
-                SwinGame.DrawBitmap(GameResources.GameImage(Bitmap), x, y);
-            }
+                float x = (float)Hitbox.Center.X - (GameResources.GameImage(Bitmap).Width / 2);
+                float y = (float)Hitbox.Center.Y - (GameResources.GameImage(Bitmap).Height / 2);
 
-            Hitbox.DrawEdge(Color.Goldenrod);
+                if (Hitbox.Center.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
+                {
+                    SwinGame.DrawBitmap(GameResources.GameImage("Above" + Bitmap), x, 20);
+                }
+                else
+                {
+                    SwinGame.DrawBitmap(GameResources.GameImage(Bitmap), x, y);
+                }
+            }
         }
 
         /// <summary>
@@ -76,7 +117,7 @@ namespace UnreasonableMechanismCS
         {
             if(_flag)
             {
-                UM.Vector v = new UM.Vector(GameObjects.Player.Position, Position);
+                Vector v = new Vector(GameObjects.Player.Hitbox.Center, Hitbox.Center);
 
                 if(v.Magnitude > 5)
                 {
