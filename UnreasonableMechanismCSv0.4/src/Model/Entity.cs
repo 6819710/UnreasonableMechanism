@@ -109,6 +109,15 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
+        /// Offsets the entity by the given movement vector.
+        /// </summary>
+        /// <param name="movement">Movement vector.</param>
+        public virtual void Offset(Vector movement)
+        {
+            _hitbox.Offset(movement);
+        }
+
+        /// <summary>
         /// Processes entity events.
         /// </summary>
         public abstract void ProcessEvents();
@@ -117,14 +126,6 @@ namespace UnreasonableMechanismCS
         /// Processes entity movement.
         /// </summary>
         public abstract void ProcessMovement();
-
-        /// <summary>
-        /// Offsets the entity by the given movement vector.
-        /// </summary>
-        /// <param name="movement">Movement vector.</param>
-        public virtual void Offset(Vector movement)
-        {
-            _hitbox.Offset(movement);
-        }
+        
     }
 }
