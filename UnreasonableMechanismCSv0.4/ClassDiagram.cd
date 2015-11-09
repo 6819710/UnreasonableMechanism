@@ -78,9 +78,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.TestLevel">
-    <Position X="0.5" Y="6" Width="1.5" />
+    <Position X="7" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAIAAAAAAAQAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAgAAAAAAAACAgAQAAAAAAAAAAAQAA=</HashCode>
       <FileName>src\TestLevel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -101,14 +101,14 @@
   <Class Name="UnreasonableMechanismCS.ScreenControler">
     <Position X="5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAg=</HashCode>
       <FileName>src\ScreenControler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Screen">
-    <Position X="5" Y="4.75" Width="1.5" />
+    <Position X="5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAACAAAAAAABgAgAAAAAAAAAAAAQAAAAAAAAAAAQAA=</HashCode>
       <FileName>src\Screen.cs</FileName>
     </TypeIdentifier>
   </Class>
