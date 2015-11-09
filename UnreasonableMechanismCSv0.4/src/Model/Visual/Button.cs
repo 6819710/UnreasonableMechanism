@@ -18,6 +18,7 @@ namespace UnreasonableMechanismCS
     {
         private string _buttonText;
         private Point _buttonLocation;
+        private bool _selected;
 
         /// <summary>
         /// Button location.
@@ -28,6 +29,18 @@ namespace UnreasonableMechanismCS
         {
             _buttonText = buttonText;
             _buttonLocation = location;
+            _selected = false;
+        }
+
+        /// <summary>
+        /// Readonly Property: Selected.
+        /// </summary>
+        public bool Selected
+        {
+            get
+            {
+                return _selected;
+            }
         }
 
         /// <summary>
@@ -37,10 +50,26 @@ namespace UnreasonableMechanismCS
         {
             DrawText(Colour.White);
         }
-
+        
         private void DrawText(Colour clr)
         {
             SwinGame.DrawText(_buttonText, clr, (float)_buttonLocation.X, (float)_buttonLocation.Y);
+        }
+
+        /// <summary>
+        /// Selects button.
+        /// </summary>
+        public void Select()
+        {
+            _selected = true;
+        }
+
+        /// <summary>
+        /// Deselects button.
+        /// </summary>
+        public void Deselect()
+        {
+            _selected = false;
         }
     }
 }
