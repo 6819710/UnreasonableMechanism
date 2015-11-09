@@ -30,6 +30,22 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
+        /// Property: Grazebox.
+        /// </summary>
+        public Polygon Grazebox
+        {
+            get
+            {
+                return _grazebox;
+            }
+
+            set
+            {
+                _grazebox = value;
+            }
+        }
+
+        /// <summary>
         /// Draws the player.
         /// </summary>
         public override void Draw()
@@ -131,12 +147,12 @@ namespace UnreasonableMechanismCS
 
         public override void ProcessEvents()
         {
-            throw new NotImplementedException();
+            ProcessMovement();
         }
 
         public override void ProcessMovement()
         {
-            throw new NotImplementedException();
+            InputController.ProcessPlayerMovement();
         }
     }
 }
