@@ -142,7 +142,7 @@ namespace UnreasonableMechanismCS
             {
                 if (Button("Play").Selected)
                 {
-                    
+                    ScreenControler.SetScreen("ModeSelect");
                 }
                 else if (Button("Practice").Selected)
                 {
