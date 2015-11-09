@@ -18,7 +18,7 @@
     <Position X="2.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAASAAAAQAEAgAAAggBAAAoAARAAAAAAAAAAAAAgAA=</HashCode>
-      <FileName>src\Model\Entity.cs</FileName>
+      <FileName>src\Model\Entities\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.GameResources" Collapsed="true">
@@ -32,21 +32,21 @@
     <Position X="4.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACQACAAAAAAAAAAAABAQAAAAhAAAAAAAAAAAAAAgA=</HashCode>
-      <FileName>src\Model\ItemEntity.cs</FileName>
+      <FileName>src\Model\Entities\ItemEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.BulletEntity" Collapsed="true">
     <Position X="6.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAACEAABAAABAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>src\Model\BulletEntity.cs</FileName>
+      <FileName>src\Model\Entities\BulletEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.PlayerEntity" Collapsed="true">
     <Position X="0.75" Y="1.75" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAgAAAEABAAAAAABAAQAAAABAAAAQgAA=</HashCode>
-      <FileName>src\Model\PlayerEntity.cs</FileName>
+      <FileName>src\Model\Entities\PlayerEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Movement" Collapsed="true">
@@ -113,10 +113,10 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Button">
-    <Position X="7" Y="3.5" Width="1.5" />
+    <Position X="7" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAIA=</HashCode>
-      <FileName>src\Model\Button.cs</FileName>
+      <FileName>src\Model\Visual\Button.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="UnreasonableMechanismCS.ItemType" Collapsed="true">
