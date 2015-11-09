@@ -21,10 +21,10 @@ namespace UnreasonableMechanismCS
         /// Constructs a new player in the defult position.
         /// </summary>
         /// <param name="playerType">Type of player selected.</param>
-        public PlayerEntity(PlayerType playerType) : base(new Point(270, 430), InitBounding(new Point(270, 430), playerType), 1, playerType.ToString())
+        public PlayerEntity(PlayerType playerType) : base(playerType.ToString(), InitBounding(new Point(270, 430), playerType), 1)
         {
             _playerType = playerType;
-            _grazebox = InitGrazeBox(Position, playerType);
+            _grazebox = InitGrazeBox(Hitbox.Center, playerType);
         }
 
         private static Polygon InitBounding(Point position, PlayerType playerType)

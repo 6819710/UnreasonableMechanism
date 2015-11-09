@@ -15,7 +15,7 @@ namespace UnreasonableMechanismCS
         private BulletType _bulletType;
         private UM.Vector _trajectory;
 
-        public BulletEntity(Point position, UM.Vector trajectory, BulletColour bulletColour, BulletType bulletType) : base(position, InitBounding(position, bulletColour, bulletType), 1, bulletColour.ToString() + bulletType.ToString())
+        public BulletEntity(Point position, UM.Vector trajectory, BulletColour bulletColour, BulletType bulletType) : base(bulletColour.ToString() + bulletType.ToString(), InitBounding(position, bulletColour, bulletType), 1)
         {
             _trajectory = trajectory;
             _bulletColour = bulletColour;
