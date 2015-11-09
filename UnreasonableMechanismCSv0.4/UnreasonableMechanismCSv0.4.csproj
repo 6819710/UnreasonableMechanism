@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\GameMenu.cs" />
     <Compile Include="src\Settings.cs" />
     <Compile Include="src\Model\Movement\Linear.cs" />
     <Compile Include="src\Model\Movement\Gravity.cs" />

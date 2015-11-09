@@ -17,14 +17,14 @@
   <Class Name="UnreasonableMechanismCS.InputController" Collapsed="true">
     <Position X="10.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\InputController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Entity" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAASAAAAQAEAAAAAggBAAAgAARAAAAAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAAASAAAAQAEAgAAAggBAAAoAARAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>src\Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -52,7 +52,7 @@
   <Class Name="UnreasonableMechanismCS.PlayerEntity" Collapsed="true">
     <Position X="0.75" Y="1.75" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAABAAAAAABAAQAAAABAAAAQAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAgAAAEABAAAAAABAAQAAAABAAAAQgAA=</HashCode>
       <FileName>src\Model\PlayerEntity.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -89,6 +89,13 @@
     <TypeIdentifier>
       <HashCode>AAABAAAAIAIAAgAAAAAAAAAAQAICAAAgAACIAAAAAAA=</HashCode>
       <FileName>src\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnreasonableMechanismCS.GameMenu">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\GameMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="UnreasonableMechanismCS.ItemType" Collapsed="true">
