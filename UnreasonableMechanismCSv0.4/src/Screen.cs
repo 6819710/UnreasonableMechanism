@@ -21,6 +21,22 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
+        /// Readonly Property: Tick
+        /// </summary>
+        public uint Tick
+        {
+            get
+            {
+                return _tick;
+            }
+        }
+
+        /// <summary>
+        /// Draws the screen.
+        /// </summary>
+        public abstract void Draw();
+
+        /// <summary>
         /// Initalises Screen.
         /// </summary>
         public abstract void Initalise();
@@ -31,8 +47,12 @@ namespace UnreasonableMechanismCS
         public abstract void ProvessEvents();
 
         /// <summary>
-        /// Draws the screen.
+        /// Resets the screen
         /// </summary>
-        public abstract void Draw();
+        public void Reset()
+        {
+            _tick = 0;
+            Initalise();
+        }
     }
 }
