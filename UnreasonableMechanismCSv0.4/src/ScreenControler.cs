@@ -23,6 +23,14 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        /// <summary>
+        /// Initalises the screen.
+        /// </summary>
+        public static void Initalise()
+        {
+            _screen.Initalise();
+        }
+
         public static void SetScreen(string screen)
         {
             _screen = GameObjects.GameScreen(screen);
