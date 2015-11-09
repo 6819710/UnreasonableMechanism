@@ -42,6 +42,10 @@ namespace UnreasonableMechanismCS
         private static void LoadGameScreens()
         {
             NewScreen("StartupMenu", new StarupMenu());
+            NewScreen("OptionsMenu", new OptionsMenu());
+
+            GameScreen("StartupMenu").Initalise();
+            GameScreen("OptionsMenu").Initalise();
         }
 
         /// <summary>
