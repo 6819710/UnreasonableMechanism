@@ -11,6 +11,7 @@ namespace UnreasonableMechanismCS
     public static class Settings
     {
         public static bool SHOWHITBOX;
+        public static bool EXIT;
 
         public static KeyCode UP;
         public static KeyCode DOWN;
@@ -25,6 +26,7 @@ namespace UnreasonableMechanismCS
         public static void InitSettings()
         {
             SHOWHITBOX = true;
+            EXIT = false;
 
             UP = KeyCode.vk_UP;
             DOWN = KeyCode.vk_DOWN;
