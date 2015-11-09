@@ -122,7 +122,7 @@ namespace UnreasonableMechanismCS
         /// Offsets the entity by the given movement vector.
         /// </summary>
         /// <param name="movement">Movement vector.</param>
-        public virtual void Offset(UM.Vector movement)
+        public virtual void Offset(Vector movement)
         {
             _hitbox.Offset(movement);
         }
