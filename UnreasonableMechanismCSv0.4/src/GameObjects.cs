@@ -10,7 +10,7 @@ namespace UnreasonableMechanismCS
 {
     public static class GameObjects
     {
-        public static Entity Player;
+        public static PlayerEntity Player;
         public static List<ItemEntity> Items = new List<ItemEntity>();
 
         /// <summary>
@@ -54,6 +54,8 @@ namespace UnreasonableMechanismCS
             {
                 ProcessItems();
             }
+
+            Player.ProcessEvents();
         }
 
         private static void ProcessItems()
