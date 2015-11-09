@@ -13,170 +13,46 @@ namespace UnreasonableMechanismCS
 {
     public static class InputController
     {
+        /// <summary>
+        /// Processes player movement.
+        /// </summary>
         public static void ProcessPlayerMovement()
         {
             if(SwinGame.KeyDown(Settings.UP))
             {
                 GameObjects.Player.Offset(new Vector(0, -2));
-                if (GameObjects.Player.Grazebox.LessThanY(20))
+                if (GameObjects.Player.Grazebox.LessThanEqualY(20))
                 {
-                    GameObjects.Player.Offset(new Vector(0, GameObjects.Player.Grazebox.MaxDistanceLessThanX(20)));
-                }  
+                    GameObjects.Player.Offset(new Vector(0, GameObjects.Player.Grazebox.MaxDistanceLessThanY(21)));
+                }
             }
 
-            if (SwinGame.KeyDown(Settings.DOWN))
+            if(SwinGame.KeyDown(Settings.DOWN))
             {
                 GameObjects.Player.Offset(new Vector(0, 2));
-                if (GameObjects.Player.Grazebox.GreaterThanY(580))
+                if (GameObjects.Player.Grazebox.GreaterThanEqualY(580))
                 {
-                    GameObjects.Player.Offset(new Vector(0, -GameObjects.Player.Grazebox.MaxDistanceGreaterThanY(580)));
+                    GameObjects.Player.Offset(new Vector(0, -GameObjects.Player.Grazebox.MaxDistanceGreaterThanY(579)));
+                }
+            }
+
+            if(SwinGame.KeyDown(Settings.LEFT))
+            {
+                GameObjects.Player.Offset(new Vector(-2, 0));
+                if (GameObjects.Player.Grazebox.LessThanEqualX(40))
+                {
+                    GameObjects.Player.Offset(new Vector(GameObjects.Player.Grazebox.MaxDistanceLessThanX(41), 0));
+                }
+            }
+
+            if(SwinGame.KeyDown(Settings.RIGHT))
+            {
+                GameObjects.Player.Offset(new Vector(2, 0));
+                if (GameObjects.Player.Grazebox.GreaterThanEqualX(500))
+                {
+                    GameObjects.Player.Offset(new Vector(-GameObjects.Player.Grazebox.MaxDistanceGreaterThanX(499), 0));
                 }
             }
         }
-
-        /*
-        /// <summary>
-        /// Processes user input.
-        /// </summary>
-        public static void ProcessInput()
-        {
-            HandleMovement();
-            HandleYawPitchRoll();
-            HandleScale();
-        }
-
-        private static void HandleMovement()
-        {
-            if (SwinGame.KeyDown(KeyCode.vk_UP))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.Offset(new UM.Vector(0, -2));
-                    polyhedron.RollX(0.035, polyhedron.Center);
-                    if(polyhedron.LessThanEqualY(0))
-                    {
-                        polyhedron.Offset(new UM.Vector(0, polyhedron.MaxDistanceLessThanY(0)));
-                    }
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_DOWN))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.Offset(new UM.Vector(0, 2));
-                    polyhedron.RollX(-0.035, polyhedron.Center);
-                    if (polyhedron.GreaterThanY(600))
-                    {
-                        polyhedron.Offset(new UM.Vector(0, -polyhedron.MaxDistanceGreaterThanY(600)));
-                    }
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_LEFT))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.Offset(new UM.Vector(-2, 0));
-                    polyhedron.PitchY(-0.035, polyhedron.Center);
-                    if (polyhedron.LessThanX(0))
-                    {
-                        polyhedron.Offset(new UM.Vector(polyhedron.MaxDistanceLessThanX(0), 0));
-                    }
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_RIGHT))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.Offset(new UM.Vector(2, 0));
-                    polyhedron.PitchY(0.035, polyhedron.Center);
-                    if (polyhedron.GreaterThanX(800))
-                    {
-                        polyhedron.Offset(new UM.Vector(-polyhedron.MaxDistanceGreaterThanX(800), 0));
-                    }
-                }
-            }
-        }
-
-        private static void HandleYawPitchRoll()
-        {
-            if (SwinGame.KeyDown(KeyCode.vk_w))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.RollX(0.035, polyhedron.Center);
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_s))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.RollX(-0.035, polyhedron.Center);
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_a))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.PitchY(-0.035, polyhedron.Center);
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_d))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.PitchY(0.035, polyhedron.Center);
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_q))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.YawZ(0.035, polyhedron.Center);
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_e))
-            {
-                foreach(Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.YawZ(-0.035, polyhedron.Center);
-                }
-            }
-        }
-
-        public static void HandleScale()
-        {
-            if (SwinGame.KeyDown(KeyCode.vk_z))
-            {
-                foreach (Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.Scale(1.01, polyhedron.Center);
-                    if(polyhedron.MaxDistanceLessThanX(polyhedron.Center.X) > 150)
-                    {
-                        polyhedron.Scale(0.99, polyhedron.Center);
-                    }
-                }
-            }
-
-            if (SwinGame.KeyDown(KeyCode.vk_x))
-            {
-                foreach (Polyhedron polyhedron in GameObjects.Polyhedra)
-                {
-                    polyhedron.Scale(0.99, polyhedron.Center);
-                    if (polyhedron.MaxDistanceLessThanX(polyhedron.Center.X) < 20)
-                    {
-                        polyhedron.Scale(1.01, polyhedron.Center);
-                    }
-                }
-            }
-        }
-        */
     }
 }
