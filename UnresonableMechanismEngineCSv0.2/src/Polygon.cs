@@ -44,7 +44,7 @@ namespace UnreasonableMechanismEngineCS
             _vertices = new List<Point>(vertices);
             _edges = new List<Vector>();
             BuildEdges();
-            Offset(new Vector(location, Centroid));
+            Offset(new Vector(location, Middle));
         }
 
         /// <summary>
@@ -138,7 +138,7 @@ namespace UnreasonableMechanismEngineCS
         }
 
         /// <summary>
-        /// Readonly Property: Middle point
+        /// Readonly Property: Middle point.
         /// </summary>
         public Point Middle
         {
