@@ -5,6 +5,9 @@ using System.Text;
 
 namespace UnreasonableMechanismCS
 {
+    /// <summary>
+    /// Controlls screen transitions.
+    /// </summary>
     public static class ScreenControler
     {
         private static Screen _screen;
