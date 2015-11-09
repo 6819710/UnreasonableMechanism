@@ -19,11 +19,11 @@ namespace UnreasonableMechanismCS
         public ModeSelect()
         {
             _buttons.Add("Demo", new Button("Demo", new Point(20, 20)));
-            _buttons.Add("Easy", new Button("Easy", new Point(20, 20)));
-            _buttons.Add("Normal", new Button("Normal", new Point(20, 20)));
-            _buttons.Add("Hard", new Button("Hard", new Point(20, 20)));
-            _buttons.Add("Lunatic", new Button("Lunatic", new Point(20, 20)));
-            _buttons.Add("Quit", new Button("Quit", new Point(20, 20)));
+            _buttons.Add("Easy", new Button("Easy", new Point(20, 40)));
+            _buttons.Add("Normal", new Button("Normal", new Point(20, 60)));
+            _buttons.Add("Hard", new Button("Hard", new Point(20, 80)));
+            _buttons.Add("Lunatic", new Button("Lunatic", new Point(20, 100)));
+            _buttons.Add("Quit", new Button("Quit", new Point(20, 120)));
 
             _buttonNames.Add("Demo");
             _buttonNames.Add("Easy");
