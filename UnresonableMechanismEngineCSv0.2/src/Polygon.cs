@@ -44,13 +44,13 @@ namespace UnreasonableMechanismEngineCS
             _vertices = new List<Point>(vertices);
             _edges = new List<Vector>();
             BuildEdges();
-            Offset(new Vector(location, Center));
+            Offset(new Vector(location, Centroid));
         }
 
         /// <summary>
-        /// Readonly Property: Center point of polygon (calculated).
+        /// Readonly Property: Centroid point of polygon (calculated).
         /// </summary>
-        public Point Center
+        public Point Centroid
         {
             get
             {
@@ -71,6 +71,132 @@ namespace UnreasonableMechanismEngineCS
             get
             {
                 return _edges;
+            }
+        }
+
+        /// <summary>
+        /// Readonly Property: Maximum x value.
+        /// </summary>
+        public double MaxX
+        {
+            get
+            {
+                double result = double.NegativeInfinity;
+
+                foreach(Point vertex in _vertices)
+                {
+                    if (result < vertex.X)
+                    {
+                        result = vertex.X;
+                    }
+                }
+
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Readonly Property: Maximum y value.
+        /// </summary>
+        public double MaxY
+        {
+            get
+            {
+                double result = double.NegativeInfinity;
+
+                foreach(Point vertex in _vertices)
+                {
+                    if(result < vertex.Y)
+                    {
+                        result = vertex.Y;
+                    }
+                }
+
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Readonly Property: Maximum z value.
+        /// </summary>
+        public double MaxZ
+        {
+            get
+            {
+                double result = double.NegativeInfinity;
+
+                foreach (Point vertex in _vertices)
+                {
+                    if (result < vertex.Z)
+                    {
+                        result = vertex.Z;
+                    }
+                }
+
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Readonly Property: Minimum x value.
+        /// </summary>
+        public double MinX
+        {
+            get
+            {
+                double result = double.PositiveInfinity;
+
+                foreach (Point vertex in _vertices)
+                {
+                    if (result > vertex.X)
+                    {
+                        result = vertex.X;
+                    }
+                }
+
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Readonly Property: Minimum y value.
+        /// </summary>
+        public double MinY
+        {
+            get
+            {
+                double result = double.PositiveInfinity;
+
+                foreach (Point vertex in _vertices)
+                {
+                    if (result > vertex.Y)
+                    {
+                        result = vertex.Y;
+                    }
+                }
+
+                return result;
+            }
+        }
+
+        /// <summary>
+        /// Readonly Property: Minimum z value.
+        /// </summary>
+        public double MinZ
+        {
+            get
+            {
+                double result = double.PositiveInfinity;
+
+                foreach (Point vertex in _vertices)
+                {
+                    if (result > vertex.Z)
+                    {
+                        result = vertex.Z;
+                    }
+                }
+
+                return result;
             }
         }
 
@@ -154,8 +280,8 @@ namespace UnreasonableMechanismEngineCS
         {
             for(int i = 0; i < _vertices.Count; i++)
             {
-                float x = (float)Center.X;
-                float y = (float)Center.Y;
+                float x = (float)Centroid.X;
+                float y = (float)Centroid.Y;
 
                 float x1 = (float)_vertices[i].X;
                 float y1 = (float)_vertices[i].Y;
@@ -560,7 +686,7 @@ namespace UnreasonableMechanismEngineCS
         /// </summary>
         /// <param name="x">Value of x.</param>
         /// <returns>Maximum distance from x.</returns>
-        public double MadDistanceLessThanEqualX(double x)
+        public double MaxDistanceLessThanEqualX(double x)
         {
             double distance = double.NegativeInfinity;
             foreach(Point vertex in _vertices)
