@@ -43,9 +43,11 @@ namespace UnreasonableMechanismCS
         {
             NewScreen("StartupMenu", new StarupMenu());
             NewScreen("OptionsMenu", new OptionsMenu());
+            NewScreen("ModeSelect", new ModeSelect());
 
             GameScreen("StartupMenu").Initalise();
             GameScreen("OptionsMenu").Initalise();
+            GameScreen("ModeSelect").Initalise();
         }
 
         /// <summary>
