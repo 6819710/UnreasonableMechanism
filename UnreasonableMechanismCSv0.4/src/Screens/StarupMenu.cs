@@ -42,6 +42,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void Initalise()
         {
+            _buttons["Play"].Select();
         }
 
         /// <summary>
