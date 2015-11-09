@@ -79,19 +79,36 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Draws the game bitmap.
+        /// Draws entity.
         /// </summary>
-        public virtual void DrawEntity()
+        public virtual void Draw()
         {
             if(Settings.SHOWHITBOX)
             {
-                Hitbox.DrawEdge(Colour.White);
-                Hitbox.Center.Draw(Colour.White);
+                DrawHitbox(Colour.White);
             }
             else
             {
-                SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_hitbox.Center.X - GameResources.GameImage(Bitmap).Width / 2, (float)_hitbox.Center.Y - GameResources.GameImage(Bitmap).Height / 2);
+                DrawEntity();
             }
+        }
+
+        /// <summary>
+        /// Draws entity bitmap.
+        /// </summary>
+        public virtual void DrawEntity()
+        {
+            SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_hitbox.Center.X - GameResources.GameImage(Bitmap).Width / 2, (float)_hitbox.Center.Y - GameResources.GameImage(Bitmap).Height / 2);
+        }
+
+        /// <summary>
+        /// Draws hitbox with the provided colour.
+        /// </summary>
+        /// <param name="clr">Colour to draw hitbox</param>
+        public virtual void DrawHitbox(Colour clr)
+        {
+            Hitbox.DrawEdge(clr);
+            Hitbox.Center.Draw(clr);
         }
 
         /// <summary>
