@@ -29,6 +29,9 @@ namespace UnreasonableMechanismCS
             _grazebox = InitGrazeBox(Hitbox.Centroid, playerType);
         }
 
+        /// <summary>
+        /// Draws the player.
+        /// </summary>
         public override void Draw()
         {
             base.Draw();
@@ -39,10 +42,13 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        /// <summary>
+        /// Draws player graze box.
+        /// </summary>
+        /// <param name="clr">Colour to draw graze box.</param>
         public void DrawGrazebox(Colour clr)
         {
             _grazebox.DrawEdge(clr);
-            _grazebox.Centroid.Draw(Colour.White);
         }
 
         private static Polygon InitBounding(Point position, PlayerType playerType)
