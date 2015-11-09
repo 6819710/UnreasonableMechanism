@@ -3,14 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UM = UnreasonableMechanismEngineCS;
-using UnreasonableMechanismEngineCS;
 using SwinGameSDK;
+using UnreasonableMechanismEngineCS;
+
+using Vector = UnreasonableMechanismEngineCS.Vector;
+using Colour = SwinGameSDK.Color;
 
 namespace UnreasonableMechanismCS
 {
     public static class InputController
     {
+        public static void ProcessPlayerMovement()
+        {
+            if(SwinGame.KeyDown(Settings.UP))
+            {
+                GameObjects.Player.Offset(new Vector(0, -2));
+                if (GameObjects.Player.Grazebox.LessThanY(20))
+                {
+                    GameObjects.Player.Offset(new Vector(0, GameObjects.Player.Grazebox.MaxDistanceLessThanX(20)));
+                }  
+            }
+
+            if (SwinGame.KeyDown(Settings.DOWN))
+            {
+                GameObjects.Player.Offset(new Vector(0, 2));
+                if (GameObjects.Player.Grazebox.GreaterThanY(580))
+                {
+                    GameObjects.Player.Offset(new Vector(0, -GameObjects.Player.Grazebox.MaxDistanceGreaterThanY(580)));
+                }
+            }
+        }
+
         /*
         /// <summary>
         /// Processes user input.
