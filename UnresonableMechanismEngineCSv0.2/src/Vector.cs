@@ -123,12 +123,11 @@ namespace UnreasonableMechanismEngineCS
 
             set
             {
-                double phi = Phi;
-                double theta = Theta;
-
-                _i = value * Math.Cos(theta) * Math.Cos(phi);
-                _j = value * Math.Cos(theta) * Math.Sin(phi);
-                _k = value * Math.Sin(theta);
+                Vector unit  = this.Unit;
+                
+                _i = value * unit.I;
+                _j = value * unit.K;
+                _k = value * unit.K;
             }
         }
 
