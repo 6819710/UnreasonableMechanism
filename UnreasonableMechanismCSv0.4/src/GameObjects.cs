@@ -27,7 +27,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public static void Draw()
         {
-            //Player.DrawEntity();
+            Player.DrawEntity();
 
             DrawItemEntities();
         }
