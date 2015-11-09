@@ -86,6 +86,7 @@
     <Compile Include="src\GameMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\TestLevel.cs" />
+    <Compile Include="src\Screens\StarupMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lib\*.dll" />
@@ -143,6 +144,7 @@
       <Name>UnreasonableMechanismEngineCSv0.2</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(ProjectDir)lib\*.dll" "$(TargetDir)" /s/y/d/e &lt;NUL: </PostBuildEvent>
