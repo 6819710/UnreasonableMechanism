@@ -48,7 +48,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public void Draw()
         {
-            if(_selected)
+            if(!_selected)
             {
                 DrawText(Colour.White);
             }
