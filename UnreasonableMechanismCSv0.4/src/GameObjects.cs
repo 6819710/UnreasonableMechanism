@@ -3,97 +3,61 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using UnreasonableMechanismEngineCS;
 using SwinGameSDK;
 
+using Colour = SwinGameSDK.Color;
+using Vector = UnreasonableMechanismEngineCS.Vector;
+
 namespace UnreasonableMechanismCS
 {
+    /// <summary>
+    /// Game objects library.
+    /// </summary>
     public static class GameObjects
     {
-        public static List<ItemEntity> Items = new List<ItemEntity>();
-        public static PlayerEntity Player;
-        public static Dictionary<string, Screen> Screens = new Dictionary<string, Screen>();
+        private static Dictionary<string, Screen> _screens = new Dictionary<string, Screen>();
+        private static PlayerEntity _player = new PlayerEntity(PlayerType.NarrowA);
 
         /// <summary>
-        /// Adds an item to the items list.
+        /// Readonly Property: Player.
         /// </summary>
-        /// <param name="obj">Object.</param>
-        public static void AddItem(ItemEntity obj)
+        public static PlayerEntity Player
         {
-            Items.Add(obj);
-        }
-
-        /// <summary>
-        /// Adds a screen to the screens list.
-        /// </summary>
-        /// <param name="obj">Object.</param>
-        public static void AddScreen(Screen obj)
-        {
-            Screens.Add(obj);
-        }
-
-        /// <summary>
-        /// Draws all game items.
-        /// </summary>
-        public static void Draw()
-        {
-            DrawItemEntities();
-
-            Player.Draw();
-        }
-
-        private static void DrawItemEntities()
-        {
-            foreach(ItemEntity item in Items)
+            get
             {
-                item.Draw();
-            }
-        }
-
-        public static void Initalise()
-        {
-            Player = new PlayerEntity(PlayerType.NarrowA);
-
-            Screens.Add("Test", new TestLevel());
-        }
-
-        /// <summary>
-        /// Processes events for all game objects.
-        /// </summary>
-        public static void ProcessEvents()
-        {
-            if(Items.Count > 0)
-            {
-                ProcessItems();
-            }
-
-            Player.ProcessEvents();
-        }
-
-        private static void ProcessItems()
-        {
-            foreach(ItemEntity item in Items)
-            {
-                item.ProcessEvents();
+                return _player;
             }
         }
 
         /// <summary>
-        /// Removes provided item from items list.
+        /// Loads game objects.
         /// </summary>
-        /// <param name="obj">Object.</param>
-        public static void RemoveItem(ItemEntity obj)
+        public static void LoadGameOjects()
         {
-            Items.Remove(obj);
+            LoadGameScreens();
+        }
+
+        private static void LoadGameScreens()
+        {
+            NewScreen("StartupMenu", new StarupMenu());
         }
 
         /// <summary>
-        /// Removes item from items list at given index.
+        /// Fetches named screen.
         /// </summary>
-        /// <param name="index">Index of item.</param>
-        public static void RemoveItem(int index)
+        /// <param name="screen">Screen to fetch.</param>
+        /// <returns>Screen.</returns>
+        public static Screen GameScreen(string screen)
         {
-            Items.RemoveAt(index);
+            return _screens[screen];
         }
+
+        private static void NewScreen(string screenName, Screen screen)
+        {
+            _screens.Add(screenName, screen);
+        }
+
     }
 }
