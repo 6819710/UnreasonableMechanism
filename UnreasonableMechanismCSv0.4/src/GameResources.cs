@@ -32,9 +32,21 @@ namespace UnreasonableMechanismCS
         {
             NewImage("GameArea", "PlayAreaBlock.png");
 
-            NewImage("Player", "Player.png");
-            NewImage("PlayerLeft", "PlayerLeft.png");
-            NewImage("PlayerRight", "PlayerRight.png");
+            NewImage("PlayerWideA", "Player.png");
+            NewImage("PlayerLeftWideA", "PlayerLeft.png");
+            NewImage("PlayerRightWideA", "PlayerRight.png");
+
+            NewImage("PlayerWideB", "Player.png");
+            NewImage("PlayerLeftWideB", "PlayerLeft.png");
+            NewImage("PlayerRightWideB", "PlayerRight.png");
+
+            NewImage("PlayerNarrowA", "Player.png");
+            NewImage("PlayerLeftNarrowA", "PlayerLeft.png");
+            NewImage("PlayerRightNarrowA", "PlayerRight.png");
+
+            NewImage("PlayerNarrowB", "Player.png");
+            NewImage("PlayerLeftNarrowB", "PlayerLeft.png");
+            NewImage("PlayerRightNarrowB", "PlayerRight.png");
 
 
             NewImage("YingYang0", "YingYang0.png");
