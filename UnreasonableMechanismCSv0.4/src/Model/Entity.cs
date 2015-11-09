@@ -106,7 +106,6 @@ namespace UnreasonableMechanismCS
         public virtual void DrawHitbox(Colour clr)
         {
             Hitbox.DrawEdge(clr);
-            Hitbox.Center.Draw(clr);
         }
 
         /// <summary>
