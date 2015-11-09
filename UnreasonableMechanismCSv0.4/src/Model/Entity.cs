@@ -96,7 +96,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public virtual void DrawEntity()
         {
-            SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_hitbox.Center.X - GameResources.GameImage(Bitmap).Width / 2, (float)_hitbox.Center.Y - GameResources.GameImage(Bitmap).Height / 2);
+            SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_hitbox.Centroid.X - GameResources.GameImage(Bitmap).Width / 2, (float)_hitbox.Centroid.Y - GameResources.GameImage(Bitmap).Height / 2);
         }
 
         /// <summary>

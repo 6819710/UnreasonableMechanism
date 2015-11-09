@@ -530,9 +530,9 @@ namespace UnreasonableMechanismEngineCS
             double distance = double.NegativeInfinity;
             foreach(Polygon face in _faces)
             {
-                if(face.LessThanEqualX(x) && face.MadDistanceLessThanEqualX(x) > distance)
+                if(face.LessThanEqualX(x) && face.MaxDistanceLessThanEqualX(x) > distance)
                 {
-                    distance = face.MadDistanceLessThanEqualX(x);
+                    distance = face.MaxDistanceLessThanEqualX(x);
                 }
             }
             return distance;
@@ -863,7 +863,7 @@ namespace UnreasonableMechanismEngineCS
                 flag = false;
                 for (int j = 0; j < _faces.Count - 1; j++)
                 {
-                    if (_faces[j + 1].Center.Z > _faces[j].Center.Z)
+                    if (_faces[j + 1].Centroid.Z > _faces[j].Centroid.Z)
                     {
                         temp = _faces[j];
                         _faces[j] = _faces[j + 1];

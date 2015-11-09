@@ -48,10 +48,10 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void DrawEntity()
         {
-            float x = (float)Hitbox.Center.X - (GameResources.GameImage(Bitmap).Width / 2);
-            float y = (float)Hitbox.Center.Y - (GameResources.GameImage(Bitmap).Height / 2);
+            float x = (float)Hitbox.Centroid.X - (GameResources.GameImage(Bitmap).Width / 2);
+            float y = (float)Hitbox.Centroid.Y - (GameResources.GameImage(Bitmap).Height / 2);
 
-            if (Hitbox.Center.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
+            if (Hitbox.Centroid.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
             {
                 SwinGame.DrawBitmap(GameResources.GameImage("Above" + Bitmap), x, 20);
             }
@@ -77,7 +77,7 @@ namespace UnreasonableMechanismCS
         {
             if(_flag)
             {
-                Vector velocity = new Vector(GameObjects.Player.Hitbox.Center, Hitbox.Center);
+                Vector velocity = new Vector(GameObjects.Player.Hitbox.Centroid, Hitbox.Centroid);
 
                 if(velocity.Magnitude > 5)
                 {

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using UM = UnreasonableMechanismEngineCS;
-using UnreasonableMechanismEngineCS;
 using SwinGameSDK;
+using UnreasonableMechanismEngineCS;
+
+using Vector = UnreasonableMechanismEngineCS.Vector;
+using Colour = SwinGameSDK.Color;
 
 
 namespace UnreasonableMechanismCS
@@ -24,7 +26,23 @@ namespace UnreasonableMechanismCS
         public PlayerEntity(PlayerType playerType) : base("Player" + playerType.ToString(), InitBounding(new Point(270, 430), playerType), 1)
         {
             _playerType = playerType;
-            _grazebox = InitGrazeBox(Hitbox.Center, playerType);
+            _grazebox = InitGrazeBox(Hitbox.Centroid, playerType);
+        }
+
+        public override void Draw()
+        {
+            base.Draw();
+
+            if(Settings.SHOWHITBOX)
+            {
+                DrawGrazebox(Colour.Orange);
+            }
+        }
+
+        public void DrawGrazebox(Colour clr)
+        {
+            _grazebox.DrawEdge(clr);
+            _grazebox.Centroid.Draw(Colour.White);
         }
 
         private static Polygon InitBounding(Point position, PlayerType playerType)
@@ -60,7 +78,49 @@ namespace UnreasonableMechanismCS
 
         private static Polygon InitGrazeBox(Point position, PlayerType playerType)
         {
-            return new Polygon(new Point[] { new Point(0, 0) }, new Point(270, 430));
+            Point[] vertices = new Point[]
+            {
+                new Point(3,1),
+                new Point(9,1),
+                new Point(14,4),
+                new Point(15,4),
+                new Point(20,1),
+                new Point(26,1),
+                new Point(26,6),
+                new Point(24,9),
+                new Point(27,12),
+                new Point(27,17),
+                new Point(25,19),
+                new Point(25,23),
+                new Point(24,24),
+                new Point(22,24),
+                new Point(20,26),
+                new Point(20,27),
+                new Point(22,29),
+                new Point(22,31),
+                new Point(19,34),
+                new Point(19,36),
+                new Point(18,37),
+                new Point(17,37),
+                new Point(15,35),
+                new Point(14,35),
+                new Point(12,37),
+                new Point(11,37),
+                new Point(10,36),
+                new Point(10,34),
+                new Point(7,31),
+                new Point(7,29),
+                new Point(9,27),
+                new Point(9,26),
+                new Point(7,24),
+                new Point(5,24),
+                new Point(1,20),
+                new Point(1,13),
+                new Point(5,9),
+                new Point(3,6)
+            };
+
+            return new Polygon(vertices, new Point(270, 430));
         }
 
         public override void ProcessEvents()
