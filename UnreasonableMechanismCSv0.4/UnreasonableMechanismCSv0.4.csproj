@@ -68,7 +68,6 @@
     <Compile Include="src\Model\Visual\Button.cs" />
     <Compile Include="src\Screen.cs" />
     <Compile Include="src\ScreenControler.cs" />
-    <Compile Include="src\GameMenu.cs" />
     <Compile Include="src\Settings.cs" />
     <Compile Include="src\Model\Movement\Linear.cs" />
     <Compile Include="src\Model\Movement\Gravity.cs" />
