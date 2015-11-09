@@ -143,19 +143,23 @@ namespace UnreasonableMechanismCS
                 }
                 else if (Button("Easy").Selected)
                 {
-
+                    ScreenControler.SetScreen("PlayerSelect");
+                    GameObjects.GameScreen("ModeSelect").Reset();
                 }
                 else if (Button("Normal").Selected)
                 {
-
+                    ScreenControler.SetScreen("PlayerSelect");
+                    GameObjects.GameScreen("ModeSelect").Reset();
                 }
                 else if (Button("Hard").Selected)
                 {
-
+                    ScreenControler.SetScreen("PlayerSelect");
+                    GameObjects.GameScreen("ModeSelect").Reset();
                 }
                 else if (Button("Lunatic").Selected)
                 {
-
+                    ScreenControler.SetScreen("PlayerSelect");
+                    GameObjects.GameScreen("ModeSelect").Reset();
                 }
                 else if (Button("Quit").Selected)
                 {
