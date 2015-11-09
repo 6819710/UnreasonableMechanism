@@ -70,13 +70,6 @@
       <FileName>src\Model\Movement\Linear.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.TestLevel">
-    <Position X="7" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAgAAAAAAAACAAAQAAAAAAAAAAAAAA=</HashCode>
-      <FileName>src\TestLevel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="UnreasonableMechanismCS.Settings">
     <Position X="10.75" Y="5" Width="1.5" />
     <TypeIdentifier>
@@ -108,21 +101,21 @@
   <Class Name="UnreasonableMechanismCS.StarupMenu">
     <Position X="2.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAgAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAgIAAAAAAAAAABQAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Screens\StarupMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.GameObjects" Collapsed="true">
     <Position X="10.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEIAAgAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAEIAAgAAAAAAAQCAAAAAAAAAAAQAAAAQAAAAA=</HashCode>
       <FileName>src\GameObjects.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Button">
     <Position X="7" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAgAAAAAAAAAAAAAAAAAAAAIAAAAAAIA=</HashCode>
       <FileName>src\Model\Button.cs</FileName>
     </TypeIdentifier>
   </Class>
