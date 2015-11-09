@@ -32,6 +32,7 @@ namespace UnreasonableMechanismCS
             _buttonNames.Add("Shoot");
             _buttonNames.Add("Bomb");
             _buttonNames.Add("Focus");
+            _buttonNames.Add("Pause");
             _buttonNames.Add("Up");
             _buttonNames.Add("Down");
             _buttonNames.Add("Left");
@@ -65,9 +66,162 @@ namespace UnreasonableMechanismCS
             Button("Shoot").Select();
         }
 
+        /// <summary>
+        /// Processes screen events.
+        /// </summary>
         public override void ProvessEvents()
         {
             //Process user input.
+            if (SwinGame.KeyTyped(Settings.DOWN))
+            {
+                if (Button("Shoot").Selected)
+                {
+                    Button("Bomb").Select();
+                    Button("Shoot").Deselect();
+                }
+                else if (Button("Bomb").Selected)
+                {
+                    Button("Focus").Select();
+                    Button("Bomb").Deselect();
+                }
+                else if (Button("Focus").Selected)
+                {
+                    Button("Pause").Select();
+                    Button("Focus").Deselect();
+                }
+                else if (Button("Pause").Selected)
+                {
+                    Button("Up").Select();
+                    Button("Pause").Deselect();
+                }
+                else if (Button("Up").Selected)
+                {
+                    Button("Down").Select();
+                    Button("Up").Deselect();
+                }
+                else if (Button("Down").Selected)
+                {
+                    Button("Left").Select();
+                    Button("Down").Deselect();
+                }
+                else if (Button("Left").Selected)
+                {
+                    Button("Right").Select();
+                    Button("Left").Deselect();
+                }
+                else if (Button("Right").Selected)
+                {
+                    Button("Skip").Select();
+                    Button("Right").Deselect();
+                }
+                else if (Button("Skip").Selected)
+                {
+                    Button("Quit").Select();
+                    Button("Skip").Deselect();
+                }
+            }
+
+            if (SwinGame.KeyTyped(Settings.UP))
+            {
+                if (Button("Bomb").Selected)
+                {
+                    Button("Shoot").Select();
+                    Button("Bomb").Deselect();
+                }
+                else if (Button("Focus").Selected)
+                {
+                    Button("Bomb").Select();
+                    Button("Focus").Deselect();
+                }
+                else if (Button("Pause").Selected)
+                {
+                    Button("Focus").Select();
+                    Button("Pause").Deselect();
+                }
+                else if (Button("Up").Selected)
+                {
+                    Button("Pause").Select();
+                    Button("Up").Deselect();
+                }
+                else if (Button("Down").Selected)
+                {
+                    Button("Up").Select();
+                    Button("Down").Deselect();
+                }
+                else if (Button("Left").Selected)
+                {
+                    Button("Down").Select();
+                    Button("Left").Deselect();
+                }
+                else if (Button("Right").Selected)
+                {
+                    Button("Left").Select();
+                    Button("Right").Deselect();
+                }
+                else if (Button("Skip").Selected)
+                {
+                    Button("Right").Select();
+                    Button("Skip").Deselect();
+                }
+                else if (Button("Quit").Selected)
+                {
+                    Button("Skip").Select();
+                    Button("Quit").Deselect();
+                }
+            }
+
+            if (SwinGame.KeyTyped(Settings.BOMB) || SwinGame.KeyTyped(Settings.PAUSE))
+            {
+                foreach (string btn in _buttonNames)
+                {
+                    Button(btn).Deselect();
+                }
+                Button("Quit").Select();
+            }
+
+            if (SwinGame.KeyTyped(Settings.SHOOT))
+            {
+                if (Button("Shoot").Selected)
+                {
+                    
+                }
+                else if (Button("Bomb").Selected)
+                {
+
+                }
+                else if (Button("Focus").Selected)
+                {
+
+                }
+                else if (Button("Pause").Selected)
+                {
+
+                }
+                else if (Button("Up").Selected)
+                {
+                    
+                }
+                else if (Button("Down").Selected)
+                {
+
+                }
+                else if (Button("Left").Selected)
+                {
+
+                }
+                else if (Button("Right").Selected)
+                {
+
+                }
+                else if (Button("Skip").Selected)
+                {
+
+                }
+                else if (Button("Quit").Selected)
+                {
+                    ScreenControler.SetScreen("StartupMenu");
+                }
+            }
         }
     }
 }
