@@ -40,12 +40,14 @@ namespace UnreasonableMechanismCS
                 //Fetch the next batch of UI interaction
                 SwinGame.ProcessEvents();
 
+                SwinGame.ClearScreen(Color.Black);
+
                 GameObjects.ProcessEvents();
 
                 TestLevel.Step(_tick);
 
                 //Clear the screen and draw the framerate
-                SwinGame.ClearScreen(Color.Black);
+                
                 SwinGame.DrawFramerate(2, 2);
 
                 GameObjects.Draw();
