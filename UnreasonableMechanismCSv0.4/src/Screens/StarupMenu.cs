@@ -58,6 +58,10 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void Initalise()
         {
+            foreach (string btn in _buttonNames)
+            {
+                Button(btn).Deselect();
+            }
             Button("Play").Select();
         }
 

@@ -63,6 +63,10 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void Initalise()
         {
+            foreach (string btn in _buttonNames)
+            {
+                Button(btn).Deselect();
+            }
             Button("Shoot").Select();
         }
 
@@ -220,6 +224,7 @@ namespace UnreasonableMechanismCS
                 else if (Button("Quit").Selected)
                 {
                     ScreenControler.SetScreen("StartupMenu");
+                    GameObjects.GameScreen("OptionsMenu").Reset();
                 }
             }
         }
