@@ -126,7 +126,7 @@ namespace UnreasonableMechanismEngineCS
                 Vector unit  = this.Unit;
                 
                 _i = value * unit.I;
-                _j = value * unit.K;
+                _j = value * unit.J;
                 _k = value * unit.K;
             }
         }

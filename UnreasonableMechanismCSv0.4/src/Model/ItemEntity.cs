@@ -121,14 +121,7 @@ namespace UnreasonableMechanismCS
         {
             if(_flag)
             {
-                Vector v = new Vector(GameObjects.Player.Hitbox.Center, Hitbox.Center);
-
-                if(v.Magnitude > 5)
-                {
-                    v.Magnitude = 5;
-                }
-
-                _movement = new Linear(v);
+                
             }
 
             _movement.step();
