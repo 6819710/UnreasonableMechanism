@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Screen.cs" />
     <Compile Include="ScreenControler.cs" />
     <Compile Include="src\GameMenu.cs" />
     <Compile Include="src\Settings.cs" />
