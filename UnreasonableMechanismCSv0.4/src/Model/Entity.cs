@@ -6,6 +6,9 @@ using UM = UnreasonableMechanismEngineCS;
 using UnreasonableMechanismEngineCS;
 using SwinGameSDK;
 
+using Colour = SwinGameSDK.Color;
+using Vector = UnreasonableMechanismEngineCS.Vector;
+
 namespace UnreasonableMechanismCS
 {
     /// <summary>
@@ -80,7 +83,15 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public virtual void DrawEntity()
         {
-            SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_hitbox.Center.X - GameResources.GameImage(Bitmap).Width / 2, (float)_hitbox.Center.Y - GameResources.GameImage(Bitmap).Height / 2);
+            if(Settings.SHOWHITBOX)
+            {
+                Hitbox.DrawEdge(Colour.White);
+                Hitbox.Center.Draw(Colour.White);
+            }
+            else
+            {
+                SwinGame.DrawBitmap(GameResources.GameImage(_bitmap), (float)_hitbox.Center.X - GameResources.GameImage(Bitmap).Width / 2, (float)_hitbox.Center.Y - GameResources.GameImage(Bitmap).Height / 2);
+            }
         }
 
         /// <summary>
