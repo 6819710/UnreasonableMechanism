@@ -23,9 +23,9 @@ namespace UnreasonableMechanismCS
         /// <summary>
         /// Constructs a new item entitiy.
         /// </summary>
-        /// <param name="position">Position of the item (point).</param>
+        /// <param name="location">Position of the item (point).</param>
         /// <param name="itemType">Type of item (itemtype).</param>
-        public ItemEntity(Point position, ItemType itemType) : base ("Item" + itemType.ToString(), InitBounding(position, itemType), 1)
+        public ItemEntity(Point location, ItemType itemType) : base ("Item" + itemType.ToString(), InitBounding(location, itemType), 1)
         {
             _itemType = itemType;
             _flag = itemType == ItemType.Star;
@@ -44,60 +44,64 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Draws the item entity.
+        /// Draws entity.
         /// </summary>
-        public override void DrawEntity()
+        public override void Draw()
         {
-            if(Settings.SHOWHITBOX)
+            if (Settings.SHOWHITBOX)
             {
-                Colour colour = Colour.White;
-                switch(_itemType)
+                switch (_itemType)
                 {
                     case ItemType.BigPower:
-                        colour = Colour.Red;
+                        DrawHitbox(Colour.Red);
                         break;
 
                     case ItemType.Bomb:
-                        colour = Colour.Green;
+                        DrawHitbox(Colour.Green);
                         break;
 
                     case ItemType.FullPower:
-                        colour = Colour.Yellow;
+                        DrawHitbox(Colour.Yellow);
                         break;
 
                     case ItemType.Life:
-                        colour = Colour.MediumPurple;
+                        DrawHitbox(Colour.MediumPurple);
                         break;
 
                     case ItemType.Point:
-                        colour = Colour.Blue;
+                        DrawHitbox(Colour.Blue);
                         break;
 
                     case ItemType.Power:
-                        colour = Colour.Red;
+                        DrawHitbox(Colour.Red);
                         break;
 
                     case ItemType.Star:
-                        colour = Colour.White;
+                        DrawHitbox(Colour.White);
                         break;
                 }
-
-                Hitbox.DrawEdge(colour);
-                Hitbox.Center.Draw(colour);
             }
             else
             {
-                float x = (float)Hitbox.Center.X - (GameResources.GameImage(Bitmap).Width / 2);
-                float y = (float)Hitbox.Center.Y - (GameResources.GameImage(Bitmap).Height / 2);
+                DrawEntity();
+            }
+        }
 
-                if (Hitbox.Center.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
-                {
-                    SwinGame.DrawBitmap(GameResources.GameImage("Above" + Bitmap), x, 20);
-                }
-                else
-                {
-                    SwinGame.DrawBitmap(GameResources.GameImage(Bitmap), x, y);
-                }
+        /// <summary>
+        /// Draws entity bitmap.
+        /// </summary>
+        public override void DrawEntity()
+        {
+            float x = (float)Hitbox.Center.X - (GameResources.GameImage(Bitmap).Width / 2);
+            float y = (float)Hitbox.Center.Y - (GameResources.GameImage(Bitmap).Height / 2);
+
+            if (Hitbox.Center.Y < 20 - GameResources.GameImage(Bitmap).Height / 2)
+            {
+                SwinGame.DrawBitmap(GameResources.GameImage("Above" + Bitmap), x, 20);
+            }
+            else
+            {
+                SwinGame.DrawBitmap(GameResources.GameImage(Bitmap), x, y);
             }
         }
 
@@ -131,23 +135,20 @@ namespace UnreasonableMechanismCS
             Offset(_movement.Velocity);
         }
 
-        private static Polygon InitBounding(Point position, ItemType itemType)
+        private static Polygon InitBounding(Point location, ItemType itemType)
         {
-            double x = position.X;
-            double y = position.Y;
-
             double width = GameResources.GameImage("Item" + itemType.ToString()).Width;
-            double Height = GameResources.GameImage("Item" + itemType.ToString()).Height;
+            double height = GameResources.GameImage("Item" + itemType.ToString()).Height;
 
             Point[] vertices = new Point[]
             {
-                new Point(x + width / 2, y - Height / 2),
-                new Point(x - width / 2, y - Height / 2),
-                new Point(x - width / 2, y + Height / 2),
-                new Point(x + width / 2, y + Height / 2),
+                new Point(0, 0),
+                new Point(width, 0),
+                new Point(width, height),
+                new Point(0, height),
             };
 
-            return new Polygon(vertices);
+            return new Polygon(vertices, location);
         }
     }
 }
