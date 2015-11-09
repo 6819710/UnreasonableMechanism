@@ -10,8 +10,9 @@ namespace UnreasonableMechanismCS
 {
     public static class GameObjects
     {
-        public static PlayerEntity Player;
         public static List<ItemEntity> Items = new List<ItemEntity>();
+        public static PlayerEntity Player;
+        public static Dictionary<string, Screen> Screens = new Dictionary<string, Screen>();
 
         /// <summary>
         /// Adds an item to the items list.
@@ -20,6 +21,15 @@ namespace UnreasonableMechanismCS
         public static void AddItem(ItemEntity obj)
         {
             Items.Add(obj);
+        }
+
+        /// <summary>
+        /// Adds a screen to the screens list.
+        /// </summary>
+        /// <param name="obj">Object.</param>
+        public static void AddScreen(Screen obj)
+        {
+            Screens.Add(obj);
         }
 
         /// <summary>
@@ -43,6 +53,8 @@ namespace UnreasonableMechanismCS
         public static void Initalise()
         {
             Player = new PlayerEntity(PlayerType.NarrowA);
+
+            Screens.Add("Test", new TestLevel());
         }
 
         /// <summary>
@@ -67,7 +79,7 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Removes the provided item from the items list.
+        /// Removes provided item from items list.
         /// </summary>
         /// <param name="obj">Object.</param>
         public static void RemoveItem(ItemEntity obj)
@@ -76,7 +88,7 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Removes the item from the items list at the given index.
+        /// Removes item from items list at given index.
         /// </summary>
         /// <param name="index">Index of item.</param>
         public static void RemoveItem(int index)
