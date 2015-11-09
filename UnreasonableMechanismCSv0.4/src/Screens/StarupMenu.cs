@@ -25,6 +25,11 @@ namespace UnreasonableMechanismCS
             _buttonNames.Add("Play");
         }
 
+        private Button Button(string buttonName)
+        {
+            return _buttons[buttonName];
+        }
+
         /// <summary>
         /// Draws the screen.
         /// </summary>
@@ -42,7 +47,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void Initalise()
         {
-            _buttons["Play"].Select();
+            Button("Play").Select();
         }
 
         /// <summary>
