@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Screens\ModeSelect.cs" />
+    <Compile Include="src\Screens\PlayerSelect.cs" />
     <Compile Include="src\Screens\OptionsMenu.cs" />
     <Compile Include="src\Model\Visual\Button.cs" />
     <Compile Include="src\Screen.cs" />
