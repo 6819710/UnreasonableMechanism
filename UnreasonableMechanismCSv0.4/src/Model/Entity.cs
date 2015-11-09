@@ -83,13 +83,11 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public virtual void Draw()
         {
-            if(Settings.SHOWHITBOX)
+            DrawEntity();
+
+            if (Settings.SHOWHITBOX)
             {
                 DrawHitbox(Colour.White);
-            }
-            else
-            {
-                DrawEntity();
             }
         }
 
