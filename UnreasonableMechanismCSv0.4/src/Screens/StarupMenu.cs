@@ -154,7 +154,7 @@ namespace UnreasonableMechanismCS
                 }
                 else if (Button("Option").Selected)
                 {
-                    ScreenControler.SetScreen("OptionMenu");
+                    ScreenControler.SetScreen("OptionsMenu");
                 }
                 else if (Button("Quit").Selected)
                 {
