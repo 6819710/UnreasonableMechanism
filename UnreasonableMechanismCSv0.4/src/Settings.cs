@@ -23,6 +23,9 @@ namespace UnreasonableMechanismCS
         public static KeyCode BOMB;
         public static KeyCode PAUSE;
 
+        public static int GAMEMODE;
+        public static PlayerType PLAYERTYPE;
+
         public static void InitSettings()
         {
             SHOWHITBOX = true;
@@ -37,6 +40,9 @@ namespace UnreasonableMechanismCS
             SHOOT = KeyCode.vk_z;
             BOMB = KeyCode.vk_x;
             PAUSE = KeyCode.vk_ESCAPE;
+
+            GAMEMODE = 0;
+            PLAYERTYPE = PlayerType.NarrowA;
         }
     }
 }
