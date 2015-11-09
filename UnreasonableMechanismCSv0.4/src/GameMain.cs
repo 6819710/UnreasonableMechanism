@@ -25,12 +25,10 @@ namespace UnreasonableMechanismCS
             GameResources.LoadResources();
             GameObjects.LoadGameOjects();
 
-
-            Settings.InitSettings();
-
+            //Initaliase game assets.
             ScreenControler.SetScreen("StartupMenu");
-
-            ScreenControler.Screen.Initalise();
+            ScreenControler.Initalise();
+            Settings.InitSettings();
 
             //Show SwinGame splash screen.
             if(_splashFlag)
