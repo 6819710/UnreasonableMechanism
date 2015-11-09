@@ -23,9 +23,9 @@ namespace UnreasonableMechanismCS
             }
         }
 
-        public static void SetScreen(Screen screen)
+        public static void SetScreen(string screen)
         {
-            _screen = screen;
+            _screen = GameObjects.GameScreen(screen);
         }
     }
 }
