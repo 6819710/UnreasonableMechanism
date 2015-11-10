@@ -35,7 +35,7 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void Draw()
         {
-            SwinGame.DrawBitmap(GameResources.GameImage("GreyoutWindow"), 0, 0);
+            SwinGame.ClearScreen(Colour.Black);
             foreach (string btn in _buttonNames)
             {
                 _buttons[btn].Draw();
