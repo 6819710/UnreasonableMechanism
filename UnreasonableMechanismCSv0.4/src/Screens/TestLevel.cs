@@ -14,7 +14,9 @@ namespace UnreasonableMechanismCS
     public class TestLevel : Screen
     {
         private Random _rand;
-
+        
+        private BulletColour[] _bulletColours;
+        private BulletType[] _bulletTypes;
         private ItemType[] _itemTypes;
 
         private int[] _triggers;
@@ -22,6 +24,35 @@ namespace UnreasonableMechanismCS
         public TestLevel()
         {
             _rand = new Random();
+
+            _bulletColours = new BulletColour[]
+            {
+                BulletColour.Black,
+                BulletColour.Blue,
+                BulletColour.Green,
+                BulletColour.Purple,
+                BulletColour.Red,
+                BulletColour.Turquoise,
+                BulletColour.White,
+                BulletColour.Yellow
+            };
+
+            _bulletTypes = new BulletType[]
+            {
+                BulletType.Beam,
+                BulletType.BigStar,
+                BulletType.Crystal,
+                BulletType.Dart,
+                BulletType.HugeSphere,
+                BulletType.LargeSphere,
+                BulletType.Palse,
+                BulletType.Ring,
+                BulletType.Seed,
+                BulletType.Shere,
+                BulletType.SmallRing,
+                BulletType.SmallSphere,
+                BulletType.Star
+            };
 
             _itemTypes = new ItemType[]
             {
@@ -68,11 +99,25 @@ namespace UnreasonableMechanismCS
                 ScreenControler.SetScreen("PauseMenu");
             }
 
-            for (int i = 0; i < 7; ++i)
+            for(int i = 0; i < 7; ++i)
             {
                 if (Tick % (_triggers[i]) == 0)
                 {
                     GameObjects.AddItem(new ItemEntity(new Point(_rand.Next() % (460 - GameResources.GameImage("Item" + _itemTypes[i].ToString()).Width) + 40, 50), _itemTypes[i]));
+                }
+            }
+
+            for(int i = 0; i < 8; i++)
+            {
+                for(int j = 0; j < 13; j++)
+                {
+                    if(Tick % (_rand.Next() % 80 + 50) == 0 && Tick > 0)
+                    {
+                        for(int k = 0; k < 12; k++)
+                        {
+                            //TODO: Bullet Adding.
+                        }
+                    }
                 }
             }
 
