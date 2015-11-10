@@ -88,7 +88,7 @@
     <Position X="4" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAABgAgAAAAAAAAAAAAQAAAAAAAAAAAQAA=</HashCode>
-      <FileName>src\Screen.cs</FileName>
+      <FileName>src\Screens\Screen.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.StarupMenu" Collapsed="true">
@@ -101,7 +101,7 @@
   <Class Name="UnreasonableMechanismCS.GameObjects" Collapsed="true">
     <Position X="13.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEIAAgAAAAAAAQCAAAAAAAAAAAQAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAEIAggCAAAAEAQCAAAgBAAAAAEQAAAAQQAAAA=</HashCode>
       <FileName>src\GameObjects.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -136,7 +136,7 @@
   <Class Name="UnreasonableMechanismCS.TestLevel">
     <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAgAAAAAAAACAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Screens\TestLevel.cs</FileName>
     </TypeIdentifier>
   </Class>

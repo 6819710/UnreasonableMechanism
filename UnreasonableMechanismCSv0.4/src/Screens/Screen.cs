@@ -21,13 +21,18 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Readonly Property: Tick
+        /// Property: Tick
         /// </summary>
         public uint Tick
         {
             get
             {
                 return _tick;
+            }
+
+            set
+            {
+                _tick = value;
             }
         }
 
