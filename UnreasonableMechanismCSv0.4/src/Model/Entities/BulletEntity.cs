@@ -28,7 +28,7 @@ namespace UnreasonableMechanismCS
         /// <param name="owner">Owner of bullet.</param>
         /// <param name="position">Spawn position of bullet.</param>
         /// <param name="trajectory">Trajectory of bullet.</param>
-        public BulletEntity(BulletColour bulletColour, BulletType bulletType, Entity owner, Point position, Vector trajectory) : base(bulletColour.ToString() + bulletType.ToString(), InitBounding(bulletType, position, trajectory), 1)
+        public BulletEntity(BulletColour bulletColour, BulletType bulletType, Entity owner, Point position, Vector trajectory) : base(bulletType.ToString() + bulletColour.ToString(), InitBounding(bulletType, position, trajectory), 1)
         {
             _bulletColour = bulletColour;
             _bulletType = bulletType;
