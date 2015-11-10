@@ -35,7 +35,7 @@ namespace UnreasonableMechanismCS
             _owner = owner;
             _trajectory = trajectory;
 
-            _movement = new Linear(trajectory.Unit * 5);
+            _movement = new Linear(trajectory);
         }
 
         /// <summary>
@@ -44,6 +44,11 @@ namespace UnreasonableMechanismCS
         public override void ProcessEvents()
         {
             ProcessMovement();
+
+            if(Hitbox.LessThanX(40) || Hitbox.GreaterThanX(480 + GameResources.GameImage(Bitmap).Height) || Hitbox.LessThanY(20) || Hitbox.GreaterThanY(580))
+            {
+                Remove = true;
+            }
         }
 
         /// <summary>
@@ -302,7 +307,7 @@ namespace UnreasonableMechanismCS
             }
 
             Polygon bounding = new Polygon(vertices, position);
-            bounding.YawZ(trajectory.Phi, bounding.Middle);
+            bounding.YawZ(-trajectory.Phi, bounding.Middle);
 
             return bounding;
         }

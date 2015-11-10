@@ -129,12 +129,12 @@ namespace UnreasonableMechanismCS
             {
                 for(int j = 0; j < 13; j++)
                 {
-                    if(Tick % (_rand.Next() % 500 + 50) == 0 && Tick > 0)
+                    if(Tick % (_rand.Next() % 50000 + 30) == 0 && Tick > 0)
                     {
                         Point position = new Point(_rand.Next() % 460 + 40, _rand.Next() % 460 + 40);
                         for(int k = 0; k < 12; k++)
                         {
-                            GameObjects.AddBullet(new BulletEntity(_bulletColours[i], _bulletTypes[i], null, position, _trajectories[k]));
+                            GameObjects.AddBullet(new BulletEntity(_bulletColours[i], _bulletTypes[j], null, position, _trajectories[k]));
                         }
                     }
                 }

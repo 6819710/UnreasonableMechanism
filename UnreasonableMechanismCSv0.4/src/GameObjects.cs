@@ -171,6 +171,14 @@ namespace UnreasonableMechanismCS
             {
                 bullet.ProcessEvents();
             }
+
+            for(int i = 0; i < _bullets.Count; i++)
+            {
+                if(_bullets[i].Remove)
+                {
+                    RemoveBullet(i);
+                }
+            }
         }
 
         /// <summary>
