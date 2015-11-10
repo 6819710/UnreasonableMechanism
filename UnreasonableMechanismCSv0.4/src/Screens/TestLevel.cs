@@ -32,7 +32,7 @@ namespace UnreasonableMechanismCS
 
         public override void Initalise()
         {
-            
+            Tick = 0;
         }
 
         public override void ProvessEvents()
