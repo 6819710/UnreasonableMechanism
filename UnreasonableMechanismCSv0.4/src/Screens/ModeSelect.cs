@@ -140,6 +140,8 @@ namespace UnreasonableMechanismCS
                 if (Button("Demo").Selected)
                 {
                     Settings.GAMEMODE = 0;
+                    ScreenControler.SetScreen("TestLevel");
+                    GameObjects.GameScreen("ModeSelect").Reset();
                 }
                 else if (Button("Easy").Selected)
                 {
