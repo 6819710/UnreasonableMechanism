@@ -99,6 +99,7 @@ namespace UnreasonableMechanismCS
                     ScreenControler.SetScreen("StartupMenu");
                     GameObjects.GameScreen("PauseMenu").Reset();
                     GameObjects.GameScreen("TestLevel").Reset();
+                    GameObjects.Initalise();
                 }
             }
         }
