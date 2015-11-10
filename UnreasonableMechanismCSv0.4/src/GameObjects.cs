@@ -20,7 +20,24 @@ namespace UnreasonableMechanismCS
         private static Dictionary<string, Screen> _screens = new Dictionary<string, Screen>();
         private static PlayerEntity _player = new PlayerEntity(PlayerType.NarrowA);
 
+        private static List<BulletEntity> _bullets = new List<BulletEntity>();
         private static List<ItemEntity> _items = new List<ItemEntity>();
+
+        /// <summary>
+        /// Property: Bullets.
+        /// </summary>
+        public static List<BulletEntity> Bullets
+        {
+            get
+            {
+                return _bullets;
+            }
+
+            set
+            {
+                _bullets = value;
+            }
+        }
 
         /// <summary>
         /// Property: Items.
@@ -54,6 +71,11 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        public static void AddBullet(BulletEntity bullet)
+        {
+            _bullets.Add(bullet);
+        }
+
         /// <summary>
         /// Adds item to item list.
         /// </summary>
@@ -61,6 +83,17 @@ namespace UnreasonableMechanismCS
         public static void AddItem(ItemEntity item)
         {
             _items.Add(item);
+        }
+
+        /// <summary>
+        /// Draws bullet objects.
+        /// </summary>
+        public static void DrawBullets()
+        {
+            foreach(BulletEntity bullet in _bullets)
+            {
+                bullet.Draw();
+            }
         }
 
         /// <summary>
@@ -94,6 +127,7 @@ namespace UnreasonableMechanismCS
 
         public static void Initalise()
         {
+            _bullets.Clear();
             _items.Clear();
             _player = new PlayerEntity(PlayerType.NarrowA);
         }
@@ -129,6 +163,17 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
+        /// Processes bullet events.
+        /// </summary>
+        public static void ProcessBulletEvents()
+        {
+            foreach(BulletEntity bullet in _bullets)
+            {
+                bullet.ProcessEvents();
+            }
+        }
+
+        /// <summary>
         /// Processes item events.
         /// </summary>
         public static void ProcessItemEvents()
@@ -137,6 +182,24 @@ namespace UnreasonableMechanismCS
             {
                 item.ProcessEvents();
             }
+        }
+
+        /// <summary>
+        /// Removes bullet from bullet list.
+        /// </summary>
+        /// <param name="bullet">Bullet to remove.</param>
+        public static void RemoveBullet(BulletEntity bullet)
+        {
+            _bullets.Remove(bullet);
+        }
+
+        /// <summary>
+        /// Removes bullet from bullet list at index.
+        /// </summary>
+        /// <param name="index">Index of bullet to remove.</param>
+        public static void RemoveBullet(int index)
+        {
+            _bullets.RemoveAt(index);
         }
 
         /// <summary>
