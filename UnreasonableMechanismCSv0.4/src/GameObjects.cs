@@ -94,7 +94,7 @@ namespace UnreasonableMechanismCS
 
         public static void Initalise()
         {
-            _items = new List<ItemEntity>();
+            _items.Clear();
             _player = new PlayerEntity(PlayerType.NarrowA);
         }
 
