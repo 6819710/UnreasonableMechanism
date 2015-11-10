@@ -29,6 +29,13 @@ namespace UnreasonableMechanismCS
             _buttons.Add("Skip", new Button("Skip", new Point(20, 180)));
             _buttons.Add("Quit", new Button("Quit", new Point(20, 200)));
 
+            _buttons.Add("ShootKey", new Button(Settings.SHOOT.ToString(), new Point(100, 20)));
+            _buttons.Add("BombKey", new Button(Settings.BOMB.ToString(), new Point(100, 40)));
+            _buttons.Add("FocusKey", new Button(Settings.FOCUS.ToString(), new Point(100, 60)));
+            _buttons.Add("PauseKey", new Button(Settings.PAUSE.ToString(), new Point(100, 80)));
+
+            _buttons.Add("SkipKey", new Button(Settings.SKIP.ToString(), new Point(100, 180)));
+
             _buttonNames.Add("Shoot");
             _buttonNames.Add("Bomb");
             _buttonNames.Add("Focus");
@@ -39,6 +46,13 @@ namespace UnreasonableMechanismCS
             _buttonNames.Add("Right");
             _buttonNames.Add("Skip");
             _buttonNames.Add("Quit");
+
+            _buttonNames.Add("ShootKey");
+            _buttonNames.Add("BombKey");
+            _buttonNames.Add("FocusKey");
+            _buttonNames.Add("PauseKey");
+
+            _buttonNames.Add("SkipKey");
         }
 
         private Button Button(string buttonName)
