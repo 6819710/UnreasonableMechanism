@@ -24,6 +24,7 @@ namespace UnreasonableMechanismCS
         {
             SwinGame.ClearScreen(Color.DarkSlateGray);
 
+            GameObjects.DrawItems();
             GameObjects.DrawPlayer();
 
             SwinGame.DrawBitmap(GameResources.GameImage("GameArea"), 0, 0);
@@ -36,7 +37,15 @@ namespace UnreasonableMechanismCS
 
         public override void ProvessEvents()
         {
+            if(Tick % (_rand.Next() % 140 + 20) == 0)
+            {
+                GameObjects.AddItem(new ItemEntity(new Point(_rand.Next() % (460 - GameResources.GameImage("Item" + ItemType.Power.ToString()).Width) + 40, 50), ItemType.Power));
+            }
+
+            GameObjects.ProcessItemEvents();
             GameObjects.Player.ProcessEvents();
+
+            Tick++;
         }
     }
 }
