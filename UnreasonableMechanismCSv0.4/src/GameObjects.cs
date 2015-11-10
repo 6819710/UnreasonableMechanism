@@ -32,6 +32,14 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
+        /// Draws the player object.
+        /// </summary>
+        public static void DrawPlayer()
+        {
+            _player.Draw();
+        }
+
+        /// <summary>
         /// Loads game objects.
         /// </summary>
         public static void LoadGameOjects()
