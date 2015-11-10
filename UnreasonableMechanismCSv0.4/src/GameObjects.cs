@@ -107,12 +107,14 @@ namespace UnreasonableMechanismCS
             NewScreen("ModeSelect", new ModeSelect());
             NewScreen("PlayerSelect", new PlayerSelect());
             NewScreen("TestLevel", new TestLevel());
+            NewScreen("PauseMenu", new PauseMenu());
 
             GameScreen("StartupMenu").Initalise();
             GameScreen("OptionsMenu").Initalise();
             GameScreen("ModeSelect").Initalise();
             GameScreen("PlayerSelect").Initalise();
             GameScreen("TestLevel").Initalise();
+            GameScreen("PauseMenu").Initalise();
         }
 
         private static void NewScreen(string screenName, Screen screen)
