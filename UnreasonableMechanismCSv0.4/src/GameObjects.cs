@@ -92,6 +92,12 @@ namespace UnreasonableMechanismCS
             return _screens[screen];
         }
 
+        public static void Initalise()
+        {
+            _items = new List<ItemEntity>();
+            _player = new PlayerEntity(PlayerType.NarrowA);
+        }
+
         /// <summary>
         /// Loads game objects.
         /// </summary>
