@@ -20,8 +20,26 @@ namespace UnreasonableMechanismCS
         private static Dictionary<string, Screen> _screens = new Dictionary<string, Screen>();
         private static PlayerEntity _player = new PlayerEntity(PlayerType.NarrowA);
 
+        private static List<ItemEntity> _items = new List<ItemEntity>();
+
         /// <summary>
-        /// Readonly Property: Player.
+        /// Property: Items.
+        /// </summary>
+        public static List<ItemEntity> Items
+        {
+            get
+            {
+                return _items;
+            }
+
+            set
+            {
+                _items = value;
+            }
+        }
+
+        /// <summary>
+        /// Property: Player.
         /// </summary>
         public static PlayerEntity Player
         {
@@ -29,10 +47,26 @@ namespace UnreasonableMechanismCS
             {
                 return _player;
             }
+
+            set
+            {
+                _player = value;
+            }
         }
 
         /// <summary>
-        /// Draws the player object.
+        /// Draws item objects.
+        /// </summary>
+        public static void DrawItems()
+        {
+            foreach(ItemEntity item in _items)
+            {
+                item.Draw();
+            }
+        }
+
+        /// <summary>
+        /// Draws player object.
         /// </summary>
         public static void DrawPlayer()
         {
