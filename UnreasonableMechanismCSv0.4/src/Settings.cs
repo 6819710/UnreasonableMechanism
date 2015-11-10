@@ -23,6 +23,8 @@ namespace UnreasonableMechanismCS
         public static KeyCode BOMB;
         public static KeyCode PAUSE;
 
+        public static KeyCode SKIP;
+
         public static int GAMEMODE;
         public static PlayerType PLAYERTYPE;
 
@@ -40,6 +42,8 @@ namespace UnreasonableMechanismCS
             SHOOT = KeyCode.vk_z;
             BOMB = KeyCode.vk_x;
             PAUSE = KeyCode.vk_ESCAPE;
+
+            SKIP = KeyCode.vk_RETURN;
 
             GAMEMODE = 0;
             PLAYERTYPE = PlayerType.NarrowA;
