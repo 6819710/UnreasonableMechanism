@@ -55,6 +55,15 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
+        /// Adds item to item list.
+        /// </summary>
+        /// <param name="item">Item to add.</param>
+        public static void AddItem(ItemEntity item)
+        {
+            _items.Add(item);
+        }
+
+        /// <summary>
         /// Draws item objects.
         /// </summary>
         public static void DrawItems()
@@ -71,6 +80,16 @@ namespace UnreasonableMechanismCS
         public static void DrawPlayer()
         {
             _player.Draw();
+        }
+
+        /// <summary>
+        /// Fetches named screen.
+        /// </summary>
+        /// <param name="screen">Screen to fetch.</param>
+        /// <returns>Screen.</returns>
+        public static Screen GameScreen(string screen)
+        {
+            return _screens[screen];
         }
 
         /// <summary>
@@ -96,20 +115,38 @@ namespace UnreasonableMechanismCS
             GameScreen("TestLevel").Initalise();
         }
 
-        /// <summary>
-        /// Fetches named screen.
-        /// </summary>
-        /// <param name="screen">Screen to fetch.</param>
-        /// <returns>Screen.</returns>
-        public static Screen GameScreen(string screen)
-        {
-            return _screens[screen];
-        }
-
         private static void NewScreen(string screenName, Screen screen)
         {
             _screens.Add(screenName, screen);
         }
 
+        /// <summary>
+        /// Processes item events.
+        /// </summary>
+        public static void ProcessItemEvents()
+        {
+            foreach (ItemEntity item in _items)
+            {
+                item.ProcessEvents();
+            }
+        }
+
+        /// <summary>
+        /// Removes item from item list.
+        /// </summary>
+        /// <param name="item">Item to remove.</param>
+        public static void RemoveItem(ItemEntity item)
+        {
+            _items.Remove(item);
+        }
+
+        /// <summary>
+        /// Removes item from item list at index.
+        /// </summary>
+        /// <param name="index">Index of item to remove.</param>
+        public static void RemoveItem(int index)
+        {
+            _items.RemoveAt(index);
+        }
     }
 }
