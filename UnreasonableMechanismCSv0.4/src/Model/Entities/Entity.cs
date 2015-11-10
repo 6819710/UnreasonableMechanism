@@ -20,6 +20,7 @@ namespace UnreasonableMechanismCS
         private Polygon _hitbox;
         private int _hitpoints;
         private int _tick;
+        private bool _remove;
 
         /// <summary>
         /// Constructs new entity.
@@ -33,6 +34,7 @@ namespace UnreasonableMechanismCS
             _hitbox = hitbox;
             _hitpoints = hitpoints;
             _tick = 0;
+            _remove = false;
         }
 
         /// <summary>
@@ -75,6 +77,22 @@ namespace UnreasonableMechanismCS
             set
             {
                 _hitpoints = value;
+            }
+        }
+
+        /// <summary>
+        /// Property: Remove flag.
+        /// </summary>
+        public bool Remove
+        {
+            get
+            {
+                return _remove;
+            }
+
+            set
+            {
+                _remove = value;
             }
         }
 
