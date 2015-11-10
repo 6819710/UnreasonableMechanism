@@ -133,20 +133,20 @@
       <FileName>src\Screens\PlayerSelect.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismCS.TestLevel">
+  <Class Name="UnreasonableMechanismCS.TestLevel" Collapsed="true">
     <Position X="7.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAgAAAAAAAACAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Screens\TestLevel.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Enum Name="UnreasonableMechanismCS.ItemType" Collapsed="true">
-    <Position X="13.5" Y="3.75" Width="1.5" />
+  <Class Name="UnreasonableMechanismCS.PauseMenu" Collapsed="true">
+    <Position X="8.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAgIAAAAAAAAAAAAAAAAABgAACAAABAAA=</HashCode>
-      <FileName>src\Model\Enum\ItemType.cs</FileName>
+      <HashCode>AEAAAAAAAAAAAgAgIAAAAAAAAAABQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Screens\PauseMenu.cs</FileName>
     </TypeIdentifier>
-  </Enum>
+  </Class>
   <Enum Name="UnreasonableMechanismCS.BulletType" Collapsed="true">
     <Position X="11.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
@@ -166,6 +166,13 @@
     <TypeIdentifier>
       <HashCode>AIAEAAgAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\Model\Enum\PlayerType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="UnreasonableMechanismCS.ItemType" Collapsed="true">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAgIAAAAAAAAAAAAAAAAABgAACAAABAAA=</HashCode>
+      <FileName>src\Model\Enum\ItemType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

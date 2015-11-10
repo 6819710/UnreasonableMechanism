@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\Model\Enum\ItemType.cs" />
+    <Compile Include="src\Screens\PauseMenu.cs" />
     <Compile Include="src\Screens\ModeSelect.cs" />
     <Compile Include="src\Screens\PlayerSelect.cs" />
     <Compile Include="src\Screens\OptionsMenu.cs" />
@@ -80,7 +82,6 @@
     <Compile Include="src\Model\Enum\BulletColour.cs" />
     <Compile Include="src\Model\Entities\BulletEntity.cs" />
     <Compile Include="src\Model\Enum\BulletType.cs" />
-    <Compile Include="src\Model\Enum\ItemType.cs" />
     <Compile Include="src\Model\Entities\ItemEntity.cs" />
     <Compile Include="src\GameResources.cs" />
     <Compile Include="src\Model\Entities\Entity.cs" />
