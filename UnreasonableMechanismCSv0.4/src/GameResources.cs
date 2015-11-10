@@ -31,7 +31,6 @@ namespace UnreasonableMechanismCS
         private static void LoadImages()
         {
             NewImage("GameArea", "PlayAreaBlock.png");
-            NewImage("GreyoutWindow", "GreyoutWindow.png");
 
             NewImage("PlayerWideA", "Player.png");
             NewImage("PlayerLeftWideA", "PlayerLeft.png");
