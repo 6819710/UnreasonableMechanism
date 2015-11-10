@@ -178,7 +178,7 @@ namespace UnreasonableMechanismEngineCS
         {
             get
             {
-                return Math.Atan(_j / _k);
+                return Math.Atan(_j / _i);
             }
 
             set
