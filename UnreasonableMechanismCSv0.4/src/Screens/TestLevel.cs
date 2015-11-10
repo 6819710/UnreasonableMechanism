@@ -18,6 +18,7 @@ namespace UnreasonableMechanismCS
         private BulletColour[] _bulletColours;
         private BulletType[] _bulletTypes;
         private ItemType[] _itemTypes;
+        private Vector[] _trajectories;
 
         private int[] _triggers;
 
@@ -65,6 +66,22 @@ namespace UnreasonableMechanismCS
                 ItemType.Star
             };
 
+            _trajectories = new Vector[]
+            {
+                new Vector(Math.Cos(BasicMath.ToRad(30)), Math.Cos(BasicMath.ToRad(30))),
+                new Vector(Math.Cos(BasicMath.ToRad(60)), Math.Cos(BasicMath.ToRad(60))),
+                new Vector(Math.Cos(BasicMath.ToRad(90)), Math.Cos(BasicMath.ToRad(90))),
+                new Vector(Math.Cos(BasicMath.ToRad(120)), Math.Cos(BasicMath.ToRad(120))),
+                new Vector(Math.Cos(BasicMath.ToRad(150)), Math.Cos(BasicMath.ToRad(150))),
+                new Vector(Math.Cos(BasicMath.ToRad(180)), Math.Cos(BasicMath.ToRad(180))),
+                new Vector(Math.Cos(BasicMath.ToRad(210)), Math.Cos(BasicMath.ToRad(210))),
+                new Vector(Math.Cos(BasicMath.ToRad(240)), Math.Cos(BasicMath.ToRad(240))),
+                new Vector(Math.Cos(BasicMath.ToRad(270)), Math.Cos(BasicMath.ToRad(270))),
+                new Vector(Math.Cos(BasicMath.ToRad(300)), Math.Cos(BasicMath.ToRad(300))),
+                new Vector(Math.Cos(BasicMath.ToRad(330)), Math.Cos(BasicMath.ToRad(330))),
+                new Vector(Math.Cos(BasicMath.ToRad(360)), Math.Cos(BasicMath.ToRad(360))),
+            };
+
             _triggers = new int[]
             {
                 _rand.Next()%340 + 600,
@@ -82,6 +99,7 @@ namespace UnreasonableMechanismCS
             SwinGame.ClearScreen(Color.DarkSlateGray);
 
             GameObjects.DrawItems();
+            GameObjects.DrawBullets();
             GameObjects.DrawPlayer();
 
             SwinGame.DrawBitmap(GameResources.GameImage("GameArea"), 0, 0);
@@ -113,15 +131,17 @@ namespace UnreasonableMechanismCS
                 {
                     if(Tick % (_rand.Next() % 80 + 50) == 0 && Tick > 0)
                     {
+                        Point position = new Point(_rand.Next() % 460 + 40, _rand.Next() % 460 + 40);
                         for(int k = 0; k < 12; k++)
                         {
-                            //TODO: Bullet Adding.
+                            GameObjects.AddBullet(new BulletEntity(_bulletColours[i], _bulletTypes[i], null, position, _trajectories[k]));
                         }
                     }
                 }
             }
 
             GameObjects.ProcessItemEvents();
+            GameObjects.ProcessBulletEvents();
             GameObjects.Player.ProcessEvents();
 
             Tick++;
