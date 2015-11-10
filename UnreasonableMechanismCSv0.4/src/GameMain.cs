@@ -30,6 +30,8 @@ namespace UnreasonableMechanismCS
             ScreenControler.Initalise();
             Settings.InitSettings();
 
+            SwinGame.ToggleFullScreen();
+
             //Show SwinGame splash screen.
             if(_splashFlag)
             {

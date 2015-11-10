@@ -38,6 +38,12 @@ namespace UnreasonableMechanismCS
             _movement = new Linear(trajectory);
         }
 
+        public override void DrawEntity()
+        {
+            Bitmap bitmap = GameResources.GameImage(Bitmap).RotateScaleBitmap((float)BasicMath.ToDeg(2 * Math.PI - _trajectory.Phi) - 90, 1);
+            SwinGame.DrawBitmap(bitmap, (float)Hitbox.Middle.X - bitmap.Width / 2, (float)Hitbox.Middle.Y - bitmap.Height / 2);
+        }
+
         /// <summary>
         /// Processes bullet events.
         /// </summary>
@@ -307,7 +313,10 @@ namespace UnreasonableMechanismCS
             }
 
             Polygon bounding = new Polygon(vertices, position);
-            bounding.YawZ(-trajectory.Phi, bounding.Middle);
+
+            double angle = 2 * Math.PI - trajectory.Phi - BasicMath.ToRad(90);
+
+            bounding.YawZ(angle, bounding.Middle);
 
             return bounding;
         }
