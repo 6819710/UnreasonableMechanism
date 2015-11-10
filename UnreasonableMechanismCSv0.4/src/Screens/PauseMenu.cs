@@ -51,7 +51,7 @@ namespace UnreasonableMechanismCS
             {
                 Button(btn).Deselect();
             }
-            Button("Wide").Select();
+            Button("Unpause").Select();
         }
 
         /// <summary>
