@@ -19,6 +19,9 @@ namespace UnreasonableMechanismCS
         private PlayerType _playerType;
         private Polygon _grazebox;
 
+        private int _cannonMain;
+        private int _cannonAux;
+
         /// <summary>
         /// Constructs a new player in the defult position.
         /// </summary>
@@ -27,6 +30,9 @@ namespace UnreasonableMechanismCS
         {
             _playerType = playerType;
             _grazebox = InitGrazeBox(Hitbox.Centroid, playerType);
+
+            _cannonAux = 0;
+            _cannonMain = 0;
         }
 
         /// <summary>
@@ -42,6 +48,109 @@ namespace UnreasonableMechanismCS
             set
             {
                 _grazebox = value;
+            }
+        }
+
+        private void Cannon()
+        {
+            switch(_playerType)
+            {
+                case PlayerType.NarrowA:
+                    switch(_cannonMain)
+                    {
+                        case 0:
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
+                    switch (_cannonAux)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                    }
+                    break;
+                case PlayerType.NarrowB:
+                    switch (_cannonMain)
+                    {
+                        case 0:
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
+                    switch (_cannonAux)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                    }
+                    break;
+                case PlayerType.WideA:
+                    switch (_cannonMain)
+                    {
+                        case 0:
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
+                    switch (_cannonAux)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                    }
+                    break;
+                case PlayerType.WideB:
+                    switch (_cannonMain)
+                    {
+                        case 0:
+                            break;
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
+                    switch (_cannonAux)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                        case 4:
+                            break;
+                    }
+                    break;
             }
         }
 
@@ -146,6 +255,50 @@ namespace UnreasonableMechanismCS
             return new Polygon(vertices, new Point(270, 430));
         }
 
+        private void Level()
+        {
+            if(GameScores.POWER < 8)
+            {
+                _cannonMain = 0;
+                _cannonAux = 0;
+            }
+            else if(GameScores.POWER < 16)
+            {
+                _cannonMain = 0;
+                _cannonAux = 1;
+            }
+            else if(GameScores.POWER < 32)
+            {
+                _cannonMain = 0;
+                _cannonAux = 2;
+            }
+            else if(GameScores.POWER < 48)
+            {
+                _cannonMain = 1;
+                _cannonAux = 2;
+            }
+            else if(GameScores.POWER < 80)
+            {
+                _cannonMain = 1;
+                _cannonAux = 3;
+            }
+            else if(GameScores.POWER < 96)
+            {
+                _cannonMain = 2;
+                _cannonAux = 3;
+            }
+            else if(GameScores.POWER < 128)
+            {
+                _cannonMain = 2;
+                _cannonAux = 4;
+            }
+            else if(GameScores.POWER == 128)
+            {
+                _cannonMain = 3;
+                _cannonAux = 4;
+            }
+        }
+
         /// <summary>
         /// Offsets the player by the given movement.
         /// </summary>
@@ -159,6 +312,13 @@ namespace UnreasonableMechanismCS
         public override void ProcessEvents()
         {
             ProcessMovement();
+
+            Level();
+
+            if(SwinGame.KeyDown(Settings.SHOOT))
+            {
+                Cannon();
+            }
         }
 
         public override void ProcessMovement()
