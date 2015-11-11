@@ -10,7 +10,7 @@
   <Class Name="UnreasonableMechanismEngineCS.Polygon" Collapsed="true">
     <Position X="9.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ICDIiAAAAMBCGgAQAEJCFCAAAACQQAIAMAhAsJAOkCA=</HashCode>
+      <HashCode>cCDIiABwAMBCGoAQAEJCFCAAAACQQAIAMAhQsJAOkCA=</HashCode>
       <FileName>src\Polygon.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -54,6 +54,20 @@
     <TypeIdentifier>
       <HashCode>AAACTgIAAAABAgAE4AVCCgAAAACgAIASAQBHAekBIiQ=</HashCode>
       <FileName>src\Vector.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UnreasonableMechanismEngineCS.PolygonCollisions" Collapsed="true">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="UnreasonableMechanismEngineCS.PolygonCollisions.PolygonCollisionResult" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>src\PolygonCollisions.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>src\PolygonCollisions.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Font Name="Segoe UI" Size="9" />

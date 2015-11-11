@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\PolygonCollisions.cs" />
     <Compile Include="src\Polyhedron.cs" />
     <Compile Include="src\Polygon.cs" />
     <Compile Include="src\Point.cs" />
