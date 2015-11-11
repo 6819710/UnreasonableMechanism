@@ -103,6 +103,13 @@ namespace UnreasonableMechanismCS
             GameObjects.DrawPlayer();
 
             SwinGame.DrawBitmap(GameResources.GameImage("GameArea"), 0, 0);
+
+            SwinGame.DrawText("Score: " + GameScores.SCORE, Color.Black, 540, 40);
+            SwinGame.DrawText("Lives: " + GameScores.PLAYER, Color.Black, 540, 60);
+            SwinGame.DrawText("Bombs: " + GameScores.BOMB, Color.Black, 540, 80);
+            SwinGame.DrawText("Power: " + GameScores.POWER, Color.Black, 540, 120);
+            SwinGame.DrawText("Graze: " + GameScores.GRAZE, Color.Black, 540, 140);
+            SwinGame.DrawText("Bonus: " + GameScores.BONUS, Color.Black, 540, 160);
         }
 
         public override void Initalise()

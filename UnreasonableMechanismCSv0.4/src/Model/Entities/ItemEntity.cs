@@ -67,7 +67,46 @@ namespace UnreasonableMechanismCS
         public override void ProcessEvents()
         {
             ProcessMovement();
-            DrawEntity();
+
+            if(PolygonCollisions.Collides(Hitbox, GameObjects.Player.Grazebox))
+            {
+                Remove = true;
+                switch(_itemType)
+                {
+                    case ItemType.BigPower:
+                        GameScores.IncrementPower(5);
+                        GameScores.SCORE += GameScores.POINTS[GameScores.ITERATOR];
+                        break;
+
+                    case ItemType.Bomb:
+                        GameScores.BOMB++;
+                        break;
+
+                    case ItemType.FullPower:
+                        GameScores.POWER = 128;
+                        GameScores.SCORE += GameScores.POINTS[GameScores.ITERATOR];
+                        break;
+
+                    case ItemType.Life:
+                        GameScores.PLAYER++;
+                        break;
+
+                    case ItemType.Point:
+                        GameScores.BONUS++;
+                        break;
+
+                    case ItemType.Power:
+                        GameScores.IncrementPower(1);
+                        GameScores.SCORE += GameScores.POINTS[GameScores.ITERATOR];
+                        break;
+
+                    case ItemType.Star:
+                        GameScores.SCORE += 500 + (10 * (GameScores.GRAZE / 3));
+                        break;
+                }
+            }
+
+            //TODO: Fire
         }
 
         /// <summary>

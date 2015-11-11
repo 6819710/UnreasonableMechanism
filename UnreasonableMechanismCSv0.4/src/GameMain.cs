@@ -29,13 +29,13 @@ namespace UnreasonableMechanismCS
             ScreenControler.SetScreen("StartupMenu");
             ScreenControler.Initalise();
             Settings.InitSettings();
-
-            SwinGame.ToggleFullScreen();
+            GameScores.InitForNewGame();
 
             //Show SwinGame splash screen.
             if(_splashFlag)
             {
                 SwinGame.ShowSwinGameSplashScreen();
+                SwinGame.ToggleFullScreen();
             }
 
             //Run game loop.

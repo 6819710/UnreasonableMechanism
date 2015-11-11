@@ -190,6 +190,14 @@ namespace UnreasonableMechanismCS
             {
                 item.ProcessEvents();
             }
+
+            for(int i = 0; i < _items.Count; i++)
+            {
+                if(_items[i].Remove)
+                {
+                    RemoveItem(i);
+                }
+            }
         }
 
         /// <summary>

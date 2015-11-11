@@ -8,7 +8,7 @@ namespace UnreasonableMechanismEngineCS
     /// <summary>
     /// Set of tools to detect polygon collisions in the X-Y plane.
     /// </summary>
-    public struct PolygonCollisions
+    public static class PolygonCollisions
     {
         public struct PolygonCollisionResult
         {
@@ -17,7 +17,7 @@ namespace UnreasonableMechanismEngineCS
             public Vector MinimumTranslationVector;
         }
 
-        public void ProjectPolygon(Vector axis, Polygon polygon, ref double min, ref double max)
+        public static void ProjectPolygon(Vector axis, Polygon polygon, ref double min, ref double max)
         {
             double dotProduct = axis.DotProduct(polygon.Vertices[0].ToVector());
             min = dotProduct;
@@ -36,7 +36,7 @@ namespace UnreasonableMechanismEngineCS
             }
         }
 
-        public double IntervalDisance(double minA, double maxA, double minB, double maxB)
+        public static double IntervalDisance(double minA, double maxA, double minB, double maxB)
         {
             if(minA < minB)
             {
@@ -48,14 +48,14 @@ namespace UnreasonableMechanismEngineCS
             }
         }
 
-        public PolygonCollisionResult PolygonCollision(Polygon a, Polygon b, Vector velocity)
+        public static PolygonCollisionResult PolygonCollision(Polygon a, Polygon b, Vector velocity)
         {
             PolygonCollisionResult result = new PolygonCollisionResult();
             result.WillIntersect = true;
             result.Intersect = true;
 
             int edgeCountA = a.Edges.Count;
-            int edgeCountB = a.Edges.Count;
+            int edgeCountB = b.Edges.Count;
             double minIntervalDistance = double.PositiveInfinity;
             Vector traslationAxis = new Vector();
             Vector edge;
@@ -128,6 +128,50 @@ namespace UnreasonableMechanismEngineCS
                 result.MinimumTranslationVector = traslationAxis * minIntervalDistance;
             }
 
+            return result;
+        }
+
+        /// <summary>
+        /// Determines weather the polygons collide in the x-y plane.
+        /// </summary>
+        /// <param name="polygonA">Polygon a.</param>
+        /// <param name="polygonB">Polygon b.</param>
+        /// <returns>Boolean.</returns>
+        public static bool Collides(Polygon polygonA, Polygon polygonB)
+        {
+            bool result = true;
+
+            int edgeCountA = polygonA.Edges.Count;
+            int edgeCountB = polygonA.Edges.Count;
+            Vector edge;
+
+            for (int edgeIndex = 0; edgeIndex < edgeCountA + edgeCountB; edgeIndex++)
+            {
+                if (edgeIndex < edgeCountA)
+                {
+                    edge = polygonA.Edges[edgeIndex];
+                }
+                else
+                {
+                    edge = polygonB.Edges[edgeIndex - edgeCountA];
+                }
+
+                Vector axis = edge.PerpendicularVector2D();
+                axis = axis.Unit;
+
+                double minA = 0;
+                double maxA = 0;
+                double minB = 0;
+                double maxB = 0;
+
+                ProjectPolygon(axis, polygonA, ref minA, ref maxA);
+                ProjectPolygon(axis, polygonB, ref minB, ref maxB);
+
+                if (IntervalDisance(minA, maxA, minB, maxB) > 0)
+                {
+                    result = false;
+                }
+            }
             return result;
         }
     }

@@ -28,6 +28,9 @@ namespace UnreasonableMechanismCS
         public static int GAMEMODE;
         public static PlayerType PLAYERTYPE;
 
+        public static int BOMBSCR;
+        public static int PLAYERSCR;
+
         public static void InitSettings()
         {
             SHOWHITBOX = true;
@@ -47,6 +50,9 @@ namespace UnreasonableMechanismCS
 
             GAMEMODE = 0;
             PLAYERTYPE = PlayerType.NarrowA;
+
+            BOMBSCR = 3;
+            PLAYERSCR = 5;
         }
     }
 }

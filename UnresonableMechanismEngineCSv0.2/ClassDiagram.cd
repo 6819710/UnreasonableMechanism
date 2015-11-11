@@ -56,19 +56,5 @@
       <FileName>src\Vector.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="UnreasonableMechanismEngineCS.PolygonCollisions" Collapsed="true">
-    <Position X="7.5" Y="2.75" Width="1.5" />
-    <NestedTypes>
-      <Struct Name="UnreasonableMechanismEngineCS.PolygonCollisions.PolygonCollisionResult" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>src\PolygonCollisions.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Struct>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAQAAAAAAAAAAAAACAAAA=</HashCode>
-      <FileName>src\PolygonCollisions.cs</FileName>
-    </TypeIdentifier>
-  </Struct>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

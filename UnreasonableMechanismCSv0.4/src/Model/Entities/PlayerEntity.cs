@@ -54,7 +54,8 @@ namespace UnreasonableMechanismCS
 
             if(Settings.SHOWHITBOX)
             {
-                DrawGrazebox(Colour.Orange);
+                Colour clr = Colour.Orange;
+                DrawGrazebox(clr);
             }
         }
 
