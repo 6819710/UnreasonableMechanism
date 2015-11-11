@@ -59,23 +59,85 @@ namespace UnreasonableMechanismCS
                     switch(_cannonMain)
                     {
                         case 0:
+                            if(Tick % 6 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Blue, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-90)) * 6, Math.Sin(BasicMath.ToRad(-90)) * 6)));
+                            }
                             break;
                         case 1:
+                            if (Tick % 6 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Blue, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-92)) * 6, Math.Sin(BasicMath.ToRad(-92)) * 6)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Blue, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-88)) * 6, Math.Sin(BasicMath.ToRad(-88)) * 6)));
+                            }
                             break;
                         case 2:
+                            if (Tick % 6 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Turquoise, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-94)) * 6, Math.Sin(BasicMath.ToRad(-94)) * 6)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Blue, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-90)) * 6, Math.Sin(BasicMath.ToRad(-90)) * 6)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Turquoise, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-86)) * 6, Math.Sin(BasicMath.ToRad(-86)) * 6)));
+                            }
                             break;
                         case 3:
+                            if (Tick % 6 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Green, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-98)) * 6, Math.Sin(BasicMath.ToRad(-98)) * 6)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Turquoise, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-94)) * 6, Math.Sin(BasicMath.ToRad(-94)) * 6)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Blue, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-90)) * 6, Math.Sin(BasicMath.ToRad(-90)) * 6)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Turquoise, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-86)) * 6, Math.Sin(BasicMath.ToRad(-86)) * 6)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Green, BulletType.Seed, this, Hitbox.Middle, new Vector(Math.Cos(BasicMath.ToRad(-82)) * 6, Math.Sin(BasicMath.ToRad(-82)) * 6)));
+                            }
                             break;
                     }
                     switch (_cannonAux)
                     {
                         case 1:
+                            if (Tick % 24 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X + 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X - 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                            }
                             break;
                         case 2:
+                            if (Tick % 36 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X + 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X - 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                            }
+                            if ((Tick + 18) % 36 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X + 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X - 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                            }
                             break;
                         case 3:
+                            if (Tick % 24 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X + 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X - 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                            }
+                            if ((Tick + 12) % 24 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X + 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X - 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-90)) * 4, Math.Sin(BasicMath.ToRad(-90)) * 4)));
+                            }
                             break;
                         case 4:
+                            if (Tick % 24 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X - 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-92)) * 4, Math.Sin(BasicMath.ToRad(-92)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X + 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-88)) * 4, Math.Sin(BasicMath.ToRad(-88)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X + 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-92)) * 4, Math.Sin(BasicMath.ToRad(-92)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X - 32, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-88)) * 4, Math.Sin(BasicMath.ToRad(-88)) * 4)));
+                            }
+                            if ((Tick + 12) % 24 == 0)
+                            {
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X - 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-92)) * 4, Math.Sin(BasicMath.ToRad(-92)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Red, BulletType.Star, this, new Point(Hitbox.Middle.X + 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-88)) * 4, Math.Sin(BasicMath.ToRad(-88)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X + 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-92)) * 4, Math.Sin(BasicMath.ToRad(-92)) * 4)));
+                                GameObjects.AddBullet(new BulletEntity(BulletColour.Purple, BulletType.Star, this, new Point(Hitbox.Middle.X - 28, Hitbox.Middle.Y), new Vector(Math.Cos(BasicMath.ToRad(-88)) * 4, Math.Sin(BasicMath.ToRad(-88)) * 4)));
+                            }
                             break;
                     }
                     break;
@@ -319,6 +381,8 @@ namespace UnreasonableMechanismCS
             {
                 Cannon();
             }
+
+            Tick++;
         }
 
         public override void ProcessMovement()
