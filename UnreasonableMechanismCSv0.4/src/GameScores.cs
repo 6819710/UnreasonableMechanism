@@ -80,7 +80,7 @@ namespace UnreasonableMechanismCS
         {
             for(int i = 0; i < value; i++)
             {
-                if (POWER > 128)
+                if (POWER >= 128)
                 {
                     if (ITERATOR < 30)
                     {
