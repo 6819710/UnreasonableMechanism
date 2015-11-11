@@ -142,7 +142,7 @@ namespace UnreasonableMechanismEngineCS
             bool result = true;
 
             int edgeCountA = polygonA.Edges.Count;
-            int edgeCountB = polygonA.Edges.Count;
+            int edgeCountB = polygonB.Edges.Count;
             Vector edge;
 
             for (int edgeIndex = 0; edgeIndex < edgeCountA + edgeCountB; edgeIndex++)
