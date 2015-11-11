@@ -34,8 +34,8 @@ namespace UnreasonableMechanismCS
             //Show SwinGame splash screen.
             if(_splashFlag)
             {
-                SwinGame.ShowSwinGameSplashScreen();
                 SwinGame.ToggleFullScreen();
+                SwinGame.ShowSwinGameSplashScreen();
             }
 
             //Run game loop.

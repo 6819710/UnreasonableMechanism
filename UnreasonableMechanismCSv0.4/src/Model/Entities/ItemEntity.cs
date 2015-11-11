@@ -43,6 +43,19 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        public bool Flag
+        {
+            get
+            {
+                return _flag;
+            }
+
+            set
+            {
+                _flag = value;
+            }
+        }
+
         /// <summary>
         /// Draws entity bitmap.
         /// </summary>

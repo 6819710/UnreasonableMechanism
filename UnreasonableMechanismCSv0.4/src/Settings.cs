@@ -33,7 +33,7 @@ namespace UnreasonableMechanismCS
 
         public static void InitSettings()
         {
-            SHOWHITBOX = true;
+            SHOWHITBOX = false;
             EXIT = false;
 
             UP = KeyCode.vk_UP;

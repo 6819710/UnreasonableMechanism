@@ -228,6 +228,12 @@ namespace UnreasonableMechanismCS
                 Colour clr = Colour.Orange;
                 DrawGrazebox(clr);
             }
+
+            if (_cannonAux > 0)
+            {
+                SwinGame.DrawBitmap(GameResources.GameImage("YingYang" + (Tick % 64) / 8), (float)(Hitbox.Middle.X + 30) - (GameResources.GameImage("YingYang" + (Tick % 64) / 8).Width / 2), (float)(Hitbox.Middle.Y) - (GameResources.GameImage("YingYang" + (Tick % 64) / 8).Height / 2));
+                SwinGame.DrawBitmap(GameResources.GameImage("YingYang" + (Tick % 64) / 8), (float)(Hitbox.Middle.X - 30) - (GameResources.GameImage("YingYang" + (Tick % 64) / 8).Width / 2), (float)(Hitbox.Middle.Y) - (GameResources.GameImage("YingYang" + (Tick % 64) / 8).Height / 2));
+            }
         }
 
         /// <summary>
@@ -380,6 +386,36 @@ namespace UnreasonableMechanismCS
             if(SwinGame.KeyDown(Settings.SHOOT))
             {
                 Cannon();
+            }
+
+            foreach(BulletEntity bullet in GameObjects.Bullets)
+            {
+                if(bullet.Owner != this)
+                {
+                    if (PolygonCollisions.Collides(_grazebox, bullet.Hitbox))
+                    {
+                        if(PolygonCollisions.Collides(Hitbox, bullet.Hitbox))
+                        {
+                            Hitpoints -= bullet.Hitpoints;
+                            bullet.Remove = true;
+                            break;
+                        }
+                        if(!bullet.Grazed)
+                        {
+                            GameScores.GRAZE++;
+                            bullet.Grazed = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (Hitbox.Middle.Y < 160)
+            {
+                foreach (ItemEntity item in GameObjects.Items)
+                {
+                    item.Flag = true;
+                }
             }
 
             Tick++;

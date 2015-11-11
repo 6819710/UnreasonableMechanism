@@ -19,6 +19,7 @@ namespace UnreasonableMechanismCS
         private Movement _movement;
         private Entity _owner;
         private Vector _trajectory;
+        private bool _grazed;
 
         /// <summary>
         /// Constructs bullet entity.
@@ -34,8 +35,35 @@ namespace UnreasonableMechanismCS
             _bulletType = bulletType;
             _owner = owner;
             _trajectory = trajectory;
+            _grazed = false;
 
             _movement = new Linear(trajectory);
+        }
+
+        public Entity Owner
+        {
+            get
+            {
+                return _owner;
+            }
+
+            set
+            {
+                _owner = value;
+            }
+        }
+
+        public bool Grazed
+        {
+            get
+            {
+                return _grazed;
+            }
+
+            set
+            {
+                _grazed = value;
+            }
         }
 
         public override void DrawEntity()
