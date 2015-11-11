@@ -96,6 +96,19 @@ namespace UnreasonableMechanismCS
             }
         }
 
+        public int Tick
+        {
+            get
+            {
+                return _tick;
+            }
+
+            set
+            {
+                _tick = value;
+            }
+        }
+
         /// <summary>
         /// Draws entity.
         /// </summary>
