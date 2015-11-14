@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("UnreasonableMechanismCSv0._5")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("UnreasonableMechanismCS")]
+[assembly: AssemblyDescription("Unreasonable Mechanism Game")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("UnreasonableMechanismCSv0._5")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyProduct("UnreasonableMechanismCS")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
