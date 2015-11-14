@@ -21,6 +21,7 @@ namespace UnreasonableMechanismCS
 
         private int _cannonMain;
         private int _cannonAux;
+        private int _cooldown;
 
         /// <summary>
         /// Constructs a new player in the defult position.
@@ -33,6 +34,7 @@ namespace UnreasonableMechanismCS
 
             _cannonAux = 0;
             _cannonMain = 0;
+            _cooldown = 0;
         }
 
         /// <summary>
@@ -410,12 +412,37 @@ namespace UnreasonableMechanismCS
                 }
             }
 
+            if (SwinGame.KeyDown(Settings.BOMB) && GameScores.BOMB > 0 && _cooldown == 0)
+            {
+                foreach (BulletEntity bullet in GameObjects.Bullets)
+                {
+                    if (bullet.Owner != this)
+                    {
+                        GameObjects.AddItem(new ItemEntity(bullet.Hitbox.Middle, ItemType.Star));
+                        bullet.Remove = true;
+                    }
+                }
+
+                foreach (ItemEntity item in GameObjects.Items)
+                {
+                    item.Flag = true;
+                }
+
+                GameScores.BOMB--;
+                _cooldown = 60;
+            }
+
             if (Hitbox.Middle.Y < 160)
             {
                 foreach (ItemEntity item in GameObjects.Items)
                 {
                     item.Flag = true;
                 }
+            }
+
+            if (_cooldown > 0)
+            {
+                _cooldown--;
             }
 
             Tick++;

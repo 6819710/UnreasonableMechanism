@@ -11,29 +11,50 @@ using Vector = UnreasonableMechanismEngineCS.Vector;
 
 namespace UnreasonableMechanismCS
 {
+    /// <summary>
+    /// StartupMenu is a child class of Screen defining startup menu of game.
+    /// </summary>
     public class StarupMenu : Screen
     {
-        private Dictionary<string, Button> _buttons = new Dictionary<string, Button>();
+        private Dictionary<string, Button> _buttons;
         private List<string> _buttonNames = new List<string>();
+        
+        //TODO: Add background image.
 
         /// <summary>
-        /// Constructs the startup menu
+        /// Constructs Startup Menu.
         /// </summary>
         public StarupMenu()
         {
-            _buttons.Add("Play", new Button("Play", new Point(20, 20)));
-            _buttons.Add("Practice", new Button("Practice", new Point(20, 40)));
-            _buttons.Add("Replay", new Button("Replay", new Point(20, 60)));
-            _buttons.Add("Scores", new Button("Scores", new Point(20, 80)));
-            _buttons.Add("Option", new Button("Option", new Point(20, 100)));
-            _buttons.Add("Quit", new Button("Quit", new Point(20, 120)));
+            _buttons = new Dictionary<string, Button>();
 
-            _buttonNames.Add("Play");
-            _buttonNames.Add("Practice");
-            _buttonNames.Add("Replay");
-            _buttonNames.Add("Scores");
-            _buttonNames.Add("Option");
-            _buttonNames.Add("Quit");
+            //Startup Menu Buttons
+            Button[] buttons = new Button[]
+            {
+                new Button("Play", new Point(20, 20)),
+                new Button("Practice", new Point(20, 40)),
+                new Button("Replay", new Point(20, 60)),
+                new Button("Scores", new Point(20, 80)),
+                new Button("Option", new Point(20, 100)),
+                new Button("Quit", new Point(20, 120))
+            };
+
+            string[] names = new string[]
+            {
+                "Play",
+                "Practice",
+                "Replay",
+                "Scores",
+                "Option",
+                "Quit"
+            };
+
+            _buttonNames = new List<string>(names);
+
+            for(int i = 0; i < _buttonNames.Count; i++)
+            {
+                _buttons.Add(names[i], buttons[i]);
+            }
         }
 
         private Button Button(string buttonName)
@@ -46,6 +67,8 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public override void Draw()
         {
+            //TODO: Add graphical menu.
+
             SwinGame.ClearScreen(Colour.Black);
             foreach (string btn in _buttonNames)
             {

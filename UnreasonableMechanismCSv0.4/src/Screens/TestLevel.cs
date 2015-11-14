@@ -114,7 +114,6 @@ namespace UnreasonableMechanismCS
 
         public override void Initalise()
         {
-            Tick = 1;
         }
 
         public override void ProvessEvents()
@@ -151,7 +150,7 @@ namespace UnreasonableMechanismCS
             GameObjects.ProcessBulletEvents();
             GameObjects.Player.ProcessEvents();
 
-            Tick++;
+            NextTick();
         }
     }
 }
