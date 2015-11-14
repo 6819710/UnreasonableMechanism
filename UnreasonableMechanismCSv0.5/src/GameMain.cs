@@ -1,7 +1,7 @@
 using System;
 using SwinGameSDK;
 
-namespace UnreasonableMechanismCSv0x5
+namespace UnreasonableMechanismCS
 {
     /// <summary>
     /// GameMain is a class defining main entry point for program.
