@@ -80,14 +80,14 @@
   <Class Name="UnreasonableMechanismCS.ScreenControler" Collapsed="true">
     <Position X="21.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAQAAAAAAAAAQAAAg=</HashCode>
+      <HashCode>AIAAAAAAAAAAAAAABAAAAAAAAAAAQAAAAAAAAAQAAAg=</HashCode>
       <FileName>src\ScreenControler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UnreasonableMechanismCS.Screen">
     <Position X="9.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAABgAgAAAAAAAAAAAAQAAAAAAAAABAQAA=</HashCode>
+      <HashCode>AAAACAAAAAAABgAgAAAAAAAAgAAAQAAAAAAAAABAQAA=</HashCode>
       <FileName>src\Screens\Screen.cs</FileName>
     </TypeIdentifier>
   </Class>
