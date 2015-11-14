@@ -6,7 +6,7 @@ using System.Text;
 namespace UnreasonableMechanismCS
 {
     /// <summary>
-    /// Controlls screen transitions.
+    /// ScreenController is a static class defining tools to handle screen management and transition.
     /// </summary>
     public static class ScreenControler
     {
@@ -31,9 +31,28 @@ namespace UnreasonableMechanismCS
             _screen.Initalise();
         }
 
+        /// <summary>
+        /// Sets Screen to provided Screen.
+        /// </summary>
+        /// <param name="screen">Screen.</param>
         public static void SetScreen(string screen)
         {
-            _screen = GameObjects.GameScreen(screen);
+            try
+            {
+                _screen = GameObjects.GameScreen(screen);
+            }
+            catch
+            {
+                throw new ApplicationException("Error: Feature not yet avalible.");
+            }
+        }
+
+        /// <summary>
+        /// Draws the current screen.
+        /// </summary>
+        public static void DrawScreen()
+        {
+            _screen.Draw();
         }
     }
 }
