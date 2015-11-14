@@ -6,7 +6,7 @@ using System.Text;
 namespace UnreasonableMechanismCS
 {
     /// <summary>
-    /// Screen defines screen types for game.
+    /// Screen is an abstract class defining game screens.
     /// </summary>
     public abstract class Screen
     {
@@ -21,18 +21,13 @@ namespace UnreasonableMechanismCS
         }
 
         /// <summary>
-        /// Property: Tick
+        /// Readonly Property: Tick
         /// </summary>
         public uint Tick
         {
             get
             {
                 return _tick;
-            }
-
-            set
-            {
-                _tick = value;
             }
         }
 
@@ -46,18 +41,31 @@ namespace UnreasonableMechanismCS
         /// </summary>
         public abstract void Initalise();
 
+        public void NextTick()
+        {
+            //TODO: Set tick to clock rather than frame rate. Optimisation.
+            _tick++;
+        }
+
         /// <summary>
         /// Processes Screen Events.
         /// </summary>
         public abstract void ProvessEvents();
 
         /// <summary>
-        /// Resets the screen
+        /// Resets screen.
         /// </summary>
         public void Reset()
         {
-            _tick = 0;
             Initalise();
+        }
+
+        /// <summary>
+        /// Resets screen tick to 0.
+        /// </summary>
+        public void ResetTick()
+        {
+            _tick = 0;
         }
     }
 }
