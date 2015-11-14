@@ -8,11 +8,11 @@
     <ProjectGuid>{9F7CE06B-F851-4F2B-AC99-523FC35662EB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnreasonableMechanismCSv0._5</RootNamespace>
-    <AssemblyName>UnreasonableMechanismCSv0.5</AssemblyName>
+    <RootNamespace>UnreasonableMechanismCS</RootNamespace>
+    <AssemblyName>UnreasonableMechanismCS</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <StartupObject>UnreasonableMechanismCSv0._5.GameMain</StartupObject>
+    <StartupObject>UnreasonableMechanismCS.GameMain</StartupObject>
     <ApplicationIcon>Resources\SwinGame.ico</ApplicationIcon>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
