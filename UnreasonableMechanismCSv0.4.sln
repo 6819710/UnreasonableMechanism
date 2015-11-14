@@ -12,6 +12,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngine
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.2Tests", "UnreasonableMechanismEngineCSv0.2Tests\UnreasonableMechanismEngineCSv0.2Tests.csproj", "{DEDDA9C1-2ED0-443A-93B8-A079740DB276}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.5", "UnreasonableMechanismCSv0.5\UnreasonableMechanismCSv0.5.csproj", "{9F7CE06B-F851-4F2B-AC99-523FC35662EB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9F68A310-52ED-4054-B422-5E666D29265B} = {9F68A310-52ED-4054-B422-5E666D29265B}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,6 +45,12 @@ Global
 		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Release|x86.ActiveCfg = Release|Any CPU
 		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Release|x86.Build.0 = Release|Any CPU
+		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Debug|x86.ActiveCfg = Debug|x86
+		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Debug|x86.Build.0 = Debug|x86
+		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Release|Any CPU.ActiveCfg = Release|x86
+		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Release|x86.ActiveCfg = Release|x86
+		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
