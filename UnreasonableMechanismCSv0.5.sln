@@ -8,8 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.4
 		{9F68A310-52ED-4054-B422-5E666D29265B} = {9F68A310-52ED-4054-B422-5E666D29265B}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.2", "UnresonableMechanismEngineCSv0.2\UnreasonableMechanismEngineCSv0.2.csproj", "{9F68A310-52ED-4054-B422-5E666D29265B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.2Tests", "UnreasonableMechanismEngineCSv0.2Tests\UnreasonableMechanismEngineCSv0.2Tests.csproj", "{DEDDA9C1-2ED0-443A-93B8-A079740DB276}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.5", "UnreasonableMechanismCSv0.5\UnreasonableMechanismCSv0.5.csproj", "{9F7CE06B-F851-4F2B-AC99-523FC35662EB}"
@@ -18,6 +16,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.5
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.3", "UnreasonableMechanismEngineCSv0.3\UnreasonableMechanismEngineCSv0.3.csproj", "{60C699CC-C19B-4F4C-BC61-CC73A1621259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.3Tests", "UnreasonableMechanismEngineCSv0.3Tests\UnreasonableMechanismEngineCSv0.3Tests.csproj", "{D8C75D6F-D95F-4362-988E-76EBC2244E6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.2", "UnreasonableMechanismEngineCSv0.2\UnreasonableMechanismEngineCSv0.2.csproj", "{9F68A310-52ED-4054-B422-5E666D29265B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.1", "UnreasonableMechanismCSv0.1\UnreasonableMechanismCSv0.1.csproj", "{BFDEA959-AFD9-4D5C-8300-DC6E09ECC84D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.2", "UnreasonableMechanismCSv0.2\UnreasonableMechanismCSv0.2.csproj", "{CE955511-472B-408D-8DB2-0FB81E381404}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.3", "UnreasonableMechanismCSv0.3\UnreasonableMechanismCSv0.3.csproj", "{336A50EF-F7A6-42A9-B8FD-3143402EC51D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,12 +41,6 @@ Global
 		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Release|Any CPU.ActiveCfg = Release|x86
 		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Release|x86.ActiveCfg = Release|x86
 		{A482CE99-CCB9-462A-8D2A-2A6D4619BC98}.Release|x86.Build.0 = Release|x86
-		{9F68A310-52ED-4054-B422-5E666D29265B}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{9F68A310-52ED-4054-B422-5E666D29265B}.Debug|x86.ActiveCfg = Debug|x86
-		{9F68A310-52ED-4054-B422-5E666D29265B}.Debug|x86.Build.0 = Debug|x86
-		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|Any CPU.ActiveCfg = Release|x86
-		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|x86.ActiveCfg = Release|x86
-		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|x86.Build.0 = Release|x86
 		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEDDA9C1-2ED0-443A-93B8-A079740DB276}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -59,6 +61,38 @@ Global
 		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Release|Any CPU.ActiveCfg = Release|x86
 		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Release|x86.ActiveCfg = Release|x86
 		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Release|x86.Build.0 = Release|x86
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Debug|x86.Build.0 = Debug|Any CPU
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Release|x86.ActiveCfg = Release|Any CPU
+		{D8C75D6F-D95F-4362-988E-76EBC2244E6A}.Release|x86.Build.0 = Release|Any CPU
+		{9F68A310-52ED-4054-B422-5E666D29265B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9F68A310-52ED-4054-B422-5E666D29265B}.Debug|x86.ActiveCfg = Debug|x86
+		{9F68A310-52ED-4054-B422-5E666D29265B}.Debug|x86.Build.0 = Debug|x86
+		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|Any CPU.ActiveCfg = Release|x86
+		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|x86.ActiveCfg = Release|x86
+		{9F68A310-52ED-4054-B422-5E666D29265B}.Release|x86.Build.0 = Release|x86
+		{BFDEA959-AFD9-4D5C-8300-DC6E09ECC84D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{BFDEA959-AFD9-4D5C-8300-DC6E09ECC84D}.Debug|x86.ActiveCfg = Debug|x86
+		{BFDEA959-AFD9-4D5C-8300-DC6E09ECC84D}.Debug|x86.Build.0 = Debug|x86
+		{BFDEA959-AFD9-4D5C-8300-DC6E09ECC84D}.Release|Any CPU.ActiveCfg = Release|x86
+		{BFDEA959-AFD9-4D5C-8300-DC6E09ECC84D}.Release|x86.ActiveCfg = Release|x86
+		{BFDEA959-AFD9-4D5C-8300-DC6E09ECC84D}.Release|x86.Build.0 = Release|x86
+		{CE955511-472B-408D-8DB2-0FB81E381404}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CE955511-472B-408D-8DB2-0FB81E381404}.Debug|x86.ActiveCfg = Debug|x86
+		{CE955511-472B-408D-8DB2-0FB81E381404}.Debug|x86.Build.0 = Debug|x86
+		{CE955511-472B-408D-8DB2-0FB81E381404}.Release|Any CPU.ActiveCfg = Release|x86
+		{CE955511-472B-408D-8DB2-0FB81E381404}.Release|x86.ActiveCfg = Release|x86
+		{CE955511-472B-408D-8DB2-0FB81E381404}.Release|x86.Build.0 = Release|x86
+		{336A50EF-F7A6-42A9-B8FD-3143402EC51D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{336A50EF-F7A6-42A9-B8FD-3143402EC51D}.Debug|x86.ActiveCfg = Debug|x86
+		{336A50EF-F7A6-42A9-B8FD-3143402EC51D}.Debug|x86.Build.0 = Debug|x86
+		{336A50EF-F7A6-42A9-B8FD-3143402EC51D}.Release|Any CPU.ActiveCfg = Release|x86
+		{336A50EF-F7A6-42A9-B8FD-3143402EC51D}.Release|x86.ActiveCfg = Release|x86
+		{336A50EF-F7A6-42A9-B8FD-3143402EC51D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

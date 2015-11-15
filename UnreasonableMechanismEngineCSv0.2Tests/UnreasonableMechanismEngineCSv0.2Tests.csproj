@@ -57,12 +57,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\UnresonableMechanismEngineCSv0.2\UnreasonableMechanismEngineCSv0.2.csproj">
-      <Project>{9F68A310-52ED-4054-B422-5E666D29265B}</Project>
-      <Name>UnreasonableMechanismEngineCSv0.2</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

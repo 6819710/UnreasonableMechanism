@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UnrealMechanismCS.GameMain">
+    <Position X="6" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IABAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>src\GameMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.GameResources">
+    <Position X="0.5" Y="10.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACEIAEIAAAACAAAAAgAAAAhAkACAEAIQBFAIABQAACg=</HashCode>
+      <FileName>src\GameResources.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.GameKeys">
+    <Position X="4.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAgAAAAAAAAAAQAICAAAgAACIAAAAAAA=</HashCode>
+      <FileName>src\GameKeys.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.GameScores">
+    <Position X="2.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAigIgAgAAAAAAAAgAAQAAhAEAAAQAAAAA=</HashCode>
+      <FileName>src\GameScores.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.Mathematics">
+    <Position X="14" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\Model\Engine\Mathermatics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.Polygon">
+    <Position X="5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ICCIiAgAAIBAwkYRAEBAEAABAASQQAAgNEjAApAIkCQ=</HashCode>
+      <FileName>src\Model\Engine\Polygon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.InputController">
+    <Position X="7.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\InputController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.GameObjects">
+    <Position X="9.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\GameObjects.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.Rotation">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAACAAAAAAEAAAAAAAAABAAAAAAIA=</HashCode>
+      <FileName>src\Model\Engine\Rotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.Polyhedron">
+    <Position X="7.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>ACCICIgAAIBAwgYRAEAQEAABAASQQAAgJEDAApAIkCQ=</HashCode>
+      <FileName>src\Model\Engine\Polyhedron.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.A9">
+    <Position X="11.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>src\Model\Polyhedron\A9.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UnrealMechanismCS.Cross">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgAA=</HashCode>
+      <FileName>src\Model\Polyhedron\Cross.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="UnrealMechanismCS.Vector">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AABAAgAAAAAAAgA04gUAAAAAiACAAIAAoAGBAAAAAiA=</HashCode>
+      <FileName>src\Model\Engine\Vector.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UnrealMechanismCS.Point">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAgAE4AUAAAAAAAAEAMAAAABhgQMAAiA=</HashCode>
+      <FileName>src\Model\Engine\Point.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
