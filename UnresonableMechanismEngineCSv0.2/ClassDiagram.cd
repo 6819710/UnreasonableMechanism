@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="UnreasonableMechanismEngineCS.BasicMath" Collapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="UnreasonableMechanismEngineCS.BasicMath">
+    <Position X="20" Y="1.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>src\BasicMath.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="UnreasonableMechanismEngineCS.Polygon" Collapsed="true">
-    <Position X="9.25" Y="0.5" Width="1.5" />
+  <Class Name="UnreasonableMechanismEngineCS.Polygon">
+    <Position X="16" Y="1.75" Width="3.75" />
     <TypeIdentifier>
       <HashCode>cCDIiABwAMBCGoAQAEJCFCAAAACQQAIAMAhQsJAOkCA=</HashCode>
       <FileName>src\Polygon.cs</FileName>
@@ -42,15 +42,15 @@
       <FileName>src\Polyhedron\P5.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Struct Name="UnreasonableMechanismEngineCS.Point" Collapsed="true">
-    <Position X="7.5" Y="1.75" Width="1.5" />
+  <Struct Name="UnreasonableMechanismEngineCS.Point">
+    <Position X="7.5" Y="1.75" Width="4.5" />
     <TypeIdentifier>
       <HashCode>ACdCAAIIAAQBAgAE4QUCBCAAQACEAIIQIABAgQPI+yU=</HashCode>
       <FileName>src\Point.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="UnreasonableMechanismEngineCS.Vector" Collapsed="true">
-    <Position X="9.25" Y="1.75" Width="1.5" />
+  <Struct Name="UnreasonableMechanismEngineCS.Vector">
+    <Position X="12.5" Y="1.75" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAACTgIAAAABAgAE4AVCCgAAAACgAIASAQBHAekBIiQ=</HashCode>
       <FileName>src\Vector.cs</FileName>
