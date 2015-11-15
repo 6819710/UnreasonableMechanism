@@ -193,7 +193,7 @@ namespace UnrealMechanismCS
                         hitBox.Offset(_movementLeft.Delta);
                     }
 
-                    Bitmap = "PlayerLeft";58
+                    Bitmap = "PlayerLeft";
                 }
             }
             else if (SwinGame.KeyDown(GameKeys.LEFT))

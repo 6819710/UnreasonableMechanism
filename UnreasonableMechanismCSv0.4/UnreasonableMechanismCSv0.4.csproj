@@ -143,7 +143,12 @@
     <None Include="app.config" />
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\UnreasonableMechanismEngineCSv0.2\UnreasonableMechanismEngineCSv0.2.csproj">
+      <Project>{9f68a310-52ed-4054-b422-5e666d29265b}</Project>
+      <Name>UnreasonableMechanismEngineCSv0.2</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(ProjectDir)lib\*.dll" "$(TargetDir)" /s/y/d/e &lt;NUL: </PostBuildEvent>

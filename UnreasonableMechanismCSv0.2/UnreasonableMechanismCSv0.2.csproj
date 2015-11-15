@@ -69,7 +69,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\Model\Bounding\Bounding.cs" />
     <Compile Include="src\Model\Struct\Polygon2D.cs" />
     <Compile Include="src\Model\Struct\Point2D.cs" />
     <Compile Include="src\Model\Struct\Vector2D.cs" />
