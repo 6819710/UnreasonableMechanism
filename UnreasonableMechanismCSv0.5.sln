@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismCSv0.5
 		{9F68A310-52ED-4054-B422-5E666D29265B} = {9F68A310-52ED-4054-B422-5E666D29265B}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnreasonableMechanismEngineCSv0.3", "UnreasonableMechanismEngineCSv0.3\UnreasonableMechanismEngineCSv0.3.csproj", "{60C699CC-C19B-4F4C-BC61-CC73A1621259}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,12 @@ Global
 		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Release|Any CPU.ActiveCfg = Release|x86
 		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Release|x86.ActiveCfg = Release|x86
 		{9F7CE06B-F851-4F2B-AC99-523FC35662EB}.Release|x86.Build.0 = Release|x86
+		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Debug|x86.ActiveCfg = Debug|x86
+		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Debug|x86.Build.0 = Debug|x86
+		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Release|Any CPU.ActiveCfg = Release|x86
+		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Release|x86.ActiveCfg = Release|x86
+		{60C699CC-C19B-4F4C-BC61-CC73A1621259}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
