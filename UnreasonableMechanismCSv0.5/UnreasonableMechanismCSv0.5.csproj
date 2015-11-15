@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\model\enum\PlayerType.cs" />
+    <Compile Include="src\model\entity\PlayerEntity.cs" />
     <Compile Include="src\model\GameEntity.cs" />
     <Compile Include="src\GameObject.cs" />
     <Compile Include="src\GameMain.cs" />
